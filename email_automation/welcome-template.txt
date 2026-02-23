@@ -16,7 +16,7 @@
     Temporary Password: {####}
     <br>
     <br>
-        The login to the admin dashboard uses 2-factor authentication. You will have to install an authenticator app (e.g. Microsoft Authenticator, Google Authenticator) to receive One Time Passcodes (OTP) every time you want to log in. This is a requirement from NREL cyber to ensure that the data access to individual user information is secure.<br>
+        The login to the admin dashboard uses 2-factor authentication. You will have to install an authenticator app (e.g. Microsoft Authenticator, Google Authenticator) to receive One Time Passcodes (OTP) every time you want to log in. This is a requirement from NLR Cyber to ensure that the data access to individual user information is secure.<br>
       <br>
     For the specified date range, you can download trip, user and trajectory tables as csv and view aggregate origin-destination points in the maps. <map_trip_lines> <br>
     <br>
@@ -26,7 +26,7 @@
 <br>
     Thank you,<br>
     <br>
-    NREL's OpenPATH Team
+    The OpenPATH Team
 </p>
 </body>
 </html>
