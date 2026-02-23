@@ -18,7 +18,8 @@
         "start_month": "02",
         "start_year": "2024",
         "mode_studied": "",
-        "program_admin_contact": "For questions about the study, please contact Congjing Zhang at the University of Washington (email: congjing@uw.edu).",
+        "program_admin_email": "congjing@uw.edu",
+        "program_admin_contact": "Congjing Zhang, University of Washington (email: congjing@uw.edu).",
         "deployment_partner_name": "University of Washington",
         "translated_text": {
             "en": {

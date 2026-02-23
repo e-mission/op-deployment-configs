@@ -70,6 +70,14 @@ body:
   validations:
     required: true
 - type: input
+  id: program_admin_email
+  attributes:
+    label: Program Admin Email
+    description: Email address of the program admin
+    placeholder: admin@example.org
+  validations:
+    required: true
+- type: input
   id: program_admin_contact
   attributes: 
     label: Program Admin Contact Info

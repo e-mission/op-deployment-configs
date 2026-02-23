@@ -18,7 +18,8 @@
         "start_month": "01",
         "start_year": "2024",
         "mode_studied": "e-bike",
-        "program_admin_contact": "For questions about the program, please contact Robera Tasissa (robera.tasissa@dc.gov) or Laura Pimentel (laura.pimentel@dc.gov).",
+        "program_admin_email": "robera.tasissa@dc.gov",
+        "program_admin_contact": "Robera Tasissa (robera.tasissa@dc.gov) or Laura Pimentel (laura.pimentel@dc.gov).",
         "deployment_partner_name": "Energy Administration at District of Columbia Department of Energy and Environment",
         "translated_text": {
             "en": {

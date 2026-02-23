@@ -297,6 +297,7 @@ export async function parseIssueBody(githubIssueTemplateFile, body) {
       start_month: combinedObject.start.split("/")[0],
       start_year: combinedObject.start.split("/")[1],
       mode_studied: combinedObject.mode_studied,
+      program_admin_email: combinedObject.program_admin_email,
       program_admin_contact: combinedObject.program_admin_contact,
       deployment_partner_name: combinedObject.deployment_partner_name_lang1,
       translated_text: textObject,
