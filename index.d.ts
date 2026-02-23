@@ -43,6 +43,7 @@ export type IntroConfig = {
   start_month: string; // might be "M" or "MM"; TODO maybe this should be a number
   start_year: string; // "YYYY"; TODO maybe this should be a number
   mode_studied?: string | string[];
+  program_admin_email: string;
   program_admin_contact: string;
   deployment_partner_name: string;
   translated_text: {

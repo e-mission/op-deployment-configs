@@ -26,6 +26,7 @@
         "start_month": "08",
         "start_year": "2024",
         "mode_studied": "ebike",
+        "program_admin_email": "mwbc@unc.edu",
         "program_admin_contact": "Matt Bhagat-Conway, UNC (email: mwbc@unc.edu)",
         "deployment_partner_name": "University of North Carolina at Chapel Hill",
         "translated_text": {
@@ -44,7 +45,7 @@
                 ]
             },
             "es": {
-                "deployment_partner_name": "La Universidad de carolina del norte en Chapel Hill",
+                "deployment_partner_name": "La Universidad de Carolina del Norte en Chapel Hill",
                 "deployment_name": "Evaluación del programa Ral-E-Bike",
                 "summary_line_1": "Para entender el impacto del programa Ral-E-Bike, esta investigación recoge datos sobre sus viajes, donde y como va y viene.",
                 "summary_line_2": "Su participación es valiosa aunque no reciba el bono de Ral-E-Bike. Nos sirvirá de base para la investigación.",

@@ -30,6 +30,7 @@
         "start_month": "01",
         "start_year": "2025",
         "mode_studied": "",
+        "program_admin_email": "skothuri@pdx.edu",
         "program_admin_contact": "Sirisha Kothuri, PSU (skothuri@pdx.edu)",
         "deployment_partner_name": "PSU",
         "translated_text": {
@@ -105,8 +106,7 @@
         "admin_access": [
             "skothuri@pdx.edu",
             "jbroach@pdx.edu",
-            "nmcneil@pdx.edu",
-            "jack.greenlee@nrel.gov"
+            "nmcneil@pdx.edu"
         ]
     }
 }
