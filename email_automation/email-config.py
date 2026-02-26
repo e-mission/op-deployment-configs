@@ -102,7 +102,7 @@ def email_extract():
     with open (config_path) as config_file:
         data = json.load(config_file)
         admindash_prefs = data['admin_dashboard']
-        emails = [i.strip().lstrip() for i in admindash_prefs['admin_access']]
+        emails = [i.strip().lstrip() for i in admindash_prefs.get('admin_access', [])]
         columns_exclude = admindash_prefs['data_trips_columns_exclude']
         map_trip_lines_enabled = admindash_prefs['map_trip_lines']
     return emails, map_trip_lines_enabled, columns_exclude

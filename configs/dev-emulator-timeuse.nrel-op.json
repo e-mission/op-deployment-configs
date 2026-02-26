@@ -188,5 +188,6 @@
     "profile_controls": {
         "support_upload": true,
         "trip_end_notification": true
-    }
+    },
+    "admin_dashboard": {}
 }
