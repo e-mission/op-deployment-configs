@@ -55,7 +55,6 @@ export type IntroConfig = {
       summary_line_3: string;
       short_textual_description: string;
       why_we_collect: string;
-      why_we_collect_es?: string; // TODO this seems like it should be removed
       raw_data_use?: string; // oddly, this is ONLY defined for denver-casr
       research_questions: string[];
     };
@@ -104,17 +103,19 @@ export type VehicleIdentity = {
   };
 };
 
+export type ReminderScheme = {
+  schedule: {
+    start: number;
+    end?: number;
+    intervalInDays: number;
+  }[];
+  title?: { [lang: string]: string };
+  text?: { [lang: string]: string };
+  defaultTime?: string; // format is HH:MM in 24 hour time
+};
+
 export type ReminderSchemesConfig = {
-  [schemeKey: string]: {
-    schedule: {
-      start: number;
-      end?: number;
-      intervalInDays: number;
-    }[];
-    title?: { [lang: string]: string };
-    text?: { [lang: string]: string };
-    defaultTime?: string; // format is HH:MM in 24 hour time
-  };
+  [schemeKey: string]: ReminderScheme;
 };
 
 // corresponds to LocationTrackingConfig in e-mission-data-collection
