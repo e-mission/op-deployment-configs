@@ -23,7 +23,7 @@ export type DeploymentConfig = {
   metrics?: MetricsConfig;
   push_notifications?: any; // TODO: fill in
   profile_controls: any; // TODO: fill in
-  admin_dashboard?: any; // TODO: fill in and maybe this should be required; it's only missing from dev-emulator- and stage- configs
+  admin_dashboard: AdminDashboardConfig;
 };
 
 export type ServerConnConfig = {
@@ -177,6 +177,29 @@ export type MetricsConfig = {
     surveys_options?: {};
     travel_options?: {};
   };
+};
+
+export type AdminDashboardConfig = {
+  data_trips_columns_exclude?: string[];
+  additional_trip_columns?: string[];
+  data_uuids_columns_exclude?: string[];
+  data_trajectories_columns_exclude?: string[];
+  token_prefix?: string;
+  token_generate?: boolean;
+  overview_users?: boolean;
+  overview_active_users?: boolean;
+  overview_trips?: boolean;
+  overview_signup_trends?: boolean;
+  overview_trips_trend?: boolean;
+  data_uuids?: boolean;
+  data_trips?: boolean;
+  map_heatmap?: boolean;
+  map_bubble?: boolean;
+  map_trip_lines?: boolean;
+  push_send?: boolean;
+  options_uuids?: boolean;
+  options_emails?: boolean;
+  admin_access?: string[]; // list of email addresses
 };
 
 export default DeploymentConfig;
