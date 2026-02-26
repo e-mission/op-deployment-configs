@@ -32,7 +32,6 @@
                 "summary_line_2": "antes de impulsar cambios en la producción",
                 "summary_line_3": "sin ninguna garantía sobre la retención de datos",
                 "short_textual_description": "Las mejores prácticas de Dev-ops implican configurar un entorno de prueba para probar los cambios en el mundo real antes de que se envíen a producción. Este entorno está diseñado para usarse con versiones provisionales o beta de OpenPATH. NREL no garantiza la retención de datos en este entorno. Utilice el entorno de acceso abierto para comprender su huella de carbono.",
-                "why_we_collect_es": "Para garantizar que el sistema de extremo a extremo funcione correctamente en una variedad de teléfonos del mundo real",
                 "why_we_collect": "Para garantizar que el sistema de extremo a extremo funcione correctamente en una variedad de teléfonos del mundo real",
                 "research_questions": [
                     "Comparando el grupo de acceso abierto (sin intervención) y los programas que brindan intervenciones.",
