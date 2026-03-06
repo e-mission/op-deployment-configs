@@ -1,7 +1,7 @@
 // examples of configs: https://github.com/e-mission/nrel-openpath-deploy-configs/tree/main/configs
 
 export type DeploymentConfig = {
-  url_abbreviation?: string; // TODO: this should probably be required; we could fill it in for old configs based on filename
+  url_abbreviation: string; // this is basically the "deployment ID"
   version: number;
   ts: number;
   server?: ServerConnConfig; // TODO: this is required for any real deployments but missing for dev-emulator- configs, so I have to mark it as optional. Maybe the dev-emulator- configs should explicitly say localhost here so we can mark this as required
@@ -55,7 +55,6 @@ export type IntroConfig = {
       summary_line_3: string;
       short_textual_description: string;
       why_we_collect: string;
-      why_we_collect_es?: string; // TODO this seems like it should be removed
       raw_data_use?: string; // oddly, this is ONLY defined for denver-casr
       research_questions: string[];
     };
@@ -104,17 +103,19 @@ export type VehicleIdentity = {
   };
 };
 
+export type ReminderScheme = {
+  schedule: {
+    start: number;
+    end?: number;
+    intervalInDays: number;
+  }[];
+  title?: { [lang: string]: string };
+  text?: { [lang: string]: string };
+  defaultTime?: string; // format is HH:MM in 24 hour time
+};
+
 export type ReminderSchemesConfig = {
-  [schemeKey: string]: {
-    schedule: {
-      start: number;
-      end?: number;
-      intervalInDays: number;
-    }[];
-    title?: { [lang: string]: string };
-    text?: { [lang: string]: string };
-    defaultTime?: string; // format is HH:MM in 24 hour time
-  };
+  [schemeKey: string]: ReminderScheme;
 };
 
 // corresponds to LocationTrackingConfig in e-mission-data-collection

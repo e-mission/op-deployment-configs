@@ -1,4 +1,5 @@
 {
+    "url_abbreviation": "denver-casr",
     "version": 1,
     "ts": 1655143472,
     "server": {
@@ -47,7 +48,6 @@
                 "summary_line_2": "Como parte del programa de Reembolso de Acción Climática, CASR ofrece incentivos a los residentes de Denver para que compren una bicicleta eléctrica.",
                 "summary_line_3": "Si es un participante del programa, esta aplicación puede ayudarlo a registrar sus viajes y competir contra otros para beneficiar nuestro medio ambiente y proporcionar información importante de Denver que nos permita evaluar la efectividad y el impacto del programa de incentivos de bicicletas eléctricas.",
                 "short_textual_description": "Denver está interesada en recopilar datos sobre el uso de bicicletas eléctricas de los participantes en su programa de reembolso de acción climática que ofrece incentivos para que los residentes de Denver compren bicicletas eléctricas.",
-                "why_we_collect_es": "Denver espera usar esta información para comprender mejor cómo se usan las bicicletas eléctricas, incluida la distancia recorrida, los viajes realizados, la reducción de emisiones asociada y los posibles impactos en la equidad.",
                 "why_we_collect": "Denver espera usar esta información para comprender mejor cómo se usan las bicicletas eléctricas, incluida la distancia recorrida, los viajes realizados, la reducción de emisiones asociada y los posibles impactos en la equidad.",
                 "raw_data_use": "monitorear el programa, planificar modificaciones al programa e impulsar futuras inversiones en infraestructura",
                 "research_questions": [
