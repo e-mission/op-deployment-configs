@@ -3,7 +3,7 @@
     "version": 2,
     "ts": 1728422892,
     "server": {
-        "connectUrl": "https://sm-ebike-openpath.nrel.gov/api/",
+        "connectUrl": "https://sm-ebike-openpath.nlr.gov/api/",
         "aggregate_call_auth": "user_only"
     },
     "opcode": {
@@ -32,7 +32,7 @@
                 "summary_line_1": "Santa Monica’s E-Bike Voucher Program provides low- and moderate- income residents with more sustainable means to travel around the City and encourages residents to replace short car trips with biking trips.",
                 "summary_line_2": "As a program participant, OpenPath will help create a travel diary for you and provide valuable insight on changes in your travel habits after receiving an e-bike.",
                 "summary_line_3": "",
-                "short_textual_description": "Santa Monica’s E-Bike Voucher Program is run by the City’s Office of Sustainability and the Environment (OSE) and provides residents increased access to sustainable transportation. One of the main objectives of the program is to encourage residents to replace short car trips with e-biking trips. By partnering with NREL, OSE hopes to gain insight into the e-bike program’s impact on travel behavior.",
+                "short_textual_description": "Santa Monica’s E-Bike Voucher Program is run by the City’s Office of Sustainability and the Environment (OSE) and provides residents increased access to sustainable transportation. One of the main objectives of the program is to encourage residents to replace short car trips with e-biking trips. By partnering with NLR, OSE hopes to gain insight into the e-bike program’s impact on travel behavior.",
                 "why_we_collect": "The data collected through OpenPath will be used to analyze how receiving an e-bike impacted Santa Monica residents’ travel behavior. It will help the City of Santa Monica quantify reduced Vehicle Miles Travelled (VMT) and carbon reductions associated with the voucher program.",
                 "research_questions": []
             },
@@ -42,7 +42,7 @@
                 "summary_line_1": "El Programa de Vales para Bicicletas Electrónicas de Santa Mónica proporciona a los residentes de bajos y moderados ingresos medios más sostenibles para viajar por la ciudad y anima a los residentes a reemplazar viajes cortos en coche por viajes en bicicleta.",
                 "summary_line_2": "Como participante del programa, OpenPath le ayudará a crear un diario de viaje y le proporcionará información valiosa sobre los cambios en sus hábitos de viaje después de recibir una bicicleta eléctrica.",
                 "summary_line_3": "",
-                "short_textual_description": "El Programa de Vales para Bicicletas Electrónicas de Santa Mónica es administrado por la Oficina de Sostenibilidad y Medio Ambiente (OSE) de la Ciudad y proporciona a los residentes un mayor acceso al transporte sostenible. Uno de los principales objetivos del programa es alentar a los residentes a sustituir los viajes cortos en coche por viajes en bicicleta electrónica. Al asociarse con NREL, OSE espera obtener información sobre el impacto del programa de cupones para bicicletas electrónicas en el comportamiento del viaje.",
+                "short_textual_description": "El Programa de Vales para Bicicletas Electrónicas de Santa Mónica es administrado por la Oficina de Sostenibilidad y Medio Ambiente (OSE) de la Ciudad y proporciona a los residentes un mayor acceso al transporte sostenible. Uno de los principales objetivos del programa es alentar a los residentes a sustituir los viajes cortos en coche por viajes en bicicleta electrónica. Al asociarse con NLR, OSE espera obtener información sobre el impacto del programa de cupones para bicicletas electrónicas en el comportamiento del viaje.",
                 "why_we_collect": "Los datos recopilados a través de OpenPath se utilizarán para analizar cómo recibir una bicicleta electrónica impactó el comportamiento de los residentes de Santa Mónica. Ayudará a la ciudad de Santa Mónica a cuantificar las millas reducidas de vehículos recorridos (VMT) y las reducciones de carbono asociadas con el programa de vales.",
                 "research_questions": []
             }

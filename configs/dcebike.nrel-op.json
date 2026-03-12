@@ -3,7 +3,7 @@
     "version": 1,
     "ts": 1655143472,
     "server": {
-        "connectUrl": "https://dcebike-openpath.nrel.gov/api/",
+        "connectUrl": "https://dcebike-openpath.nlr.gov/api/",
         "aggregate_call_auth": "user_only"
     },
     "opcode": {
@@ -29,7 +29,7 @@
                 "summary_line_1": "The District Department of Transportation (DDOT) and the Council of the District of Columbia aim to equitably increase e-bike ownership in the District and reduce carbon emissions from transportation.",
                 "summary_line_2": "The District Electric Bicycle Incentive Program provides vouchers and rebates to District residents for the purchase of an electric bicycle or electric cargo bicycle (“e- bike”).",
                 "summary_line_3": "If you are a program recipient, this app can help you log your trips and provide valuable information to the District on how e-bikes are being used.",
-                "short_textual_description": "As DDOT and the Council aim to equitably increase e-bike ownership in the District and empower residents with sustainable, affordable ways of getting around, DDOT would like to experiment with an automated (“passive”) trip tracking solution for understanding travel behavior. This program study can allow DDOT and its partner NREL to understand mode shifts and transportation patterns without complex, time-consuming surveys.",
+                "short_textual_description": "As DDOT and the Council aim to equitably increase e-bike ownership in the District and empower residents with sustainable, affordable ways of getting around, DDOT would like to experiment with an automated (“passive”) trip tracking solution for understanding travel behavior. This program study can allow DDOT and its partner NLR to understand mode shifts and transportation patterns without complex, time-consuming surveys.",
                 "why_we_collect": "The data collected during the program will be used to understand how e-bikes are used by recipients, including when and how often as well as distance travelled. It will also help the District understand VMT and carbon reductions as a result of recipients' substituted travel.",
                 "research_questions": [
                     "How much VMT is reduced from program recipients traveling by e-bike instead of driving?",
@@ -43,7 +43,7 @@
                 "summary_line_1": "El Departamento de Transporte del Distrito (DDOT) y el Consejo del Distrito de Columbia tienen como objetivo aumentar de manera equitativa la propiedad de bicicletas eléctricas en el Distrito y reducir las emisiones de carbono del transporte.",
                 "summary_line_2": "El Programa de incentivos para bicicletas eléctricas del distrito ofrece vales y reembolsos a los residentes del distrito por la compra de una bicicleta eléctrica o una bicicleta de carga eléctrica (“e-bike”).",
                 "summary_line_3": "Si es beneficiario del programa, esta aplicación puede ayudarlo a registrar sus viajes y brindar información valiosa al Distrito sobre cómo se utilizan las bicicletas eléctricas.",
-                "short_textual_description": "Mientras el DDOT y el Consejo apuntan a aumentar equitativamente la propiedad de bicicletas eléctricas en el Distrito y capacitar a los residentes con formas sostenibles y asequibles de desplazarse, al DDOT le gustaría experimentar con una solución de seguimiento de viajes automatizada (“pasiva”) para comprender el comportamiento de los viajes. Este estudio del programa puede permitir que el DDOT y su socio NREL comprendan los cambios de modo y los patrones de transporte sin realizar encuestas complejas y que requieran mucho tiempo.",
+                "short_textual_description": "Mientras el DDOT y el Consejo apuntan a aumentar equitativamente la propiedad de bicicletas eléctricas en el Distrito y capacitar a los residentes con formas sostenibles y asequibles de desplazarse, al DDOT le gustaría experimentar con una solución de seguimiento de viajes automatizada (“pasiva”) para comprender el comportamiento de los viajes. Este estudio del programa puede permitir que el DDOT y su socio NLR comprendan los cambios de modo y los patrones de transporte sin realizar encuestas complejas y que requieran mucho tiempo.",
                 "why_we_collect": "Los datos recopilados durante el programa se utilizarán para comprender cómo los destinatarios utilizan las bicicletas eléctricas, incluido cuándo y con qué frecuencia, así como la distancia recorrida. También ayudará al Distrito a comprender el VMT y las reducciones de carbono como resultado de los viajes sustituidos de los destinatarios.",
                 "research_questions": [
                     "¿Cuánto se reduce el VMT a los beneficiarios del programa que viajan en bicicleta eléctrica en lugar de conducir?",
@@ -56,7 +56,7 @@
     "survey_info": {
         "surveys": {
             "UserProfileSurvey": {
-                "formPath": "https://raw.githubusercontent.com/e-mission/nrel-openpath-deploy-configs/main/survey_resources/dcebike/dcebike-onboarding-v2.xml",
+                "formPath": "https://raw.githubusercontent.com/e-mission/op-deployment-configs/main/survey_resources/dcebike/dcebike-onboarding-v2.xml",
                 "version": 1,
                 "compatibleWith": 1,
                 "dataKey": "manual/demographic_survey",

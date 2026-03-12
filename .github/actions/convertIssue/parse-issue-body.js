@@ -276,7 +276,7 @@ export async function parseIssueBody(githubIssueTemplateFile, body) {
     configObject["ts"] = Math.floor(Date.now() / 1000);
 
     let connect_url =
-      "https://" + combinedObject.url_abbreviation + "-openpath.nrel.gov/api/";
+      "https://" + combinedObject.url_abbreviation + "-openpath.nlr.gov/api/";
     configObject["server"] = {
       connectUrl: connect_url,
       aggregate_call_auth: "user_only",

@@ -3,7 +3,7 @@
     "version": 2,
     "ts": 1760371251,
     "server": {
-        "connectUrl": "https://clip-pilot-openpath.nrel.gov/api/",
+        "connectUrl": "https://clip-pilot-openpath.nlr.gov/api/",
         "aggregate_call_auth": "user_only"
     },
     "opcode": {
@@ -47,7 +47,7 @@
     "survey_info": {
         "surveys": {
             "UserProfileSurvey": {
-                "formPath": "https://raw.githubusercontent.com/e-mission/nrel-openpath-deploy-configs/main/survey_resources/clip-pilot/clip-pilot-onboarding-v0.xml",
+                "formPath": "https://raw.githubusercontent.com/e-mission/op-deployment-configs/main/survey_resources/clip-pilot/clip-pilot-onboarding-v0.xml",
                 "version": 1,
                 "compatibleWith": 1,
                 "dataKey": "manual/demographic_survey",

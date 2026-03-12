@@ -9,10 +9,10 @@
         "mode_studied": "e-bike",
         "program_admin_email": "k.shankari@nlr.gov",
         "program_admin_contact": "K. Shankari (k.shankari@nlr.gov)",
-        "deployment_partner_name": "National Renewable Energy Laboratory (NREL)",
+        "deployment_partner_name": "National Laboratory of the Rockies (NLR)",
         "translated_text": {
             "en": {
-                "deployment_partner_name": "National Renewable Energy Laboratory (NREL)",
+                "deployment_partner_name": "National Laboratory of the Rockies (NLR)",
                 "deployment_name": "Development environment (program)",
                 "summary_line_1": "allows developers to work on the OpenPATH app",
                 "summary_line_2": "connect to a local server",

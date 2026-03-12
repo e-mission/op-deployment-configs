@@ -3,7 +3,7 @@
     "version": 1,
     "ts": 1655143472,
     "server": {
-        "connectUrl": "https://denver-casr-openpath.nrel.gov/api/",
+        "connectUrl": "https://denver-casr-openpath.nlr.gov/api/",
         "aggregate_call_auth": "user_only"
     },
     "opcode": {
@@ -160,7 +160,7 @@
     },
     "admin_dashboard": {
         "admin_access": [
-            "K.Shankari@nrel.gov",
+            "K.Shankari@nlr.gov",
             "sue.baldwin@denvergov.org",
             "Mike.Salisbury@denvergov.org"
         ],

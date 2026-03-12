@@ -3,7 +3,7 @@
     "version": 4,
     "ts": 1730230434,
     "server": {
-        "connectUrl": "https://unc-ebike-openpath.nrel.gov/api/",
+        "connectUrl": "https://unc-ebike-openpath.nlr.gov/api/",
         "aggregate_call_auth": "user_only"
     },
     "opcode": {
@@ -62,7 +62,7 @@
     "survey_info": {
         "surveys": {
             "UserProfileSurvey": {
-                "formPath": "https://raw.githubusercontent.com/e-mission/nrel-openpath-deploy-configs/main/survey_resources/unc-ebike/onboarding-v1.xml",
+                "formPath": "https://raw.githubusercontent.com/e-mission/op-deployment-configs/main/survey_resources/unc-ebike/onboarding-v1.xml",
                 "version": 1,
                 "compatibleWith": 1,
                 "dataKey": "manual/demographic_survey",
@@ -74,7 +74,7 @@
         },
         "trip-labels": "MULTILABEL"
     },
-    "label_options": "https://raw.githubusercontent.com/e-mission/nrel-openpath-deploy-configs/main/label_options/unc-ebike-label-options.json",
+    "label_options": "https://raw.githubusercontent.com/e-mission/op-deployment-configs/main/label_options/unc-ebike-label-options.json",
     "display_config": {
         "use_imperial": true
     },
@@ -106,7 +106,7 @@
         "admin_access": [
             "mwbc@unc.edu",
             "palmmatt@unc.edu",
-            "k.shankari@nrel.gov"
+            "k.shankari@nlr.gov"
         ]
     }
 }

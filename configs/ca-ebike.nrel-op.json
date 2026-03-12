@@ -3,7 +3,7 @@
     "version": 2,
     "ts": 1655143472,
     "server": {
-        "connectUrl": "https://ca-ebike-openpath.nrel.gov/api/",
+        "connectUrl": "https://ca-ebike-openpath.nlr.gov/api/",
         "aggregate_call_auth": "user_only"
     },
     "opcode": {
@@ -28,7 +28,7 @@
                 "summary_line_1": "The California Air Resources Board (CARB) aims to incentivize people to adopt energy-efficient, non-polluting modes of transportation and maximize air quality benefits.",
                 "summary_line_2": "In this program, it is providing e-bikes to low-income individuals in communities around the state.",
                 "summary_line_3": "If you are a program Participant, this app can help you log your trips and compete against others to benefit our environment.",
-                "short_textual_description": " As e-bike incentive programs are spreading, NREL would like to experiment with an automated trip tracking solution for understanding travel behavior. This program evaluation can allow NREL to understand variations in travel across centers, days of the week and months of the year without complex, time-consuming surveys.",
+                "short_textual_description": " As e-bike incentive programs are spreading, NLR would like to experiment with an automated trip tracking solution for understanding travel behavior. This program evaluation can allow NLR to understand variations in travel across centers, days of the week and months of the year without complex, time-consuming surveys.",
                 "why_we_collect": "The data collected during the program will be used to understand how e-bikes are used including when and how often as well as distance travelled. This in turn will aid in the estimation of GHG reductio from such incentive programs and new technologies.",
                 "research_questions": [
                     "Travel behavior modeling to support cost-benefit analyses of various potential incentive programs.",
@@ -41,7 +41,7 @@
                 "summary_line_1": "El Consejo de Recursos del Aire de California (CARB) apunta a incentivar a personas adoptar modas de transportacion energía eficientes y no contaminantes y a maximizar los beneficios del calidad del aire.",
                 "summary_line_2": "En este programa, proporciona bicicletas eléctricas a personas de bajos ingresos en comunidades de todo el estado.",
                 "summary_line_3": "Si es un participante del programa, esta aplicación puede ayudarlo a registrar sus viajes y competir contra otros para beneficiar nuestro medio ambiente.",
-                "short_textual_description": "Como programas de incentivos para bicicletas eléctiracas están extendiendo, NREL quiere experimentar con una solución automatizada de seguimiento de viajes para entender comportamiento de viaje. El evaluación del programa se puede permitir a NREL entender variaciones de viaje tras centros, días del semana y meses del año sin encuestas complejos que cuestan mucho tiempo.",
+                "short_textual_description": "Como programas de incentivos para bicicletas eléctiracas están extendiendo, NLR quiere experimentar con una solución automatizada de seguimiento de viajes para entender comportamiento de viaje. El evaluación del programa se puede permitir a NLR entender variaciones de viaje tras centros, días del semana y meses del año sin encuestas complejos que cuestan mucho tiempo.",
                 "why_we_collect": "Los datos recopilados durante el programa se utilizarán para comprender cómo se utilizan las bicicletas eléctricas, incluido cuándo y con qué frecuencia, así como la distancia recorrida. Esto, a su vez, ayudará en la estimación de la reducción de GEI de dichos programas de incentivos y nuevas tecnologías. ",
                 "research_questions": [
                     "Modelado del comportamiento de viaje para apoyar el análisis de costo-beneficio de varios programas de incentivos potenciales.",
@@ -65,7 +65,7 @@
         },
         "trip-labels": "MULTILABEL"
     },
-    "label_options": "https://raw.githubusercontent.com/e-mission/nrel-openpath-deploy-configs/main/label_options/caebike-label-options.json",
+    "label_options": "https://raw.githubusercontent.com/e-mission/op-deployment-configs/main/label_options/caebike-label-options.json",
     "display_config": {
         "use_imperial": true
     },
@@ -97,10 +97,10 @@
         "options_emails": true,
         "admin_access": [
           "dtfitch@ucdavis.edu",
-          "k.shankari@nrel.gov",
+          "k.shankari@nlr.gov",
           "siagarwal@ucdavis.edu",
           "tfukushige@ucdavis.edu",
-          "jack.greenlee@nrel.gov"
+          "jack.greenlee@nlr.gov"
         ]
     }
 }

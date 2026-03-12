@@ -3,7 +3,7 @@
     "version": 1,
     "ts": 1655143472,
     "server": {
-        "connectUrl": "https://open-access-openpath.nrel.gov/api/",
+        "connectUrl": "https://open-access-openpath.nlr.gov/api/",
         "aggregate_call_auth": "user_only"
     },
     "intro": {
@@ -12,29 +12,29 @@
         "start_year": "2022",
         "program_admin_email": "k.shankari@nlr.gov",
         "program_admin_contact": "K. Shankari (k.shankari@nlr.gov)",
-        "deployment_partner_name": "National Renewable Energy Laboratory (NREL)",
+        "deployment_partner_name": "National Laboratory of the Rockies (NLR)",
         "translated_text": {
             "en": {
-                "deployment_partner_name": "National Renewable Energy Laboratory (NREL)",
+                "deployment_partner_name": "National Laboratory of the Rockies (NLR)",
                 "deployment_name": "Open Access Study",
                 "summary_line_1": "enables people to track their travel modes and measure their associated energy use and emissions",
                 "summary_line_2": "makes aggregated data on mode shares, trip frequencies, and carbon footprints available via a public dashboard",
                 "summary_line_3": "serves as a control group while evaluating behavior change of programs.",
-                "short_textual_description": "Transportation is the largest contributor to US greenhouse gas emissions. As the nation's premier facility for energy-efficient transportation R&D solutions, NREL’s sustainable transportation and mobility research takes a whole-system, human-centric approach to solve complex energy challenges and slash greenhouse gas emissions. As part of this approach we collect long-term travel behavior data that tells us how, where and why people travel.",
-                "why_we_collect": "NREL can use this information to understand how travel patterns change in response to federal, state and local interventions. These interventions can include programs, incentives and infrastructure changes. Since the data will be collected for a long time, changes can be directly observed instead of inferred from other data sources. The data can also serve as a control of unmodified behavior for programs that target a small sample of the population.",
+                "short_textual_description": "Transportation is the largest contributor to US greenhouse gas emissions. As the nation's premier facility for energy-efficient transportation R&D solutions, NLR’s sustainable transportation and mobility research takes a whole-system, human-centric approach to solve complex energy challenges and slash greenhouse gas emissions. As part of this approach we collect long-term travel behavior data that tells us how, where and why people travel.",
+                "why_we_collect": "NLR can use this information to understand how travel patterns change in response to federal, state and local interventions. These interventions can include programs, incentives and infrastructure changes. Since the data will be collected for a long time, changes can be directly observed instead of inferred from other data sources. The data can also serve as a control of unmodified behavior for programs that target a small sample of the population.",
                 "research_questions": [
                     "Comparing the open-access group (no intervention) and programs that provide interventions.",
                     "General monitoring of mobility trends for travel behavior, including shifts to travel behavior and the introduction of new mobility modes."
                 ]
             },
             "es": {
-                "deployment_partner_name": "Laboratorio Nacional de Energías Renovables (NREL)",
+                "deployment_partner_name": "Laboratorio Nacional de las Rocosas (NLR)",
                 "deployment_name": "Estudio de acceso abierto",
                 "summary_line_1": "permite a las personas realizar un seguimiento de sus modos de viaje y medir su uso de energía y emisiones asociadas",
                 "summary_line_2": "hace que los datos agregados sobre modos compartidos, frecuencias de viaje y huellas de carbono estén disponibles a través de un tablero público",
                 "summary_line_3": "sirve como un grupo de control al evaluar el cambio de comportamiento de los programas",
-                "short_textual_description": "El transporte es el mayor contribuyente a las emisiones de gases de efecto invernadero de EE. UU. Como la principal instalación del país para soluciones de investigación y desarrollo de transporte eficiente en energía, la investigación de movilidad y transporte sostenible de NREL adopta un enfoque de sistema completo centrado en el ser humano para resolver desafíos energéticos complejos y reducir las emisiones de gases de efecto invernadero. Como parte de este enfoque, recopilamos datos de comportamiento de viaje a largo plazo que nos digan cómo, dónde y por qué viaja la gente.",
-                "why_we_collect": "NREL puede usar esta información para comprender cómo cambian los patrones de viaje en respuesta a las intervenciones federales, estatales y locales. Las intervenciones pueden incluyen programas, incentivos y cambios de infraestructura. Dado que estos datos serán recopilarse durante mucho tiempo, los cambios se pueden observar directamente en lugar de inferido de otras fuentes de datos. Estos datos también pueden servir como control de comportamiento no modificado para programas que se dirigen a una pequeña muestra de la población.",
+                "short_textual_description": "El transporte es el mayor contribuyente a las emisiones de gases de efecto invernadero de EE. UU. Como la principal instalación del país para soluciones de investigación y desarrollo de transporte eficiente en energía, la investigación de movilidad y transporte sostenible de NLR adopta un enfoque de sistema completo centrado en el ser humano para resolver desafíos energéticos complejos y reducir las emisiones de gases de efecto invernadero. Como parte de este enfoque, recopilamos datos de comportamiento de viaje a largo plazo que nos digan cómo, dónde y por qué viaja la gente.",
+                "why_we_collect": "NLR puede usar esta información para comprender cómo cambian los patrones de viaje en respuesta a las intervenciones federales, estatales y locales. Las intervenciones pueden incluyen programas, incentivos y cambios de infraestructura. Dado que estos datos serán recopilarse durante mucho tiempo, los cambios se pueden observar directamente en lugar de inferido de otras fuentes de datos. Estos datos también pueden servir como control de comportamiento no modificado para programas que se dirigen a una pequeña muestra de la población.",
                 "research_questions": [
                     "Comparando el grupo de acceso abierto (sin intervención) y los programas que brindan intervenciones.",
                     "Monitoreo general de las tendencias de movilidad para el comportamiento de viaje, incluidos los cambios en el comportamiento de viaje y la introducción de nuevos modos de movilidad."

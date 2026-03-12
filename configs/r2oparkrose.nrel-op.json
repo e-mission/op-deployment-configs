@@ -3,7 +3,7 @@
     "version": 1,
     "ts": 1714080310,
     "server": {
-        "connectUrl": "https://r2oparkrose-openpath.nrel.gov/api/",
+        "connectUrl": "https://r2oparkrose-openpath.nlr.gov/api/",
         "aggregate_call_auth": "user_only"
     },
     "opcode": {

@@ -3,7 +3,7 @@
     "version": 1,
     "ts": 1655143472,
     "server": {
-        "connectUrl": "https://openpath-stage.nrel.gov/api/",
+        "connectUrl": "https://openpath-stage.nlr.gov/api/",
         "aggregate_call_auth": "user_only"
     },
     "intro": {
@@ -12,15 +12,15 @@
         "start_year": "2020",
         "program_admin_email": "k.shankari@nlr.gov",
         "program_admin_contact": "K. Shankari (k.shankari@nlr.gov)",
-        "deployment_partner_name": "National Renewable Energy Laboratory (NREL)",
+        "deployment_partner_name": "National Laboratory of the Rockies (NLR)",
         "translated_text": {
             "en": {
-                "deployment_partner_name": "National Renewable Energy Laboratory (NREL)",
+                "deployment_partner_name": "National Laboratory of the Rockies (NLR)",
                 "deployment_name": "Staging environment for testing studies only",
                 "summary_line_1": "allows real-world testing of the app in study mode",
                 "summary_line_2": "before pushing changes to production",
                 "summary_line_3": "without any guarantees about retaining data",
-                "short_textual_description": "Dev-ops best practices involve setting up a staging environment to test changes in the real world before they are pushed out to production. This environment is designed for use with staging or beta versions of the OpenPATH. NREL makes no guarantees about data retention on this environment. Please use the Open Access environment to understand your carbon footprint.",
+                "short_textual_description": "Dev-ops best practices involve setting up a staging environment to test changes in the real world before they are pushed out to production. This environment is designed for use with staging or beta versions of the OpenPATH. NLR makes no guarantees about data retention on this environment. Please use the Open Access environment to understand your carbon footprint.",
                 "why_we_collect": "To ensure that the end-to-end system works properly on a variety of real-world phones",
                 "research_questions": [
                     "Comparing the open-access group (no intervention) and programs that provide interventions.",
@@ -28,12 +28,12 @@
                 ]
             },
             "es": {
-                "deployment_partner_name": "Laboratorio Nacional de Energías Renovables (NREL)",
+                "deployment_partner_name": "Laboratorio Nacional de las Rocosas (NLR)",
                 "deployment_name": "Entorno de ensayo solo para estudios de prueba",
                 "summary_line_1": "permite realizar pruebas en el mundo real de la aplicación en modo de estudio",
                 "summary_line_2": "antes de impulsar cambios en la producción",
                 "summary_line_3": "sin ninguna garantía sobre la retención de datos",
-                "short_textual_description": "Las mejores prácticas de Dev-ops implican configurar un entorno de prueba para probar los cambios en el mundo real antes de que se envíen a producción. Este entorno está diseñado para usarse con versiones provisionales o beta de OpenPATH. NREL no garantiza la retención de datos en este entorno. Utilice el entorno de acceso abierto para comprender su huella de carbono.",
+                "short_textual_description": "Las mejores prácticas de Dev-ops implican configurar un entorno de prueba para probar los cambios en el mundo real antes de que se envíen a producción. Este entorno está diseñado para usarse con versiones provisionales o beta de OpenPATH. NLR no garantiza la retención de datos en este entorno. Utilice el entorno de acceso abierto para comprender su huella de carbono.",
                 "why_we_collect": "Para garantizar que el sistema de extremo a extremo funcione correctamente en una variedad de teléfonos del mundo real",
                 "research_questions": [
                     "Comparando el grupo de acceso abierto (sin intervención) y los programas que brindan intervenciones.",

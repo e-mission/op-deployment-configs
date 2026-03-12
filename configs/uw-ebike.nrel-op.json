@@ -3,7 +3,7 @@
     "version": 2,
     "ts": 1741377085,
     "server": {
-        "connectUrl": "https://uw-ebike-openpath.nrel.gov/api/",
+        "connectUrl": "https://uw-ebike-openpath.nlr.gov/api/",
         "aggregate_call_auth": "user_only"
     },
     "opcode": {
@@ -52,7 +52,7 @@
     "survey_info": {
         "surveys": {
             "UserProfileSurvey": {
-                "formPath": "https://raw.githubusercontent.com/e-mission/nrel-openpath-deploy-configs/main/survey_resources/uw-ebike/uw-ebike-onboarding-v0.xml",
+                "formPath": "https://raw.githubusercontent.com/e-mission/op-deployment-configs/main/survey_resources/uw-ebike/uw-ebike-onboarding-v0.xml",
                 "version": 1,
                 "compatibleWith": 1,
                 "dataKey": "manual/demographic_survey",
