@@ -3,7 +3,7 @@
     "version": 1,
     "ts": 1655143472,
     "server": {
-        "connectUrl": "https://nrel-commute-openpath.nrel.gov/api/",
+        "connectUrl": "https://nrel-commute-openpath.nlr.gov/api/",
         "aggregate_call_auth": "user_only"
     },
     "intro": {
@@ -19,7 +19,7 @@
                 "deployment_name": "Commuting Study",
                 "summary_line_1": "allows Campus Mobility to understand how people get to work at different times of the year",
                 "summary_line_2": "supports complex schedules permitted by the 'Future of Work' including partial work from home",
-                "summary_line_3": "allows the lab to track progress towards the <a href='https://www.nrel.gov/about/net-zero-labs.html'>Net-Zero Labs goal</a> in the transportation domain",
+                "summary_line_3": "allows the lab to track progress towards the <a href='https://www.nlr.gov/about/net-zero-labs.html'>Net-Zero Labs goal</a> in the transportation domain",
                 "short_textual_description": "As commute schedules get increasingly complex in our “Future of Work”, NLR would like to experiment with an automated trip tracking solution for understanding travel behavior. This Commuting Study (“Study”) can allow NLR to understand variations in travel across centers, days of the week and months of the year without complex, time-consuming surveys.",
                 "why_we_collect": "NLR can use this information to understand how people get to work, what their constraints are, and how to better provide alternative options to driving alone. This comprehensive information will aid NLR in its goal to reduce carbon emissions from transportation.",
                 "research_questions": [

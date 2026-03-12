@@ -3,7 +3,7 @@
     "version": 7,
     "ts": 1741122104,
     "server": {
-        "connectUrl": "https://walk-study-psu-openpath.nrel.gov/api/",
+        "connectUrl": "https://walk-study-psu-openpath.nlr.gov/api/",
         "aggregate_call_auth": "user_only"
     },
     "opcode": {

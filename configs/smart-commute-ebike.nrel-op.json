@@ -3,7 +3,7 @@
     "version": 1,
     "ts": 1655143472,
     "server": {
-        "connectUrl": "https://smart-commute-ebike-openpath.nrel.gov/api/",
+        "connectUrl": "https://smart-commute-ebike-openpath.nlr.gov/api/",
         "aggregate_call_auth": "user_only"
     },
     "intro": {
@@ -95,8 +95,8 @@
         ],
         "admin_access": [
             "jeanne@smartcommute.org",
-            "jianli.gu@nrel.gov",
-            "k.shankari@nrel.gov"
+            "jianli.gu@nlr.gov",
+            "k.shankari@nlr.gov"
         ]
     }
 }

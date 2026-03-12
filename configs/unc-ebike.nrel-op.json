@@ -3,7 +3,7 @@
     "version": 4,
     "ts": 1730230434,
     "server": {
-        "connectUrl": "https://unc-ebike-openpath.nrel.gov/api/",
+        "connectUrl": "https://unc-ebike-openpath.nlr.gov/api/",
         "aggregate_call_auth": "user_only"
     },
     "opcode": {
@@ -106,7 +106,7 @@
         "admin_access": [
             "mwbc@unc.edu",
             "palmmatt@unc.edu",
-            "k.shankari@nrel.gov"
+            "k.shankari@nlr.gov"
         ]
     }
 }

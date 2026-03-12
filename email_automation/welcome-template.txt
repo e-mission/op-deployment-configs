@@ -6,8 +6,8 @@
 <br>
  <strong>Your admin dashboard can be found at:</strong> <br>
  <br>
-    <a href='https://<filename>-openpath.nrel.gov/admin/'>
-    https://<filename>-openpath.nrel.gov/admin/</a>.<br>
+    <a href='https://<filename>-openpath.nlr.gov/admin/'>
+    https://<filename>-openpath.nlr.gov/admin/</a>.<br>
     <br>
     An account has been created for you with AWS Cognito. Please log in and change your 
     temporary password:<br>

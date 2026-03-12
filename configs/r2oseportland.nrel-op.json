@@ -3,7 +3,7 @@
     "version": 1,
     "ts": 1743723406,
     "server": {
-        "connectUrl": "https://r2oseportland-openpath.nrel.gov/api/",
+        "connectUrl": "https://r2oseportland-openpath.nlr.gov/api/",
         "aggregate_call_auth": "user_only"
     },
     "opcode": {
@@ -86,7 +86,7 @@
             "madi@thestreettrust.org",
             "burgin@thestreettrust.org",
             "sophie@thestreettrust.org",
-            "jack.greenlee@nrel.gov"
+            "jack.greenlee@nlr.gov"
         ]
     }
 }

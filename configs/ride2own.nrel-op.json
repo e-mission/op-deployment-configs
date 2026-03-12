@@ -3,7 +3,7 @@
     "version": 1,
     "ts": 1655143472,
     "server": {
-        "connectUrl": "https://ride2own-openpath.nrel.gov/api/",
+        "connectUrl": "https://ride2own-openpath.nlr.gov/api/",
         "aggregate_call_auth": "user_only"
     },
     "opcode": {
@@ -68,7 +68,7 @@
             "quincy@weallrisegroup.com",
             "madi@thestreettrust.org",
             "sophie@thestreettrust.org",
-            "k.shankari@nrel.gov"
+            "k.shankari@nlr.gov"
         ],
         "overview_users": true,
         "overview_active_users": true,

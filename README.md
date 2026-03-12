@@ -15,7 +15,7 @@ When your new config submission is accepted and merged, we will set up your envi
 
 ### Reviewing and testing
 If you just want to try out the app functionality to see if it would be a good fit for your project, you can:
-- Join the open-access environment (https://open-access-openpath.nrel.gov/join),
+- Join the open-access environment (https://open-access-openpath.nlr.gov/join),
 
   -OR-
 
@@ -44,7 +44,7 @@ If you are here to preview/review/beta test the app functionality, please use th
 
 If you want to experiment with the stage environment for _programs_ please use the stage program environment (see instructions above for requesting access)
 
-If you are here to test out the app on your personal phone, please use the open-access environment (https://open-access-openpath.nrel.gov/join)
+If you are here to test out the app on your personal phone, please use the open-access environment (https://open-access-openpath.nlr.gov/join)
 
 In general, if you are planning to keep the app installed for less than a day, please use stage so you don't pollute the real dataset.
 
@@ -69,7 +69,7 @@ Example config format (with default values) is:
 {
     "version": 1,
     "server": {
-        "url": "https://openpath-stage.nrel.gov/api/",
+        "url": "https://openpath-stage.nlr.gov/api/",
         "aggregate_call_auth": "user_only"
     },
     "intro": {

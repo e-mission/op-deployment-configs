@@ -3,7 +3,7 @@
     "version": 1,
     "ts": 1655143472,
     "server": {
-        "connectUrl": "https://ccebikes-openpath.nrel.gov/api/",
+        "connectUrl": "https://ccebikes-openpath.nlr.gov/api/",
         "aggregate_call_auth": "user_only"
     },
     "opcode": {
@@ -104,7 +104,7 @@
         "admin_access": [
             "janej@communitycycles.org",
             "sandee@communitycycles.org",
-            "k.shankari@nrel.gov"
+            "k.shankari@nlr.gov"
         ]
     }
 }

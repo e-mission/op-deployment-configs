@@ -3,7 +3,7 @@
     "version": 2,
     "ts": 1710526862,
     "server": {
-        "connectUrl": "https://cosa-ebike-project-openpath.nrel.gov/api/",
+        "connectUrl": "https://cosa-ebike-project-openpath.nlr.gov/api/",
         "aggregate_call_auth": "user_only"
     },
     "opcode": {

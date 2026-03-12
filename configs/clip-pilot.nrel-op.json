@@ -3,7 +3,7 @@
     "version": 2,
     "ts": 1760371251,
     "server": {
-        "connectUrl": "https://clip-pilot-openpath.nrel.gov/api/",
+        "connectUrl": "https://clip-pilot-openpath.nlr.gov/api/",
         "aggregate_call_auth": "user_only"
     },
     "opcode": {

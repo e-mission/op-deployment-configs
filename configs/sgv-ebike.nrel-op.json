@@ -3,7 +3,7 @@
     "version": 2,
     "ts": 1741368160,
     "server": {
-        "connectUrl": "https://sgv-ebike-openpath.nrel.gov/api/",
+        "connectUrl": "https://sgv-ebike-openpath.nlr.gov/api/",
         "aggregate_call_auth": "user_only"
     },
     "opcode": {

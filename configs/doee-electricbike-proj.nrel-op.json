@@ -3,7 +3,7 @@
     "version": 1,
     "ts": 1707330356,
     "server": {
-        "connectUrl": "https://doee-electricbike-proj-openpath.nrel.gov/api/",
+        "connectUrl": "https://doee-electricbike-proj-openpath.nlr.gov/api/",
         "aggregate_call_auth": "user_only"
     },
     "opcode": {

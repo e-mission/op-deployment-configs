@@ -3,7 +3,7 @@
     "version": 1,
     "ts": 1714679651,
     "server": {
-        "connectUrl": "https://godcgo-openpath.nrel.gov/api/",
+        "connectUrl": "https://godcgo-openpath.nlr.gov/api/",
         "aggregate_call_auth": "user_only"
     },
     "opcode": {

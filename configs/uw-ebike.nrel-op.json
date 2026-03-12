@@ -3,7 +3,7 @@
     "version": 2,
     "ts": 1741377085,
     "server": {
-        "connectUrl": "https://uw-ebike-openpath.nrel.gov/api/",
+        "connectUrl": "https://uw-ebike-openpath.nlr.gov/api/",
         "aggregate_call_auth": "user_only"
     },
     "opcode": {
