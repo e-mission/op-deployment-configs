@@ -11,16 +11,40 @@ logger.setLevel(logging.INFO)
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    group = parser.add_mutually_exclusive_group(required=True)
-    group.add_argument('-l', '--local',
-                       help = 'Running locally. Provide full path to config file + install boto3 prior to running.' )
-    group.add_argument('-g', '--github',
+    auth_group = parser.add_mutually_exclusive_group(required=True)
+    auth_group.add_argument('-l', '--local',
+                       action='store_true',
+                       help = 'Running locally. Reads AWS credentials from environment variables.' )
+    auth_group.add_argument('-g', '--github',
+                       action='store_true',
                        help = 'Must be run on GitHub. To run locally, use -l argument.') 
+    
+    parser.add_argument('-p', '--pool-name',
+                       help = 'Cognito user pool name (e.g. nrelopenpath-prod-myprogram). If not provided, derived from config filename.')
+    parser.add_argument('-c', '--config',
+                       help = 'Path to config file. If not provided, uses positional argument.')
+    parser.add_argument('filepath', nargs='?',
+                       help = 'Config file path (positional, optional if -c is provided)')
+    
     args = parser.parse_args()
-    filepath_raw = sys.argv[2]
+    
+    # Determine config path
+    if args.config:
+        filepath_raw = args.config
+    elif args.filepath:
+        filepath_raw = args.filepath
+    else:
+        parser.error("Must provide either a config file path (positional argument or -c flag)")
+    
     filename_raw = filepath_raw.split("/")[-1]
     filename = filename_raw.split('.')[0]
-    pool_name = "nrelopenpath-prod-" + filename
+    
+    # Determine pool name
+    if args.pool_name:
+        pool_name = args.pool_name
+    else:
+        pool_name = "nrelopenpath-prod-" + filename
+    
     current_path = os.path.dirname(__file__)
     maindir = current_path.rsplit("/",1)[0]
     config_path = filepath_raw if args.local else maindir + f'/configs/{filename_raw}'
