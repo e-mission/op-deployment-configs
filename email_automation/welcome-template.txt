@@ -15,6 +15,8 @@
     Username: {username}
     Temporary Password: {####}
     <br>
+    Please note that your username and temporary password are case-sensitive.
+    <br>
     <br>
         The login to the admin dashboard uses 2-factor authentication. You will have to install an authenticator app (e.g. Microsoft Authenticator, Google Authenticator) to receive One Time Passcodes (OTP) every time you want to log in. This is a requirement from NLR Cyber to ensure that the data access to individual user information is secure.<br>
       <br>
