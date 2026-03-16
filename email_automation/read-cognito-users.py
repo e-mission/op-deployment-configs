@@ -1,9 +1,9 @@
-import boto3
-from botocore.exceptions import ClientError
-import os
+import botocore.exceptions as be
 import logging
 import sys
 import argparse
+
+import cognito_common as cc
 
 logger = logging.getLogger()
 logger.setLevel(logging.INFO)
@@ -39,78 +39,12 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     if args.config:
-        filepath_raw = args.config
-        filename_raw = filepath_raw.split("/")[-1]
-        filename = filename_raw.split('.')[0]
-        pool_name = "nrelopenpath-prod-" + filename
+        program_name = cc.derive_program_name_from_config(args.config)
+        pool_name = cc.derive_pool_name_from_config(program_name)
     else:
         pool_name = args.pool_name
 
-if args.local:
-    ACCESS = os.environ.get("AWS_ACCESS_KEY_ID")
-    SECRET = os.environ.get("AWS_SECRET_ACCESS_KEY")
-    TOKEN = os.environ.get("AWS_SESSION_TOKEN")
-    AWS_REGION = "us-west-2"
-
-    cognito_client = boto3.client(
-        'cognito-idp',
-        aws_access_key_id=ACCESS,
-        aws_secret_access_key=SECRET,
-        aws_session_token=TOKEN,
-        region_name=AWS_REGION
-    )
-
-if args.github:
-    AWS_REGION = os.environ.get("AWS_REGION")
-    cognito_client = boto3.client('cognito-idp', region_name=AWS_REGION)
-
-
-def read_userpool_obj_list_on_all_pages(cognito_client):
-    # From https://stackoverflow.com/a/64698263
-    response = cognito_client.list_user_pools(MaxResults=60)
-    next_token = response.get("NextToken", None)
-    print(f'Received response with {len(response["UserPools"])=} and {next_token=}')
-    user_pool_obj_list = response["UserPools"]
-    while next_token is not None:
-        response = cognito_client.list_user_pools(NextToken=next_token, MaxResults=60)
-        next_token = response.get("NextToken", None)
-        print(f'Received response with {len(response["UserPools"])=} & {next_token=}')
-        user_pool_obj_list.extend(response["UserPools"])
-    return user_pool_obj_list
-
-
-def get_userpool_id(pool_name, cognito_client):
-    all_user_pools = read_userpool_obj_list_on_all_pages(cognito_client)
-    pool_names = [user_pool["Name"] for user_pool in all_user_pools]
-    if pool_name not in pool_names:
-        return False, None
-    pool_index = pool_names.index(pool_name)
-    pool_id = all_user_pools[pool_index]["Id"]
-    return True, pool_id
-
-
-def get_all_users(pool_id, cognito_client):
-    """List all users in the pool, handling pagination."""
-    try:
-        response = cognito_client.list_users(UserPoolId=pool_id)
-        users = response["Users"]
-        pagination_token = response.get("PaginationToken", None)
-        while pagination_token is not None:
-            response = cognito_client.list_users(
-                UserPoolId=pool_id,
-                PaginationToken=pagination_token
-            )
-            users.extend(response["Users"])
-            pagination_token = response.get("PaginationToken", None)
-        return users
-    except ClientError as err:
-        logger.error(
-            "Couldn't list users for %s. Here's why: %s: %s",
-            pool_id,
-            err.response["Error"]["Code"],
-            err.response["Error"]["Message"],
-        )
-        raise
+cognito_client = cc.build_cognito_client(args.local)
 
 
 def display_user(user):
@@ -120,13 +54,22 @@ def display_user(user):
 
 
 ######################################################################
-is_userpool_exist, pool_id = get_userpool_id(pool_name, cognito_client)
+is_userpool_exist, pool_id = cc.get_userpool_id(pool_name, cognito_client, verbose=True)
 
 if not is_userpool_exist:
     print(f"{pool_name} does not exist. Check the pool name and try again.")
     sys.exit(1)
 
-users = get_all_users(pool_id, cognito_client)
+try:
+    users = cc.get_all_users(pool_id, cognito_client)
+except be.ClientError as err:
+    logger.error(
+        "Couldn't list users for %s. Here's why: %s: %s",
+        pool_id,
+        err.response["Error"]["Code"],
+        err.response["Error"]["Message"],
+    )
+    raise
 print(f"\nUser pool: {pool_name}  ({pool_id})")
 print(f"Total users: {len(users)}\n")
 print("-" * 60)
