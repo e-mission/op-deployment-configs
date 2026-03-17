@@ -1,7 +1,53 @@
 import os
+import re
 
 import boto3
 
+# TODO: Filter this down to only the fields that are overridden from defaults
+# when the pool is created. A concern with that might be if the default values change between creation and update.
+# But a concern with this is keeping the list of fields maintained.
+# this is just a shitty decision by AWS and doesn't have a great solution unless they have a programmatic way to 
+# indicate keys and their defaults.
+# Otherwise, we just need to check this list every time before we run any update scripts.
+# The update scripts will be run manually and rarely, so that shouldn't be too much of a burden, as long as we can remember to do it.
+UPDATE_USER_POOL_FIELDS = (
+    "Policies",
+    "DeletionProtection",
+    "LambdaConfig",
+    "AutoVerifiedAttributes",
+    "SmsVerificationMessage",
+    "EmailVerificationMessage",
+    "EmailVerificationSubject",
+    "VerificationMessageTemplate",
+    "SmsAuthenticationMessage",
+    "UserAttributeUpdateSettings",
+    "MfaConfiguration",
+    "DeviceConfiguration",
+    "EmailConfiguration",
+    "SmsConfiguration",
+    "UserPoolTags",
+    "AdminCreateUserConfig",
+    "UserPoolAddOns",
+    "AccountRecoverySetting",
+    "PoolName",
+    "UserPoolTier",
+)
+
+def validate_check_done():
+    print("""WARNING! This script relies on a hardcoded set of fields ('UPDATE_USER_POOL_FIELDS') that are defined in cognito_common.py.
+            Fields that are not in that list will be reset to their defaults.
+            Before running this script, you must double-check this list against the list of fields that are overridden during creation,
+            and any changes to the defaults since the last time you ran the script.
+        Confirm that you have checked this list by typing '<username> LIST IS FINE' (case-sensitive)""")
+    confirm_text = input("Requested text: ")
+    match = re.fullmatch(r"(?P<username>\w+) LIST IS FINE", confirm_text)
+    if match:
+        username = match.group("username")
+        print(f"Running script as user {username}")
+        return username
+    else:
+        print("Error: expected format '<username> LIST IS FINE'")
+        return None
 
 def derive_program_name_from_config(config_path):
     return os.path.basename(config_path).split(".")[0]
@@ -94,3 +140,21 @@ def get_all_users(pool_id, cognito_client):
         users.extend(response["Users"])
         pagination_token = response.get("PaginationToken", None)
     return users
+
+
+def build_user_pool_update_request(user_pool, src_key, dst_key, dst_value):
+    update_request = {"UserPoolId": user_pool["Id"]}
+    for field_name in UPDATE_USER_POOL_FIELDS:
+        source_name = "Name" if field_name == "PoolName" else field_name
+        field_value = user_pool.get(source_name)
+        if field_value is not None:
+            update_request[field_name] = field_value
+
+    if dst_value is None:
+        raise ValueError(f"ERROR: {dst_value=} when building user pool update request")
+    
+    merged_dst_value = dict(user_pool.get(src_key) or {})
+    merged_dst_value.update(dst_value)
+    update_request[dst_key] = merged_dst_value
+
+    return update_request

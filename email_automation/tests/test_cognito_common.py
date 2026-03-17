@@ -118,6 +118,80 @@ class TestCognitoCommon(unittest.TestCase):
         self.assertIsNone(client)
         mock_client.assert_not_called()
 
+    def test_build_user_pool_update_request(self):
+        user_pool = {
+            "Id": "us-west-2_abc123",
+            "Name": "test-pool",
+            "Policies": {"PasswordPolicy": {"MinimumLength": 8}},
+            "EmailConfiguration": {"SourceArn": "arn:aws:ses:us-west-2:123456789012:identity/old@example.com"},
+        }
+        email_configuration = {
+            "SourceArn": "arn:aws:ses:us-west-2:123456789012:identity/new@example.com"
+        }
+
+        result = cc.build_user_pool_update_request(user_pool, "EmailConfiguration", "EmailConfiguration", email_configuration)
+
+        self.assertEqual(result["UserPoolId"], "us-west-2_abc123")
+        self.assertEqual(result["PoolName"], "test-pool")
+        self.assertIn("Policies", result)
+        self.assertEqual(
+            result["EmailConfiguration"]["SourceArn"],
+            "arn:aws:ses:us-west-2:123456789012:identity/new@example.com"
+        )
+
+    def test_build_user_pool_update_request_different_key(self):
+        user_pool = {
+            "Id": "us-west-2_def456",
+            "Name": "test-pool-2",
+            "Policies": {"PasswordPolicy": {"MinimumLength": 8}},
+            "SmsConfiguration": {
+                "ExternalId": "old-external-id",
+                "SnsCallerArn": "arn:aws:iam::123456789012:role/old-role",
+            },
+        }
+        sms_configuration = {
+            "ExternalId": "new-external-id",
+        }
+
+        result = cc.build_user_pool_update_request(
+            user_pool,
+            "SmsConfiguration",
+            "SmsConfiguration",
+            sms_configuration,
+        )
+
+        self.assertEqual(result["UserPoolId"], "us-west-2_def456")
+        self.assertEqual(result["PoolName"], "test-pool-2")
+        self.assertIn("Policies", result)
+        self.assertEqual(result["SmsConfiguration"]["ExternalId"], "new-external-id")
+        self.assertEqual(
+            result["SmsConfiguration"]["SnsCallerArn"],
+            "arn:aws:iam::123456789012:role/old-role",
+        )
+
+    @patch("builtins.input", return_value="alice LIST IS FINE")
+    @patch("builtins.print")
+    def test_validate_check_done_success(self, mock_print, _mock_input):
+        username = cc.validate_check_done()
+
+        self.assertEqual(username, "alice")
+        mock_print.assert_any_call("Running script as user alice")
+
+    @patch("builtins.input", return_value="bad confirmation text")
+    @patch("builtins.print")
+    def test_validate_check_done_failure(self, mock_print, _mock_input):
+        username = cc.validate_check_done()
+
+        self.assertIsNone(username)
+        mock_print.assert_any_call("Error: expected format '<username> LIST IS FINE'")
+
+    @patch("builtins.input", return_value="alice LIST IS FINE and I didn't check")
+    @patch("builtins.print")
+    def test_validate_check_done_extra_text(self, mock_print, _mock_input):
+        username = cc.validate_check_done()
+
+        self.assertIsNone(username)
+        mock_print.assert_any_call("Error: expected format '<username> LIST IS FINE'")
 
 if __name__ == "__main__":
     unittest.main()
