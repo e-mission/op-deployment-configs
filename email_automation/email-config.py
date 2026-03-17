@@ -1,86 +1,68 @@
-import boto3
-from botocore.exceptions import ClientError
+import botocore.exceptions as be
 import json
 import os
 import logging
-import sys
 import argparse
+
+
 logger = logging.getLogger()
 logger.setLevel(logging.INFO)
 # If you don't have boto3 installed, make sure to `pip install boto3` before running this script. 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    group = parser.add_mutually_exclusive_group(required=True)
-    group.add_argument('-l', '--local',
-                       help = 'Running locally. Provide full path to config file + install boto3 prior to running.' )
-    group.add_argument('-g', '--github',
+    auth_group = parser.add_mutually_exclusive_group(required=True)
+    auth_group.add_argument('-l', '--local',
+                       action='store_true',
+                       help = 'Running locally. Reads AWS credentials from environment variables.' )
+    auth_group.add_argument('-g', '--github',
+                       action='store_true',
                        help = 'Must be run on GitHub. To run locally, use -l argument.') 
+    
+    parser.add_argument('-p', '--pool-name',
+                       help = 'Cognito user pool name (e.g. nrelopenpath-prod-myprogram). If not provided, derived from config filename.')
+    parser.add_argument('-c', '--config',
+                       help = 'Path to config file. If not provided, uses positional argument.')
+    parser.add_argument('filepath', nargs='?',
+                       help = 'Config file path (positional, optional if -c is provided)')
+    parser.add_argument('-q', '--quiet',
+                       action='store_true',
+                       help = 'Suppress pagination progress while listing user pools.')
+    
     args = parser.parse_args()
-    filepath_raw = sys.argv[2]
-    filename_raw = filepath_raw.split("/")[-1]
-    filename = filename_raw.split('.')[0]
-    pool_name = "nrelopenpath-prod-" + filename
+    import cognito_common as cc
+    
+    # Determine config path
+    if args.config:
+        filepath_raw = args.config
+    elif args.filepath:
+        filepath_raw = args.filepath
+    else:
+        parser.error("Must provide either a config file path (positional argument or -c flag)")
+
+    program_name = cc.derive_program_name_from_config(filepath_raw)
+    
+    # Determine pool name
+    if args.pool_name:
+        pool_name = args.pool_name
+    else:
+        pool_name = cc.derive_pool_name_from_config(program_name)
+    
     current_path = os.path.dirname(__file__)
     maindir = current_path.rsplit("/",1)[0]
-    config_path = filepath_raw if args.local else maindir + f'/configs/{filename_raw}'
+    config_path = cc.derive_config_path(filepath_raw, args.local, __file__)
 
-if args.local:
-    #Set up AWS credentials as environment variables + set variables 
-    ACCESS = os.environ.get("AWS_ACCESS_KEY_ID")
-    SECRET = os.environ.get("AWS_SECRET_ACCESS_KEY")
-    TOKEN = os.environ.get("AWS_SESSION_TOKEN")
-    AWS_REGION = "us-west-2"
-
-    #Set up clients
-    cognito_client = boto3.client(
-        'cognito-idp',
-        aws_access_key_id = ACCESS,
-        aws_secret_access_key= SECRET,
-        aws_session_token=TOKEN, 
-        region_name=AWS_REGION
-        )
-
-    sts_client = boto3.client(
-        'sts',
-        aws_access_key_id = ACCESS,
-        aws_secret_access_key= SECRET,
-        aws_session_token=TOKEN, 
-        region_name=AWS_REGION
-        )
-if args.github:
-    AWS_REGION = os.environ.get("AWS_REGION")
-    cognito_client = boto3.client('cognito-idp', region_name=AWS_REGION)
-    sts_client = ''
-
-def read_userpool_obj_list_on_all_pages(cognito_client):
-    # From https://stackoverflow.com/a/64698263
-    response = cognito_client.list_user_pools(MaxResults=60)
-    next_token = response.get("NextToken", None)
-    print(f'Received response with {len(response["UserPools"])=} and {next_token=}')
-    user_pool_obj_list = response["UserPools"]
-    while next_token is not None:
-        response = cognito_client.list_user_pools(NextToken=next_token, MaxResults=60)
-        next_token = response.get("NextToken", None)
-        print(f'Received response with {len(response["UserPools"])=} & {next_token=}')
-        user_pool_obj_list.extend(response["UserPools"])
-    return user_pool_obj_list
-
-# Functions 
-def get_userpool_name(pool_name, cognito_client):
-    all_user_pools = read_userpool_obj_list_on_all_pages(cognito_client)
-    is_userpool_exist = False
-    user_pools = [user_pool["Name"] for user_pool in all_user_pools]
-    is_userpool_exist = True if pool_name in user_pools else False
-    user_pool_index = user_pools.index(pool_name) if is_userpool_exist else None
-    pool_id = all_user_pools[user_pool_index]["Id"] if is_userpool_exist else None
-    return is_userpool_exist, pool_id
+cognito_client = cc.build_cognito_client(args.local)
+sts_client = cc.build_sts_client(args.local)
+AWS_REGION = cc.get_region(args.local)
 
 def get_users(pool_id, cognito_client):
     try:
-        response = cognito_client.list_users(UserPoolId=pool_id)
-        return response["Users"]
-    except ClientError as err:
+        # note that this is not strictly required in our case since we only support
+        # < 5 admin users. But it is good to refactor so we can bake in that assumption
+        # in a common function and improve it if necessary
+        return cc.get_all_users(pool_id, cognito_client)
+    except be.ClientError as err:
         logger.error(
             "Couldn't list users for %s. Here's why: %s: %s",
             pool_id,
@@ -92,10 +74,10 @@ def get_users(pool_id, cognito_client):
 def get_verified_arn(sts_client):
     if args.local:
         account_num = sts_client.get_caller_identity()["Account"]
-        identity_arn = "arn:aws:ses:" + AWS_REGION + ":" + account_num + ":identity/openpath@nrel.gov"
+        identity_arn = "arn:aws:ses:" + AWS_REGION + ":" + account_num + ":identity/openpath@nlr.gov"
     if args.github:
         AWS_ACCT_ID = os.environ.get("AWS_ACCT_ID")
-        identity_arn = "arn:aws:ses:" + AWS_REGION + ":" + AWS_ACCT_ID + ":identity/openpath@nrel.gov"
+        identity_arn = "arn:aws:ses:" + AWS_REGION + ":" + AWS_ACCT_ID + ":identity/openpath@nlr.gov"
     return identity_arn
 
 def email_extract():
@@ -124,10 +106,10 @@ def create_account(pool_id, email, cognito_client):
                 )
     return response
 
-def format_email(filename, map_trip_lines_enabled, columns_exclude):
+def format_email(program_name, map_trip_lines_enabled, columns_exclude):
     with open(maindir + '/email_automation/welcome-template.txt', 'r') as f:
         html = f.read()
-        html = html.replace('<filename>', filename)
+        html = html.replace('<ProgramName>', program_name)
         if map_trip_lines_enabled:
             html = html.replace ('<map_trip_lines>', 'Additionally, you can view individual user-origin destination points using the "Map Lines" option from the map page.')
         else:
@@ -146,7 +128,7 @@ def update_user_pool(pool_id, pool_name, html, identity_arn, cognito_client):
         EmailConfiguration={
             'SourceArn': identity_arn,
             'EmailSendingAccount': 'DEVELOPER',
-            'From': 'openpath@nrel.gov'
+            'From': 'openpath@nlr.gov'
         },
         AdminCreateUserConfig={
             'AllowAdminCreateUserOnly': True,
@@ -163,7 +145,7 @@ def remove_user(pool_id, user):
         Username= str(user)
 )
 ######################################################################
-is_userpool_exist, pool_id = get_userpool_name(pool_name, cognito_client) 
+is_userpool_exist, pool_id = cc.get_userpool_id(pool_name, cognito_client, verbose=not args.quiet)
 
  # Start by checking for the User Pool. If the User Pool does not yet exist, wait until it is set up to add users. 
 if is_userpool_exist:
@@ -183,7 +165,7 @@ if is_userpool_exist:
         if not str(users).find(email) > 1:
             #If user not in pool, format the email template for their welcome email, update the user pool, and create an account for them.
             print(email + " not in user pool! Creating account...")
-            html = format_email(filename, map_trip_lines_enabled, columns_exclude)
+            html = format_email(program_name, map_trip_lines_enabled, columns_exclude)
             identity_arn = get_verified_arn(sts_client)
             update_user_pool(pool_id, pool_name, html, identity_arn, cognito_client)
             response = create_account(pool_id, email, cognito_client)
