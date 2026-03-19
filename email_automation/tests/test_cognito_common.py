@@ -3,7 +3,7 @@ import sys
 import types
 import unittest
 from pathlib import Path
-from unittest.mock import patch, sentinel
+from unittest.mock import MagicMock, patch, sentinel
 
 
 EMAIL_AUTOMATION_DIR = Path(__file__).resolve().parents[1]
@@ -14,6 +14,30 @@ if "boto3" not in sys.modules:
     sys.modules["boto3"] = types.SimpleNamespace(client=None)
 
 import cognito_common as cc
+
+
+def build_mock_cognito_client(user_pool, update_field_names=None):
+    if update_field_names is None:
+        update_field_names = (
+            "UserPoolId",
+            "PoolName",
+            "EmailConfiguration",
+            "SmsConfiguration",
+            "UserAttributeUpdateSettings",
+            "MfaConfiguration",
+        )
+
+    mock_cognito_client = MagicMock()
+    mock_cognito_client.describe_user_pool.return_value = {"UserPool": user_pool}
+    input_shape = types.SimpleNamespace(
+        members={field_name: object() for field_name in update_field_names}
+    )
+    operation_model = types.SimpleNamespace(input_shape=input_shape)
+    service_model = types.SimpleNamespace(
+        operation_model=MagicMock(return_value=operation_model)
+    )
+    mock_cognito_client.meta = types.SimpleNamespace(service_model=service_model)
+    return mock_cognito_client
 
 
 class TestCognitoCommon(unittest.TestCase):
@@ -118,55 +142,150 @@ class TestCognitoCommon(unittest.TestCase):
         self.assertIsNone(client)
         mock_client.assert_not_called()
 
-    def test_build_user_pool_update_request(self):
-        user_pool = {
-            "Id": "us-west-2_abc123",
-            "Name": "test-pool",
-            "Policies": {"PasswordPolicy": {"MinimumLength": 8}},
-            "EmailConfiguration": {"SourceArn": "arn:aws:ses:us-west-2:123456789012:identity/old@example.com"},
-        }
-        email_configuration = {
-            "SourceArn": "arn:aws:ses:us-west-2:123456789012:identity/new@example.com"
-        }
-
-        result = cc.build_user_pool_update_request(user_pool, "EmailConfiguration", "EmailConfiguration", email_configuration)
-
-        self.assertEqual(result["UserPoolId"], "us-west-2_abc123")
-        self.assertEqual(result["PoolName"], "test-pool")
-        self.assertIn("Policies", result)
-        self.assertEqual(
-            result["EmailConfiguration"]["SourceArn"],
-            "arn:aws:ses:us-west-2:123456789012:identity/new@example.com"
+    def test_update_user_pool(self):
+        mock_cognito_client = build_mock_cognito_client(
+            {
+                "Id": "us-west-2_abc123",
+                "Name": "test-pool",
+                "EmailConfiguration": {
+                    "SourceArn": "arn:aws:ses:us-west-2:123456789012:identity/old@example.com"
+                },
+            }
         )
 
-    def test_build_user_pool_update_request_different_key(self):
-        user_pool = {
-            "Id": "us-west-2_def456",
-            "Name": "test-pool-2",
-            "Policies": {"PasswordPolicy": {"MinimumLength": 8}},
-            "SmsConfiguration": {
-                "ExternalId": "old-external-id",
+        cc.update_user_pool(
+            "us-west-2_abc123",
+            "EmailConfiguration",
+            "EmailConfiguration",
+            {"SourceArn": "arn:aws:ses:us-west-2:123456789012:identity/new@example.com"},
+            mock_cognito_client,
+        )
+
+        mock_cognito_client.update_user_pool.assert_called_once_with(
+            UserPoolId="us-west-2_abc123",
+            PoolName="test-pool",
+            EmailConfiguration={
+                "SourceArn": "arn:aws:ses:us-west-2:123456789012:identity/new@example.com"
+            },
+        )
+
+    def test_update_user_pool_different_key(self):
+        mock_cognito_client = build_mock_cognito_client(
+            {
+                "Id": "us-west-2_def456",
+                "Name": "test-pool-2",
+                "SmsConfiguration": {
+                    "ExternalId": "old-external-id",
+                    "SnsCallerArn": "arn:aws:iam::123456789012:role/old-role",
+                },
+            }
+        )
+
+        cc.update_user_pool(
+            "us-west-2_def456",
+            "SmsConfiguration",
+            "SmsConfiguration",
+            {"ExternalId": "new-external-id"},
+            mock_cognito_client,
+        )
+
+        mock_cognito_client.update_user_pool.assert_called_once_with(
+            UserPoolId="us-west-2_def456",
+            PoolName="test-pool-2",
+            SmsConfiguration={
+                "ExternalId": "new-external-id",
                 "SnsCallerArn": "arn:aws:iam::123456789012:role/old-role",
             },
-        }
-        sms_configuration = {
-            "ExternalId": "new-external-id",
-        }
-
-        result = cc.build_user_pool_update_request(
-            user_pool,
-            "SmsConfiguration",
-            "SmsConfiguration",
-            sms_configuration,
         )
 
-        self.assertEqual(result["UserPoolId"], "us-west-2_def456")
-        self.assertEqual(result["PoolName"], "test-pool-2")
-        self.assertIn("Policies", result)
-        self.assertEqual(result["SmsConfiguration"]["ExternalId"], "new-external-id")
-        self.assertEqual(
-            result["SmsConfiguration"]["SnsCallerArn"],
-            "arn:aws:iam::123456789012:role/old-role",
+    def test_update_user_pool_keep_original(self):
+        mock_cognito_client = build_mock_cognito_client(
+            {
+                "Id": "us-west-2_xyz789",
+                "Name": "test-pool-3",
+                "UserAttributeUpdateSettings": {
+                    "AttributesRequireVerificationBeforeUpdate": ["email", "phone_number"]
+                },
+            }
+        )
+
+        cc.update_user_pool(
+            "us-west-2_xyz789",
+            "EmailConfiguration",
+            "EmailConfiguration",
+            {"SourceArn": "arn:aws:ses:us-west-2:123456789012:identity/new@example.com"},
+            mock_cognito_client,
+        )
+
+        mock_cognito_client.update_user_pool.assert_called_once_with(
+            UserPoolId="us-west-2_xyz789",
+            PoolName="test-pool-3",
+            UserAttributeUpdateSettings={
+                "AttributesRequireVerificationBeforeUpdate": ["email", "phone_number"]
+            },
+            EmailConfiguration={
+                "SourceArn": "arn:aws:ses:us-west-2:123456789012:identity/new@example.com"
+            },
+        )
+
+    def test_update_user_pool_does_not_call_mfa_factor_api(self):
+        mock_cognito_client = build_mock_cognito_client(
+            {
+                "Id": "us-west-2_mfa123",
+                "Name": "mfa-pool",
+                "MfaConfiguration": "OPTIONAL",
+            }
+        )
+
+        cc.update_user_pool(
+            "us-west-2_mfa123",
+            "EmailConfiguration",
+            "EmailConfiguration",
+            {"SourceArn": "arn:aws:ses:us-west-2:123456789012:identity/new@example.com"},
+            mock_cognito_client,
+        )
+
+        mock_cognito_client.update_user_pool.assert_called_once_with(
+            UserPoolId="us-west-2_mfa123",
+            PoolName="mfa-pool",
+            MfaConfiguration="OPTIONAL",
+            EmailConfiguration={
+                "SourceArn": "arn:aws:ses:us-west-2:123456789012:identity/new@example.com"
+            },
+        )
+        mock_cognito_client.get_user_pool_mfa_config.assert_not_called()
+        mock_cognito_client.set_user_pool_mfa_config.assert_not_called()
+
+    def test_update_user_pool_skips_non_model_fields(self):
+        mock_cognito_client = build_mock_cognito_client(
+            {
+                "Id": "us-west-2_model123",
+                "Name": "model-pool",
+                "SchemaAttributes": [{"Name": "email"}],
+                "UsernameAttributes": ["email"],
+                "EstimatedNumberOfUsers": 7,
+                "Arn": "arn:aws:cognito-idp:us-west-2:123456789012:userpool/us-west-2_model123",
+                "EmailConfiguration": {
+                    "SourceArn": "arn:aws:ses:us-west-2:123456789012:identity/old@example.com"
+                },
+            }
+        )
+
+        cc.update_user_pool(
+            "us-west-2_model123",
+            "EmailConfiguration",
+            "EmailConfiguration",
+            {"From": "OpenPATH <new@example.com>"},
+            mock_cognito_client,
+        )
+
+        mock_cognito_client.update_user_pool.assert_called_once_with(
+            UserPoolId="us-west-2_model123",
+            PoolName="model-pool",
+            EmailConfiguration={
+                "SourceArn": "arn:aws:ses:us-west-2:123456789012:identity/old@example.com",
+                "From": "OpenPATH <new@example.com>",
+            },
         )
 
     @patch("builtins.input", return_value="alice LIST IS FINE")

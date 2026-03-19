@@ -3,41 +3,16 @@ import re
 
 import boto3
 
-# TODO: Filter this down to only the fields that are overridden from defaults
-# when the pool is created. A concern with that might be if the default values change between creation and update.
-# But a concern with this is keeping the list of fields maintained.
-# this is just a shitty decision by AWS and doesn't have a great solution unless they have a programmatic way to 
-# indicate keys and their defaults.
-# Otherwise, we just need to check this list every time before we run any update scripts.
-# The update scripts will be run manually and rarely, so that shouldn't be too much of a burden, as long as we can remember to do it.
-UPDATE_USER_POOL_FIELDS = (
-    "Policies",
-    "DeletionProtection",
-    "LambdaConfig",
-    "AutoVerifiedAttributes",
-    "SmsVerificationMessage",
-    "EmailVerificationMessage",
-    "EmailVerificationSubject",
-    "VerificationMessageTemplate",
-    "SmsAuthenticationMessage",
-    "UserAttributeUpdateSettings",
-    "MfaConfiguration",
-    "DeviceConfiguration",
-    "EmailConfiguration",
-    "SmsConfiguration",
-    "UserPoolTags",
-    "AdminCreateUserConfig",
-    "UserPoolAddOns",
-    "AccountRecoverySetting",
-    "PoolName",
-    "UserPoolTier",
-)
+DESCRIBE_TO_UPDATE_FIELD_NAME_MAP = {
+    "Name": "PoolName",
+    "Id": "UserPoolId",
+}
 
 def validate_check_done():
-    print("""WARNING! This script relies on a hardcoded set of fields ('UPDATE_USER_POOL_FIELDS') that are defined in cognito_common.py.
-            Fields that are not in that list will be reset to their defaults.
-            Before running this script, you must double-check this list against the list of fields that are overridden during creation,
-            and any changes to the defaults since the last time you ran the script.
+    print("""WARNING! This script preserves fields returned by DescribeUserPool that are also writable through UpdateUserPool.
+            Fields that are not part of UpdateUserPool, such as schema/sign-in alias settings and factor-specific MFA config,
+            are not set by this helper. Note that calling UpdateUserPool does not modify those settings as of 19 Mar 2026.
+            Before running this script, you must double-check any settings outside the UpdateUserPool model that matter for this pool.
         Confirm that you have checked this list by typing '<username> LIST IS FINE' (case-sensitive)""")
     confirm_text = input("Requested text: ")
     match = re.fullmatch(r"(?P<username>\w+) LIST IS FINE", confirm_text)
@@ -142,12 +117,13 @@ def get_all_users(pool_id, cognito_client):
     return users
 
 
-def build_user_pool_update_request(user_pool, src_key, dst_key, dst_value):
+def update_user_pool(user_pool_id, src_key, dst_key, dst_value, cognito_client):
+    user_pool = cognito_client.describe_user_pool(UserPoolId=user_pool_id)["UserPool"]
+    input_shape = cognito_client.meta.service_model.operation_model("UpdateUserPool").input_shape
     update_request = {"UserPoolId": user_pool["Id"]}
-    for field_name in UPDATE_USER_POOL_FIELDS:
-        source_name = "Name" if field_name == "PoolName" else field_name
-        field_value = user_pool.get(source_name)
-        if field_value is not None:
+    for source_name, field_value in user_pool.items():
+        field_name = DESCRIBE_TO_UPDATE_FIELD_NAME_MAP.get(source_name, source_name)
+        if field_name in input_shape.members:
             update_request[field_name] = field_value
 
     if dst_value is None:
@@ -157,4 +133,4 @@ def build_user_pool_update_request(user_pool, src_key, dst_key, dst_value):
     merged_dst_value.update(dst_value)
     update_request[dst_key] = merged_dst_value
 
-    return update_request
+    return cognito_client.update_user_pool(**update_request)
