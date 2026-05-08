@@ -1,0 +1,91 @@
+{
+    "url_abbreviation": "r2opyouth",
+    "version": 1,
+    "ts": 1778261474,
+    "server": {
+        "connectUrl": "https://r2opyouth-openpath.nlr.gov/api/",
+        "aggregate_call_auth": "user_only"
+    },
+    "opcode": {
+        "autogen": true,
+        "subgroups": [
+            "default",
+            "test"
+        ]
+    },
+    "intro": {
+        "program_or_study": "study",
+        "start_month": "6",
+        "start_year": "2026",
+        "mode_studied": "e-bike",
+        "program_admin_email": "madi@thestreettrust.org",
+        "program_admin_contact": "Madi Carlson, The Street Trust, madi@thestreettrust.org, 206-612-4970",
+        "deployment_partner_name": "The Street Trust",
+        "translated_text": {
+            "en": {
+                "deployment_partner_name": "The Street Trust",
+                "deployment_name": "Ride2Own E-Bike Pilot Program: Parkrose Youth",
+                "summary_line_1": "The Street Trust aims to remove (offset) barriers to entry for e-bike ownership, contributing to the health and wellbeing of participants by using an energy-efficient, non-polluting mode of transportation that maximizes air quality benefits.",
+                "summary_line_2": "This pilot program provides e-bikes to individuals in the PATHfinder Club who want to start riding, but don’t have the financial means or previous experience to purchase one themselves.",
+                "summary_line_3": "If you are a program participant, this app can help you log your trips.",
+                "short_textual_description": "The Street Trust would like to pilot the demand-shift potential for e-bike ownership in the Portland area by hosting a yearlong ride-to-own program where participants receive a free e-bike, gear, and bike education in exchange for one year of qualitative and quantitative trip data sharing. To gather the data needed, this pilot requires an automated trip tracking solution for understanding travel behavior. The pilot will allow The Street Trust to understand variations in travel across days of the week and months of the year without complex, time-consuming surveys.",
+                "why_we_collect": "The data collected during the program will be used to understand how e-bikes are used, including when and how often as well as distance traveled. The Street Trust can use this information to understand how people are using e-bikes, what their constraints are, and will help policymakers and decisionmakers in Oregon understand how to better provide bike infrastructure to the area. This comprehensive information will aid The Street Trust in its mission to help build a complete, safe, low-carbon, multimodal transportation system that contributes to equity in access, opportunity, health, and prosperity for people and communities across the Portland Metro Region and beyond.",
+                "research_questions": [
+                    "Travel behavior modeling to support cost-benefit analyses of other ride-to-own e-bike programs as well as e-bike ownership for low-income individuals.",
+                    "Travel behavior modeling to inform local and regional bike infrastructure investments.",
+                    "The impact of demand shifts towards e-bike use on transportation energy efficiency and GHG emissions."
+                ]
+            }
+        }
+    },
+    "survey_info": {
+        "surveys": {
+            "UserProfileSurvey": {
+                "formPath": "json/demo-survey-v2.json",
+                "version": 1,
+                "compatibleWith": 1,
+                "dataKey": "manual/demographic_survey",
+                "labelTemplate": {
+                    "en": "Answered",
+                    "es": "Contestada"
+                }
+            }
+        },
+        "trip-labels": "MULTILABEL"
+    },
+    "display_config": {
+        "use_imperial": true
+    },
+    "metrics": {
+        "include_test_users": true
+    },
+    "profile_controls": {
+        "support_upload": false,
+        "trip_end_notification": false
+    },
+    "admin_dashboard": {
+        "data_trips_columns_exclude": [],
+        "additional_trip_columns": [],
+        "data_uuids_columns_exclude": [],
+        "token_prefix": "nrelop",
+        "token_generate": false,
+        "overview_users": true,
+        "overview_active_users": true,
+        "overview_trips": true,
+        "overview_signup_trends": true,
+        "overview_trips_trend": true,
+        "data_uuids": true,
+        "data_trips": true,
+        "map_heatmap": true,
+        "map_bubble": true,
+        "map_trip_lines": false,
+        "options_uuids": true,
+        "options_emails": true,
+        "admin_access": [
+            "madi@thestreettrust.org",
+            "sophie@thestreettrust.org",
+            "windsor@thestreettrust.org",
+            "emilyfuller@thestreettrust.org"
+        ]
+    }
+}
