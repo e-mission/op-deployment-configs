@@ -1,0 +1,99 @@
+{
+    "url_abbreviation": "boise",
+    "version": 1,
+    "ts": 1778620874,
+    "server": {
+        "connectUrl": "https://boise-openpath.nlr.gov/api/",
+        "aggregate_call_auth": "user_only"
+    },
+    "opcode": {
+        "autogen": true,
+        "subgroups": [
+            "default",
+            "test"
+        ]
+    },
+    "intro": {
+        "program_or_study": "program",
+        "start_month": "06",
+        "start_year": "2026",
+        "mode_studied": "e-bike",
+        "program_admin_email": "rwalkins@cityofboise.org",
+        "program_admin_contact": "Randi Walkins, rwalkins@treasurevalleycleancities.org, 208-608-7554",
+        "deployment_partner_name": "City of Boise",
+        "translated_text": {
+            "en": {
+                "deployment_partner_name": "City of Boise",
+                "deployment_name": "Boise e-bike rebate program",
+                "summary_line_1": "The City of Boise and the Treasure Valley Clean Cities Coalition are providing eligible community members with e-bike rebates. We'd like to learn how impactful this rebate program is at helping people adopt e-bikes as a form of transportation.",
+                "summary_line_2": "",
+                "summary_line_3": "",
+                "short_textual_description": "The City of Boise and the Treasure Valley Clean Cities Coalition are providing eligible community members with e-bike rebates. We'd like to learn how impactful this rebate program is at helping people adopt e-bikes as a form of transportation.",
+                "why_we_collect": "To learn how successful our e-bike rebate program is",
+                "research_questions": [
+                    "Are e-bike rebates impactful at encouraging e-bike adoption for transportation needs?",
+                    "",
+                    ""
+                ]
+            },
+            "es": {
+                "deployment_partner_name": "",
+                "deployment_name": "",
+                "summary_line_1": "",
+                "summary_line_2": "",
+                "summary_line_3": "",
+                "short_textual_description": "",
+                "why_we_collect": "",
+                "research_questions": []
+            }
+        }
+    },
+    "survey_info": {
+        "surveys": {
+            "UserProfileSurvey": {
+                "formPath": "json/demo-survey-v2.json",
+                "version": 1,
+                "compatibleWith": 1,
+                "dataKey": "manual/demographic_survey",
+                "labelTemplate": {
+                    "en": "Answered",
+                    "es": "Contestada"
+                }
+            }
+        },
+        "trip-labels": "MULTILABEL"
+    },
+    "display_config": {
+        "use_imperial": true
+    },
+    "metrics": {
+        "include_test_users": true
+    },
+    "profile_controls": {
+        "support_upload": false,
+        "trip_end_notification": false
+    },
+    "admin_dashboard": {
+        "data_trips_columns_exclude": [],
+        "additional_trip_columns": [],
+        "data_uuids_columns_exclude": [],
+        "token_prefix": "nrelop",
+        "token_generate": false,
+        "overview_users": true,
+        "overview_active_users": true,
+        "overview_trips": true,
+        "overview_signup_trends": true,
+        "overview_trips_trend": true,
+        "data_uuids": true,
+        "data_trips": true,
+        "map_heatmap": true,
+        "map_bubble": true,
+        "map_trip_lines": false,
+        "options_uuids": true,
+        "options_emails": true,
+        "admin_access": [
+            "rwalkins@cityofboise.org",
+            "pgoodell@treasurevalleycleancities.org"
+        ]
+    }
+}
