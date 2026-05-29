@@ -1,6 +1,6 @@
 {
     "url_abbreviation": "ride2own",
-    "version": 2,
+    "version": 3,
     "ts": 1655143472,
     "server": {
         "connectUrl": "https://ride2own-openpath.nlr.gov/api/",
@@ -18,8 +18,8 @@
         "start_month": "09",
         "start_year": "2023",
         "mode_studied": "e-bike",
-        "program_admin_email": "maris@weallrisegroup.com",
-        "program_admin_contact": "Maris Yurdana at maris@weallrisegroup.com",
+        "program_admin_email": "madi@thestreettrust.org",
+        "program_admin_contact": "Madi Carlson at madi@thestreettrust.org",
         "deployment_partner_name": "The Street Trust",
         "translated_text": {
             "en": {
@@ -64,9 +64,9 @@
     },
     "admin_dashboard": {
         "admin_access": [
-            "burgin@thestreettrust.org",
             "madi@thestreettrust.org",
             "sophie@thestreettrust.org",
+            "emilyfuller@thestreettrust.org",
             "k.shankari@nlr.gov"
         ],
         "overview_users": true,
