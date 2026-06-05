@@ -10,6 +10,7 @@
         "autogen": true,
         "subgroups": [
             "default",
+            "studypanel",
             "test"
         ]
     },
