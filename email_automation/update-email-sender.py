@@ -1,6 +1,5 @@
 import argparse
 import logging
-import email.utils as eu
 
 import botocore.exceptions as be
 
@@ -9,13 +8,6 @@ import cognito_common as cc
 
 logger = logging.getLogger()
 logger.setLevel(logging.INFO)
-
-
-def get_identity_email(address):
-    _display_name, identity_email = eu.parseaddr(address)
-    if not identity_email or "@" not in identity_email:
-        raise ValueError(f"Could not parse email identity from {address!r}")
-    return identity_email
 
 
 def update_pool_email_configuration(pool_obj, cognito_client, expected_current_configuration, desired_email_configuration, dry_run):
@@ -81,6 +73,14 @@ if __name__ == "__main__":
         help="New From address, optionally with display name, e.g. 'OpenPATH <openpath@nlr.gov>'.",
     )
     parser.add_argument(
+        "--old-identity",
+        help="Current SES identity name used by the pool email configuration, for example 'openpath@nrel.gov'.",
+    )
+    parser.add_argument(
+        "--new-identity",
+        help="New SES identity name to write to the pool email configuration, for example 'openpath@nlr.gov'.",
+    )
+    parser.add_argument(
         "--dry-run",
         action="store_true",
         help="Print the pools that would be updated without applying changes.",
@@ -138,17 +138,18 @@ if __name__ == "__main__":
             print(f"{cognito_client.describe_user_pool(UserPoolId=pool_obj['Id'])['UserPool']}")
         raise SystemExit(0)
 
+    if not args.old_identity or not args.new_identity:
+        parser.error("--old-identity and --new-identity are required unless using --list")
+
     if not cc.validate_check_done():
         raise SystemExit(0)
 
     sts_client = cc.build_sts_client(True)
     aws_region = cc.get_region(True)
-
     sts_account_num = sts_client.get_caller_identity()["Account"]
-    old_identity_email = get_identity_email(args.old_address)
-    new_identity_email = get_identity_email(args.new_address)
-    old_source_arn = f"arn:aws:ses:{aws_region}:{sts_account_num}:identity/{old_identity_email}"
-    new_source_arn = f"arn:aws:ses:{aws_region}:{sts_account_num}:identity/{new_identity_email}"
+
+    old_source_arn = f"arn:aws:ses:{aws_region}:{sts_account_num}:identity/{args.old_identity}"
+    new_source_arn = f"arn:aws:ses:{aws_region}:{sts_account_num}:identity/{args.new_identity}"
     expected_current_configuration = {
         "SourceArn": old_source_arn,
         "EmailSendingAccount": "DEVELOPER",

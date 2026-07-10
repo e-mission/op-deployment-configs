@@ -25,23 +25,5 @@ update_email_sender = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(update_email_sender)
 
 
-class TestUpdateEmailSender(unittest.TestCase):
-    def test_get_identity_email_plain_email(self):
-        self.assertEqual(
-            update_email_sender.get_identity_email("openpath@nrel.gov"),
-            "openpath@nrel.gov",
-        )
-
-    def test_get_identity_email_display_name(self):
-        self.assertEqual(
-            update_email_sender.get_identity_email("OpenPATH <openpath@nrel.gov>"),
-            "openpath@nrel.gov",
-        )
-
-    def test_get_identity_email_invalid_value(self):
-        with self.assertRaisesRegex(ValueError, "Could not parse email identity"):
-            update_email_sender.get_identity_email("OpenPATH")
-
-
 if __name__ == "__main__":
     unittest.main()

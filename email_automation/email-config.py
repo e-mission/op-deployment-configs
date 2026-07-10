@@ -74,10 +74,10 @@ def get_users(pool_id, cognito_client):
 def get_verified_arn(sts_client):
     if args.local:
         account_num = sts_client.get_caller_identity()["Account"]
-        identity_arn = "arn:aws:ses:" + AWS_REGION + ":" + account_num + ":identity/openpath@nlr.gov"
+        identity_arn = "arn:aws:ses:" + AWS_REGION + ":" + account_num + ":identity/mailer.nlr.gov"
     if args.github:
         AWS_ACCT_ID = os.environ.get("AWS_ACCT_ID")
-        identity_arn = "arn:aws:ses:" + AWS_REGION + ":" + AWS_ACCT_ID + ":identity/openpath@nlr.gov"
+        identity_arn = "arn:aws:ses:" + AWS_REGION + ":" + AWS_ACCT_ID + ":identity/mailer.nlr.gov"
     return identity_arn
 
 def email_extract():
@@ -128,7 +128,7 @@ def update_user_pool(pool_id, pool_name, html, identity_arn, cognito_client):
         EmailConfiguration={
             'SourceArn': identity_arn,
             'EmailSendingAccount': 'DEVELOPER',
-            'From': 'openpath@nlr.gov'
+            'From': 'openpath@mailer.nlr.gov'
         },
         AdminCreateUserConfig={
             'AllowAdminCreateUserOnly': True,
