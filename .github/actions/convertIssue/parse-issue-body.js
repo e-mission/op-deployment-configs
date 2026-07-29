@@ -2,7 +2,7 @@
 
 import { readFile } from "node:fs/promises";
 import { setFailed } from "@actions/core";
-import yaml from "js-yaml";
+import { load } from "js-yaml";
 
 function normalizeNewLines(str) {
   return str.replace(/\r\n/g, "\n");
@@ -43,7 +43,7 @@ function cleanBoolean(str) {
 async function parseFields(githubIssueTemplateFile) {
   try {
     let issueTemplate = await readFile(githubIssueTemplateFile, "utf8");
-    let githubFormData = yaml.load(issueTemplate);
+    let githubFormData = load(issueTemplate);
 
     // Markdown fields aren’t included in output body
     let fields = githubFormData.body.filter(
