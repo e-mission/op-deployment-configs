@@ -1,0 +1,97 @@
+{
+    "url_abbreviation": "sc-ebike-library",
+    "version": 1,
+    "ts": 1785340752,
+    "server": {
+        "connectUrl": "https://sc-ebike-library-openpath.nlr.gov/api/",
+        "aggregate_call_auth": "user_only"
+    },
+    "opcode": {
+        "autogen": false,
+        "subgroups": [
+            "discount",
+            "public",
+            "group",
+            "test"
+        ]
+    },
+    "intro": {
+        "program_or_study": "program",
+        "start_month": "07",
+        "start_year": "2026",
+        "mode_studied": "e-bike",
+        "program_admin_email": "smartcommutemetronorth@gmail.com",
+        "program_admin_contact": "Jeanne S., Smart Commute TMO (jeanne@smartcommute.org)",
+        "deployment_partner_name": "Smart Commute",
+        "translated_text": {
+            "en": {
+                "deployment_partner_name": "Smart Commute",
+                "deployment_name": "Smart Commute eBike Library",
+                "summary_line_1": "The app checks out/in eBikes for rent",
+                "summary_line_2": "",
+                "summary_line_3": "",
+                "short_textual_description": "eBike rental app",
+                "why_we_collect": "To track rentals",
+                "research_questions": []
+            },
+            "": {
+                "deployment_partner_name": "",
+                "deployment_name": "",
+                "summary_line_1": "",
+                "summary_line_2": "",
+                "summary_line_3": "",
+                "short_textual_description": "",
+                "why_we_collect": "",
+                "research_questions": []
+            }
+        }
+    },
+    "survey_info": {
+        "surveys": {
+            "UserProfileSurvey": {
+                "formPath": "json/demo-survey-v2.json",
+                "version": 1,
+                "compatibleWith": 1,
+                "dataKey": "manual/demographic_survey",
+                "labelTemplate": {
+                    "en": "Answered",
+                    "es": "Contestada"
+                }
+            }
+        },
+        "trip-labels": "MULTILABEL"
+    },
+    "display_config": {
+        "use_imperial": true
+    },
+    "metrics": {
+        "include_test_users": false
+    },
+    "profile_controls": {
+        "support_upload": false,
+        "trip_end_notification": true
+    },
+    "admin_dashboard": {
+        "data_trips_columns_exclude": [],
+        "additional_trip_columns": [],
+        "data_uuids_columns_exclude": [],
+        "token_prefix": "nrelop",
+        "token_generate": true,
+        "overview_users": true,
+        "overview_active_users": true,
+        "overview_trips": true,
+        "overview_signup_trends": true,
+        "overview_trips_trend": true,
+        "data_uuids": true,
+        "data_trips": true,
+        "map_heatmap": true,
+        "map_bubble": true,
+        "map_trip_lines": true,
+        "options_uuids": true,
+        "options_emails": true,
+        "admin_access": [
+            "jeanne@smartcommute.org",
+            "carson@smartcommute.org"
+        ]
+    }
+}
