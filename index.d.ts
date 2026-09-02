@@ -15,6 +15,7 @@ export type DeploymentConfig = {
   };
   label_options?: LabelOptionsConfig | `https://${string}`;
   vehicle_identities?: VehicleIdentity[];
+  vehicle_library?: VehicleLibraryConfig;
   reminderSchemes?: ReminderSchemesConfig;
   tracking?: Partial<TrackingConfig>;
   sync?: Partial<SyncConfig>;
@@ -149,6 +150,13 @@ export type VehicleIdentity = {
     color?: string;
     mpge?: number;
   };
+};
+
+export type VehicleLibraryConfig = {
+   // A JS expression that calculates the fee for a vehicle checkout period
+   // Receives the following variables: duration, subgroup,
+   // and unpacked fields of the vehicle object
+  fee_expression: string;
 };
 
 export type ReminderScheme = {
