@@ -78,7 +78,7 @@
         "additional_trip_columns": [],
         "data_uuids_columns_exclude": [],
         "token_prefix": "nrelop",
-        "token_generate": false,
+        "token_generate": true,
         "overview_users": true,
         "overview_active_users": true,
         "overview_trips": true,
