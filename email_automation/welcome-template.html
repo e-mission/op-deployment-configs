@@ -1,0 +1,42 @@
+<html>
+
+<head></head>
+
+<body>
+    <h1>Welcome to OpenPATH!</h1>
+    <p>
+        Thank you for joining the OpenPATH project.
+        <br><br>
+        <strong>Your admin dashboard can be found at:</strong>
+        <br><br>
+        <a href='https://{ProgramName}-openpath.nlr.gov/admin/'>
+            https://{ProgramName}-openpath.nlr.gov/admin/
+        </a>
+        <br><br>
+        An account has been created for you with AWS Cognito. Please log in and change your
+        temporary password:
+        <br><br>
+        Username: {username}
+        Temporary Password: {####}
+        <br><br>
+        The login to the admin dashboard uses 2-factor authentication. You will have to install an authenticator app
+        (e.g. Microsoft Authenticator, Google Authenticator) to receive One Time Passcodes (OTP) every time you want to
+        log in. This is a requirement from NLR Cyber to ensure that the data access to individual user information is
+        secure.
+        <br><br>
+        For the specified date range, you can download trip, user and trajectory tables as csv and view aggregate
+        origin-destination points in the maps.
+        <br><br>
+        {map_trip_lines}
+        <br><br>
+        {columns_exclude}
+        <br><br>
+        Please let us know if you have any problems with signing in.
+        <br><br>
+        Thank you,
+        <br><br>
+        The OpenPATH Team
+    </p>
+</body>
+
+</html>
