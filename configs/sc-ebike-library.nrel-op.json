@@ -1,6 +1,6 @@
 {
     "url_abbreviation": "sc-ebike-library",
-    "version": 3,
+    "version": 4,
     "ts": 1785340752,
     "server": {
         "connectUrl": "https://openpath-stage.nlr.gov/api/",
@@ -49,7 +49,7 @@
     "survey_info": {
         "surveys": {
             "UserProfileSurvey": {
-                "formPath": "json/demo-survey-v2.json",
+                "formPath": "https://raw.githubusercontent.com/e-mission/op-deployment-configs/main/survey_resources/sc-ebike-library/sc-ebike-library-onboarding-v0.xml",
                 "version": 1,
                 "compatibleWith": 1,
                 "dataKey": "manual/demographic_survey",
@@ -96,5 +96,41 @@
             "jeanne@smartcommute.org",
             "carson@smartcommute.org"
         ]
+    },
+    "translation_overrides": {
+        "en": {
+            "library": {
+                "set-up-payment-banner": "Set up your payment method to check out a bike.",
+                "setup-required-before-checkout": "Please complete payment setup before checking out a bike.",
+                "available-vehicles": {
+                    "title": "Available Bikes",
+                    "one-vehicle-available": "1 bike available",
+                    "vehicles-available": "{{n}} bikes available",
+                    "type-vehicles": "Bikes"
+                },
+                "active-rental": {
+                    "vehicle-fallback-name": "Bike {{vehicleId}}",
+                    "step-find-dock-text": "Return the bike to any available dock",
+                    "step-secure-title": "Secure the bike",
+                    "step-secure-text": "Place the bike in the dock"
+                },
+                "checkout": {
+                    "title": "Checkout Bike {{vehicleId}}",
+                    "subtitle": "Confirm your rental to unlock the bike",
+                    "rental-title": "Bike Rental",
+                    "rental-subtitle": "You're charged based on how long you keep the bike",
+                    "hold-notice": "We'll place a temporary ${{amount}} authorization hold on your saved payment method. It is released when the bike is checked in, and you are only charged for your usage."
+                },
+                "return": {
+                    "title": "Return Bike",
+                    "vehicle": "Bike",
+                    "back-to-available": "Back to Available Bikes"
+                },
+                "qr-scanner": {
+                    "scan-vehicle-title": "Scan Bike QR Code",
+                    "vehicle-id-placeholder": "Bike ID"
+                }
+            }
+        }
     }
 }
