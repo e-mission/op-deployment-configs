@@ -16,6 +16,7 @@ export type DeploymentConfig = {
   label_options?: LabelOptionsConfig | `https://${string}`;
   vehicle_identities?: VehicleIdentity[];
   vehicle_library?: VehicleLibraryConfig;
+  translation_overrides?: TranslationOverrides;
   reminderSchemes?: ReminderSchemesConfig;
   tracking?: Partial<TrackingConfig>;
   sync?: Partial<SyncConfig>;
@@ -153,10 +154,18 @@ export type VehicleIdentity = {
 };
 
 export type VehicleLibraryConfig = {
-   // A JS expression that calculates the fee for a vehicle checkout period
-   // Receives the following variables: duration, subgroup,
-   // and unpacked fields of the vehicle object
+  // A JS expression that calculates the fee for a vehicle checkout period
+  // Receives the following variables: duration, subgroup,
+  // and unpacked fields of the vehicle object
   fee_expression: string;
+};
+
+export type TranslationTree = {
+  [key: string]: string | TranslationTree;
+};
+
+export type TranslationOverrides = {
+  [lang: string]: TranslationTree;
 };
 
 export type ReminderScheme = {
