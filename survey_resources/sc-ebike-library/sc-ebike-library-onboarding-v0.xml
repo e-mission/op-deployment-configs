@@ -1,0 +1,733 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:odk="http://www.opendatakit.org/xforms">
+  <h:head>
+    <h:title>Smart Commute eBike Library OpenPATH Demographics Survey</h:title>
+    <model odk:xforms-version="1.0.0">
+      <itext>
+        <translation lang="English (en)" default="true()">
+          <text id="sj0gn93-0">
+            <value>Woman</value>
+          </text>
+          <text id="sj0gn93-1">
+            <value>Man</value>
+          </text>
+          <text id="sj0gn93-2">
+            <value>Transgender</value>
+          </text>
+          <text id="sj0gn93-3">
+            <value>Non-binary</value>
+          </text>
+          <text id="sj0gn93-4">
+            <value>Other</value>
+          </text>
+          <text id="sj0gn93-5">
+            <value>Prefer not to say</value>
+          </text>
+          <text id="hw6ou02-0">
+            <value>Black or African American</value>
+          </text>
+          <text id="hw6ou02-1">
+            <value>White or Caucasian</value>
+          </text>
+          <text id="hw6ou02-2">
+            <value>Hispanic, Latino/a/x, or Spanish</value>
+          </text>
+          <text id="hw6ou02-3">
+            <value>East Asian</value>
+          </text>
+          <text id="hw6ou02-4">
+            <value>South Asian</value>
+          </text>
+          <text id="hw6ou02-5">
+            <value>American Indian or Alaska Native</value>
+          </text>
+          <text id="hw6ou02-6">
+            <value>Native Hawaiian or Other Pacific Islander</value>
+          </text>
+          <text id="hw6ou02-7">
+            <value>Multiracial/Multiethnic</value>
+          </text>
+          <text id="hw6ou02-8">
+            <value>Other</value>
+          </text>
+          <text id="hw6ou02-9">
+            <value>Prefer not to say</value>
+          </text>
+          <text id="is7jb99-0">
+            <value>Less than a high school graduate</value>
+          </text>
+          <text id="is7jb99-1">
+            <value>High school graduate or GED</value>
+          </text>
+          <text id="is7jb99-2">
+            <value>Some college or associates degree</value>
+          </text>
+          <text id="is7jb99-3">
+            <value>Bachelor's degree</value>
+          </text>
+          <text id="is7jb99-4">
+            <value>Graduate degree or professional degree</value>
+          </text>
+          <text id="is7jb99-5">
+            <value>Prefer not to say</value>
+          </text>
+          <text id="vm7wa34-0">
+            <value>Single-Family Residence, Owned</value>
+          </text>
+          <text id="vm7wa34-1">
+            <value>Single-Family Residence, Rented</value>
+          </text>
+          <text id="vm7wa34-2">
+            <value>Multi-Family Residence, Owned</value>
+          </text>
+          <text id="vm7wa34-3">
+            <value>Multi-Family Residence, Rented</value>
+          </text>
+          <text id="vm7wa34-4">
+            <value>Shelter</value>
+          </text>
+          <text id="vm7wa34-5">
+            <value>Prefer not to say</value>
+          </text>
+          <text id="wc3ba24-0">
+            <value>Less than $24,999</value>
+          </text>
+          <text id="wc3ba24-1">
+            <value>$25,000 to $49,999</value>
+          </text>
+          <text id="wc3ba24-2">
+            <value>$50,000 to $99,999</value>
+          </text>
+          <text id="wc3ba24-3">
+            <value>$100,000 to $149,999</value>
+          </text>
+          <text id="wc3ba24-4">
+            <value>$150,000 to $199,999</value>
+          </text>
+          <text id="wc3ba24-5">
+            <value>$200,000 or more</value>
+          </text>
+          <text id="wc3ba24-6">
+            <value>Prefer not to say</value>
+          </text>
+          <text id="sk0vf59-0">
+            <value>1</value>
+          </text>
+          <text id="sk0vf59-1">
+            <value>2</value>
+          </text>
+          <text id="sk0vf59-2">
+            <value>3</value>
+          </text>
+          <text id="sk0vf59-3">
+            <value>4</value>
+          </text>
+          <text id="sk0vf59-4">
+            <value>5</value>
+          </text>
+          <text id="sk0vf59-5">
+            <value>6</value>
+          </text>
+          <text id="sk0vf59-6">
+            <value>7</value>
+          </text>
+          <text id="sk0vf59-7">
+            <value>More than 7</value>
+          </text>
+          <text id="sk0vf59-8">
+            <value>Prefer not to say</value>
+          </text>
+          <text id="uf9mf06-0">
+            <value>0</value>
+          </text>
+          <text id="uf9mf06-1">
+            <value>1</value>
+          </text>
+          <text id="uf9mf06-2">
+            <value>2</value>
+          </text>
+          <text id="uf9mf06-3">
+            <value>3</value>
+          </text>
+          <text id="uf9mf06-4">
+            <value>More than 3</value>
+          </text>
+          <text id="uf9mf06-5">
+            <value>Prefer not to say</value>
+          </text>
+          <text id="/aAv6agDzWX47GMdR8wxaUq/group_hg4zz25:label">
+            <value>Personal Level Information</value>
+          </text>
+          <text id="/aAv6agDzWX47GMdR8wxaUq/group_hg4zz25/In_which_year_were_you_born:label">
+            <value>In which year were you born?</value>
+          </text>
+          <text id="/aAv6agDzWX47GMdR8wxaUq/group_hg4zz25/What_is_your_gender:label">
+            <value>What best describes your gender?</value>
+          </text>
+          <text id="/aAv6agDzWX47GMdR8wxaUq/group_hg4zz25/What_is_your_race_ethnicity:label">
+            <value>What is your race/ethnicity?</value>
+          </text>
+          <text id="/aAv6agDzWX47GMdR8wxaUq/group_hg4zz25/What_is_your_race_ethnicity:hint">
+            <value>Please select all that apply.</value>
+          </text>
+          <text id="/aAv6agDzWX47GMdR8wxaUq/group_hg4zz25/What_is_the_highest_grade_or_d:label">
+            <value>What is the highest level of education you have completed?</value>
+          </text>
+          <text id="/aAv6agDzWX47GMdR8wxaUq/group_pa5ah98:label">
+            <value>Household Level Information</value>
+          </text>
+          <text id="/aAv6agDzWX47GMdR8wxaUq/group_pa5ah98/What_is_your_home_type:label">
+            <value>What is your home type?</value>
+          </text>
+          <text id="/aAv6agDzWX47GMdR8wxaUq/group_pa5ah98/Please_identify_which_category:label">
+            <value>Please identify which category represents your total household income, before taxes, for last year.</value>
+          </text>
+          <text id="/aAv6agDzWX47GMdR8wxaUq/group_pa5ah98/Please_identify_which_category:hint">
+            <value>We are asking this because income is related to how, when and why people go from place to place. This information will be used for statistical purposes only.</value>
+          </text>
+          <text id="/aAv6agDzWX47GMdR8wxaUq/group_pa5ah98/Including_yourself_how_many_p:label">
+            <value>Including yourself, how many people live in your home?</value>
+          </text>
+          <text id="/aAv6agDzWX47GMdR8wxaUq/group_pa5ah98/How_many_motor_vehicles_are_ow:label">
+            <value>How many motor vehicles are owned, leased, or available for regular use by the people who currently live in your household?</value>
+          </text>
+          <text id="/aAv6agDzWX47GMdR8wxaUq/group_pa5ah98/How_many_motor_vehicles_are_ow:hint">
+            <value>Include motorcycles, mopeds and RVs.</value>
+          </text>
+        </translation>
+        <translation lang="Spanish (es)">
+          <text id="sj0gn93-0">
+            <value>Mujer</value>
+          </text>
+          <text id="sj0gn93-1">
+            <value>Hombre</value>
+          </text>
+          <text id="sj0gn93-2">
+            <value>Transgénero</value>
+          </text>
+          <text id="sj0gn93-3">
+            <value>No binaria</value>
+          </text>
+          <text id="sj0gn93-4">
+            <value>Otro</value>
+          </text>
+          <text id="sj0gn93-5">
+            <value>Prefiero no decirlo</value>
+          </text>
+          <text id="hw6ou02-0">
+            <value>Negrx o Afroamericanx</value>
+          </text>
+          <text id="hw6ou02-1">
+            <value>Blancx o Caucásicx</value>
+          </text>
+          <text id="hw6ou02-2">
+            <value>Hispanx, Latinx, o Españolx</value>
+          </text>
+          <text id="hw6ou02-3">
+            <value>Asiáticx Oriental</value>
+          </text>
+          <text id="hw6ou02-4">
+            <value>Sudasiáticx</value>
+          </text>
+          <text id="hw6ou02-5">
+            <value>India Americanx o Nativx de Alaska</value>
+          </text>
+          <text id="hw6ou02-6">
+            <value>Nativx Hawaianx u otra isleñx del Pacífico</value>
+          </text>
+          <text id="hw6ou02-7">
+            <value>Multirracial / Multiétnicx</value>
+          </text>
+          <text id="hw6ou02-8">
+            <value>Otro</value>
+          </text>
+          <text id="hw6ou02-9">
+            <value>Prefiero no decirlo</value>
+          </text>
+          <text id="is7jb99-0">
+            <value>Menos que un graduado de secundaria</value>
+          </text>
+          <text id="is7jb99-1">
+            <value>Graduado de secundaria o GED</value>
+          </text>
+          <text id="is7jb99-2">
+            <value>Algún título universitario o asociado</value>
+          </text>
+          <text id="is7jb99-3">
+            <value>Licenciatura</value>
+          </text>
+          <text id="is7jb99-4">
+            <value>Título de posgrado o título profesional</value>
+          </text>
+          <text id="is7jb99-5">
+            <value>Prefiero no decirlo</value>
+          </text>
+          <text id="vm7wa34-0">
+            <value>Residencia Unifamiliar, Propia</value>
+          </text>
+          <text id="vm7wa34-1">
+            <value>Residencia Unifamiliar, Alquilada</value>
+          </text>
+          <text id="vm7wa34-2">
+            <value>Residencia Multifamiliar, Propia</value>
+          </text>
+          <text id="vm7wa34-3">
+            <value>Residencia Multifamiliar, Alquilada</value>
+          </text>
+          <text id="vm7wa34-4">
+            <value>Albergue</value>
+          </text>
+          <text id="vm7wa34-5">
+            <value>Prefiero no decirlo</value>
+          </text>
+          <text id="wc3ba24-0">
+            <value>Menos de $24,999</value>
+          </text>
+          <text id="wc3ba24-1">
+            <value>$ 25,000 a $ 49,999</value>
+          </text>
+          <text id="wc3ba24-2">
+            <value>$50,000 a $99,999</value>
+          </text>
+          <text id="wc3ba24-3">
+            <value>$100,000 a $149,999</value>
+          </text>
+          <text id="wc3ba24-4">
+            <value>$150,000 a $199,999</value>
+          </text>
+          <text id="wc3ba24-5">
+            <value>$200,000 o más</value>
+          </text>
+          <text id="wc3ba24-6">
+            <value>Prefiero no decirlo</value>
+          </text>
+          <text id="sk0vf59-0">
+            <value>1</value>
+          </text>
+          <text id="sk0vf59-1">
+            <value>2</value>
+          </text>
+          <text id="sk0vf59-2">
+            <value>3</value>
+          </text>
+          <text id="sk0vf59-3">
+            <value>4</value>
+          </text>
+          <text id="sk0vf59-4">
+            <value>5</value>
+          </text>
+          <text id="sk0vf59-5">
+            <value>6</value>
+          </text>
+          <text id="sk0vf59-6">
+            <value>7</value>
+          </text>
+          <text id="sk0vf59-7">
+            <value>Más de 7</value>
+          </text>
+          <text id="sk0vf59-8">
+            <value>Prefiero no decirlo</value>
+          </text>
+          <text id="uf9mf06-0">
+            <value>0</value>
+          </text>
+          <text id="uf9mf06-1">
+            <value>1</value>
+          </text>
+          <text id="uf9mf06-2">
+            <value>2</value>
+          </text>
+          <text id="uf9mf06-3">
+            <value>3</value>
+          </text>
+          <text id="uf9mf06-4">
+            <value>Más de 3</value>
+          </text>
+          <text id="uf9mf06-5">
+            <value>Prefiero no decirlo</value>
+          </text>
+          <text id="/aAv6agDzWX47GMdR8wxaUq/group_hg4zz25:label">
+            <value>Información de nivel personal</value>
+          </text>
+          <text id="/aAv6agDzWX47GMdR8wxaUq/group_hg4zz25/In_which_year_were_you_born:label">
+            <value>¿En que año naciste?</value>
+          </text>
+          <text id="/aAv6agDzWX47GMdR8wxaUq/group_hg4zz25/What_is_your_gender:label">
+            <value>¿Cuál describe de la mejor manera su género?</value>
+          </text>
+          <text id="/aAv6agDzWX47GMdR8wxaUq/group_hg4zz25/What_is_your_race_ethnicity:label">
+            <value>¿Cuál es su raza/etnicidad?</value>
+          </text>
+          <text id="/aAv6agDzWX47GMdR8wxaUq/group_hg4zz25/What_is_your_race_ethnicity:hint">
+            <value>Por favor seleccione todas las respuestas válidas.</value>
+          </text>
+          <text id="/aAv6agDzWX47GMdR8wxaUq/group_hg4zz25/What_is_the_highest_grade_or_d:label">
+            <value>¿Cuál es el grado más alto o el título que ha obtenido?</value>
+          </text>
+          <text id="/aAv6agDzWX47GMdR8wxaUq/group_pa5ah98:label">
+            <value>Información a nivel del hogar</value>
+          </text>
+          <text id="/aAv6agDzWX47GMdR8wxaUq/group_pa5ah98/What_is_your_home_type:label">
+            <value>¿Cuál es tu tipo de casa?</value>
+          </text>
+          <text id="/aAv6agDzWX47GMdR8wxaUq/group_pa5ah98/Please_identify_which_category:label">
+            <value>Por favor, identifique qué categoría representa el ingreso total de su hogar, antes de impuestos, en el último año.</value>
+          </text>
+          <text id="/aAv6agDzWX47GMdR8wxaUq/group_pa5ah98/Please_identify_which_category:hint">
+            <value>Preguntamos esto porque el ingreso está relacionado con cómo, cuándo y por qué la gente va de un lugar a otro. Esta información se utilizará únicamente con fines estadísticos.</value>
+          </text>
+          <text id="/aAv6agDzWX47GMdR8wxaUq/group_pa5ah98/Including_yourself_how_many_p:label">
+            <value>Incluyéndose usted, ¿cuántas personas viven en su casa?</value>
+          </text>
+          <text id="/aAv6agDzWX47GMdR8wxaUq/group_pa5ah98/How_many_motor_vehicles_are_ow:label">
+            <value>¿Cuántos vehículos de motor son propiedad, están alquilados o están disponibles para uso regular por las personas que vive actualmente en su hogar?</value>
+          </text>
+          <text id="/aAv6agDzWX47GMdR8wxaUq/group_pa5ah98/How_many_motor_vehicles_are_ow:hint">
+            <value>Incluya motocicletas, ciclomotores y vehículos recreativos.</value>
+          </text>
+        </translation>
+      </itext>
+      <instance>
+        <aAv6agDzWX47GMdR8wxaUq id="demo_survey_v2">
+          <start/>
+          <end/>
+          <group_hg4zz25>
+            <In_which_year_were_you_born/>
+            <What_is_your_gender/>
+            <What_is_your_race_ethnicity/>
+            <What_is_the_highest_grade_or_d/>
+          </group_hg4zz25>
+          <group_pa5ah98>
+            <What_is_your_home_type/>
+            <Please_identify_which_category/>
+            <Including_yourself_how_many_p/>
+            <How_many_motor_vehicles_are_ow/>
+          </group_pa5ah98>
+          <meta>
+            <instanceID/>
+          </meta>
+        </aAv6agDzWX47GMdR8wxaUq>
+      </instance>
+      <instance id="sj0gn93">
+        <root>
+          <item>
+            <itextId>sj0gn93-0</itextId>
+            <name>woman</name>
+          </item>
+          <item>
+            <itextId>sj0gn93-1</itextId>
+            <name>man</name>
+            <order>1</order>
+          </item>
+          <item>
+            <itextId>sj0gn93-2</itextId>
+            <name>transgender</name>
+            <order>2</order>
+          </item>
+          <item>
+            <itextId>sj0gn93-3</itextId>
+            <name>non_binary</name>
+            <order>3</order>
+          </item>
+          <item>
+            <itextId>sj0gn93-4</itextId>
+            <name>other</name>
+            <order>4</order>
+          </item>
+          <item>
+            <itextId>sj0gn93-5</itextId>
+            <name>prefer_not_to_say</name>
+            <order>5</order>
+          </item>
+        </root>
+      </instance>
+      <instance id="hw6ou02">
+        <root>
+          <item>
+            <itextId>hw6ou02-0</itextId>
+            <name>black_or_african_american</name>
+          </item>
+          <item>
+            <itextId>hw6ou02-1</itextId>
+            <name>white_or_caucasian</name>
+          </item>
+          <item>
+            <itextId>hw6ou02-2</itextId>
+            <name>hispanic_latino_a_x_or_spanish</name>
+          </item>
+          <item>
+            <itextId>hw6ou02-3</itextId>
+            <name>east_asian</name>
+          </item>
+          <item>
+            <itextId>hw6ou02-4</itextId>
+            <name>south_asian</name>
+          </item>
+          <item>
+            <itextId>hw6ou02-5</itextId>
+            <name>american_indian_or_alaska_native</name>
+          </item>
+          <item>
+            <itextId>hw6ou02-6</itextId>
+            <name>native_hawaiian_or_other_pacific_islande</name>
+          </item>
+          <item>
+            <itextId>hw6ou02-7</itextId>
+            <name>multiracial_multiethnic</name>
+          </item>
+          <item>
+            <itextId>hw6ou02-8</itextId>
+            <name>other</name>
+          </item>
+          <item>
+            <itextId>hw6ou02-9</itextId>
+            <name>prefer_not_to_say</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="is7jb99">
+        <root>
+          <item>
+            <itextId>is7jb99-0</itextId>
+            <name>less_than_a_high_school_graduate</name>
+          </item>
+          <item>
+            <itextId>is7jb99-1</itextId>
+            <name>high_school_graduate_or_ged</name>
+          </item>
+          <item>
+            <itextId>is7jb99-2</itextId>
+            <name>some_college_or_associates_degree</name>
+          </item>
+          <item>
+            <itextId>is7jb99-3</itextId>
+            <name>bachelor_s_degree</name>
+          </item>
+          <item>
+            <itextId>is7jb99-4</itextId>
+            <name>graduate_degree_or_professional_degree</name>
+          </item>
+          <item>
+            <itextId>is7jb99-5</itextId>
+            <name>prefer_not_to_say</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="vm7wa34">
+        <root>
+          <item>
+            <itextId>vm7wa34-0</itextId>
+            <name>single_family_own</name>
+          </item>
+          <item>
+            <itextId>vm7wa34-1</itextId>
+            <name>single_family_rent</name>
+            <order>1</order>
+          </item>
+          <item>
+            <itextId>vm7wa34-2</itextId>
+            <name>multi_family_own</name>
+            <order>2</order>
+          </item>
+          <item>
+            <itextId>vm7wa34-3</itextId>
+            <name>multi_family_rent</name>
+            <order>3</order>
+          </item>
+          <item>
+            <itextId>vm7wa34-4</itextId>
+            <name>shelter</name>
+            <order>4</order>
+          </item>
+          <item>
+            <itextId>vm7wa34-5</itextId>
+            <name>prefer_not_to_say</name>
+            <order>5</order>
+          </item>
+        </root>
+      </instance>
+      <instance id="wc3ba24">
+        <root>
+          <item>
+            <itextId>wc3ba24-0</itextId>
+            <name>less_than__24_999</name>
+          </item>
+          <item>
+            <itextId>wc3ba24-1</itextId>
+            <name>_25_000_to__49_999</name>
+            <order>1</order>
+          </item>
+          <item>
+            <itextId>wc3ba24-2</itextId>
+            <name>_50_000_to__99_999</name>
+            <order>2</order>
+          </item>
+          <item>
+            <itextId>wc3ba24-3</itextId>
+            <name>_100_000_to__149_999</name>
+            <order>3</order>
+          </item>
+          <item>
+            <itextId>wc3ba24-4</itextId>
+            <name>_150_000_to__199_999</name>
+            <order>4</order>
+          </item>
+          <item>
+            <itextId>wc3ba24-5</itextId>
+            <name>_200_000_or_more</name>
+            <order>5</order>
+          </item>
+          <item>
+            <itextId>wc3ba24-6</itextId>
+            <name>prefer_not_to_say</name>
+            <order>6</order>
+          </item>
+        </root>
+      </instance>
+      <instance id="sk0vf59">
+        <root>
+          <item>
+            <itextId>sk0vf59-0</itextId>
+            <name>1</name>
+          </item>
+          <item>
+            <itextId>sk0vf59-1</itextId>
+            <name>2</name>
+          </item>
+          <item>
+            <itextId>sk0vf59-2</itextId>
+            <name>3</name>
+          </item>
+          <item>
+            <itextId>sk0vf59-3</itextId>
+            <name>4</name>
+          </item>
+          <item>
+            <itextId>sk0vf59-4</itextId>
+            <name>5</name>
+          </item>
+          <item>
+            <itextId>sk0vf59-5</itextId>
+            <name>6</name>
+          </item>
+          <item>
+            <itextId>sk0vf59-6</itextId>
+            <name>7</name>
+          </item>
+          <item>
+            <itextId>sk0vf59-7</itextId>
+            <name>more_than_7</name>
+          </item>
+          <item>
+            <itextId>sk0vf59-8</itextId>
+            <name>prefer_not_to_say</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="uf9mf06">
+        <root>
+          <item>
+            <itextId>uf9mf06-0</itextId>
+            <name>0</name>
+          </item>
+          <item>
+            <itextId>uf9mf06-1</itextId>
+            <name>1</name>
+          </item>
+          <item>
+            <itextId>uf9mf06-2</itextId>
+            <name>2</name>
+          </item>
+          <item>
+            <itextId>uf9mf06-3</itextId>
+            <name>3</name>
+          </item>
+          <item>
+            <itextId>uf9mf06-4</itextId>
+            <name>more_than_3</name>
+          </item>
+          <item>
+            <itextId>uf9mf06-5</itextId>
+            <name>prefer_not_to_say</name>
+          </item>
+        </root>
+      </instance>
+      <bind nodeset="/aAv6agDzWX47GMdR8wxaUq/start" jr:preload="timestamp" type="dateTime" jr:preloadParams="start"/>
+      <bind nodeset="/aAv6agDzWX47GMdR8wxaUq/end" jr:preload="timestamp" type="dateTime" jr:preloadParams="end"/>
+      <bind nodeset="/aAv6agDzWX47GMdR8wxaUq/group_hg4zz25" required="false()"/>
+      <bind nodeset="/aAv6agDzWX47GMdR8wxaUq/group_hg4zz25/In_which_year_were_you_born" type="int" required="true()" constraint=". &gt;= 1900 and . &lt;= (int(format-date(today(), '%Y')) - 18)"/>
+      <bind nodeset="/aAv6agDzWX47GMdR8wxaUq/group_hg4zz25/What_is_your_gender" type="string" required="true()"/>
+      <bind nodeset="/aAv6agDzWX47GMdR8wxaUq/group_hg4zz25/What_is_your_race_ethnicity" type="string" required="true()"/>
+      <bind nodeset="/aAv6agDzWX47GMdR8wxaUq/group_hg4zz25/What_is_the_highest_grade_or_d" type="string" required="true()"/>
+      <bind nodeset="/aAv6agDzWX47GMdR8wxaUq/group_pa5ah98" required="false()"/>
+      <bind nodeset="/aAv6agDzWX47GMdR8wxaUq/group_pa5ah98/What_is_your_home_type" type="string" required="true()"/>
+      <bind nodeset="/aAv6agDzWX47GMdR8wxaUq/group_pa5ah98/Please_identify_which_category" type="string" required="true()"/>
+      <bind nodeset="/aAv6agDzWX47GMdR8wxaUq/group_pa5ah98/Including_yourself_how_many_p" type="string" required="true()"/>
+      <bind nodeset="/aAv6agDzWX47GMdR8wxaUq/group_pa5ah98/How_many_motor_vehicles_are_ow" type="string" required="true()"/>
+      <bind nodeset="/aAv6agDzWX47GMdR8wxaUq/meta/instanceID" type="string" readonly="true()" jr:preload="uid"/>
+    </model>
+  </h:head>
+  <h:body class="pages">
+    <group ref="/aAv6agDzWX47GMdR8wxaUq/group_hg4zz25">
+      <label ref="jr:itext('/aAv6agDzWX47GMdR8wxaUq/group_hg4zz25:label')"/>
+      <input ref="/aAv6agDzWX47GMdR8wxaUq/group_hg4zz25/In_which_year_were_you_born">
+        <label ref="jr:itext('/aAv6agDzWX47GMdR8wxaUq/group_hg4zz25/In_which_year_were_you_born:label')"/>
+      </input>
+      <select1 ref="/aAv6agDzWX47GMdR8wxaUq/group_hg4zz25/What_is_your_gender">
+        <label ref="jr:itext('/aAv6agDzWX47GMdR8wxaUq/group_hg4zz25/What_is_your_gender:label')"/>
+        <itemset nodeset="instance('sj0gn93')/root/item">
+          <value ref="name"/>
+          <label ref="jr:itext(itextId)"/>
+        </itemset>
+      </select1>
+      <select ref="/aAv6agDzWX47GMdR8wxaUq/group_hg4zz25/What_is_your_race_ethnicity">
+        <label ref="jr:itext('/aAv6agDzWX47GMdR8wxaUq/group_hg4zz25/What_is_your_race_ethnicity:label')"/>
+        <hint ref="jr:itext('/aAv6agDzWX47GMdR8wxaUq/group_hg4zz25/What_is_your_race_ethnicity:hint')"/>
+        <itemset nodeset="instance('hw6ou02')/root/item">
+          <value ref="name"/>
+          <label ref="jr:itext(itextId)"/>
+        </itemset>
+      </select>
+      <select1 ref="/aAv6agDzWX47GMdR8wxaUq/group_hg4zz25/What_is_the_highest_grade_or_d">
+        <label ref="jr:itext('/aAv6agDzWX47GMdR8wxaUq/group_hg4zz25/What_is_the_highest_grade_or_d:label')"/>
+        <itemset nodeset="instance('is7jb99')/root/item">
+          <value ref="name"/>
+          <label ref="jr:itext(itextId)"/>
+        </itemset>
+      </select1>
+    </group>
+    <group ref="/aAv6agDzWX47GMdR8wxaUq/group_pa5ah98">
+      <label ref="jr:itext('/aAv6agDzWX47GMdR8wxaUq/group_pa5ah98:label')"/>
+      <select1 ref="/aAv6agDzWX47GMdR8wxaUq/group_pa5ah98/What_is_your_home_type">
+        <label ref="jr:itext('/aAv6agDzWX47GMdR8wxaUq/group_pa5ah98/What_is_your_home_type:label')"/>
+        <itemset nodeset="instance('vm7wa34')/root/item">
+          <value ref="name"/>
+          <label ref="jr:itext(itextId)"/>
+        </itemset>
+      </select1>
+      <select1 ref="/aAv6agDzWX47GMdR8wxaUq/group_pa5ah98/Please_identify_which_category">
+        <label ref="jr:itext('/aAv6agDzWX47GMdR8wxaUq/group_pa5ah98/Please_identify_which_category:label')"/>
+        <hint ref="jr:itext('/aAv6agDzWX47GMdR8wxaUq/group_pa5ah98/Please_identify_which_category:hint')"/>
+        <itemset nodeset="instance('wc3ba24')/root/item">
+          <value ref="name"/>
+          <label ref="jr:itext(itextId)"/>
+        </itemset>
+      </select1>
+      <select1 ref="/aAv6agDzWX47GMdR8wxaUq/group_pa5ah98/Including_yourself_how_many_p">
+        <label ref="jr:itext('/aAv6agDzWX47GMdR8wxaUq/group_pa5ah98/Including_yourself_how_many_p:label')"/>
+        <itemset nodeset="instance('sk0vf59')/root/item">
+          <value ref="name"/>
+          <label ref="jr:itext(itextId)"/>
+        </itemset>
+      </select1>
+      <select1 ref="/aAv6agDzWX47GMdR8wxaUq/group_pa5ah98/How_many_motor_vehicles_are_ow">
+        <label ref="jr:itext('/aAv6agDzWX47GMdR8wxaUq/group_pa5ah98/How_many_motor_vehicles_are_ow:label')"/>
+        <hint ref="jr:itext('/aAv6agDzWX47GMdR8wxaUq/group_pa5ah98/How_many_motor_vehicles_are_ow:hint')"/>
+        <itemset nodeset="instance('uf9mf06')/root/item">
+          <value ref="name"/>
+          <label ref="jr:itext(itextId)"/>
+        </itemset>
+      </select1>
+    </group>
+  </h:body>
+</h:html>
