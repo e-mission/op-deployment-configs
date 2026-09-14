@@ -1,0 +1,1350 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:odk="http://www.opendatakit.org/xforms">
+  <h:head>
+    <h:title>Proba para descarga XML</h:title>
+    <model odk:xforms-version="1.0.0">
+      <itext>
+        <translation lang="Spanish (sp)" default="true()">
+          <text id="ph5is83-0">
+            <value>16-17</value>
+          </text>
+          <text id="ph5is83-1">
+            <value>18-24</value>
+          </text>
+          <text id="ph5is83-2">
+            <value>25-34</value>
+          </text>
+          <text id="ph5is83-3">
+            <value>35-44</value>
+          </text>
+          <text id="ph5is83-4">
+            <value>45-54</value>
+          </text>
+          <text id="ph5is83-5">
+            <value>55-64</value>
+          </text>
+          <text id="ph5is83-6">
+            <value>65-74</value>
+          </text>
+          <text id="ph5is83-7">
+            <value>75-85</value>
+          </text>
+          <text id="ph5is83-8">
+            <value>95 o más</value>
+          </text>
+          <text id="nt4mc41-0">
+            <value>Mujer</value>
+          </text>
+          <text id="nt4mc41-1">
+            <value>Hombre</value>
+          </text>
+          <text id="nt4mc41-2">
+            <value>No binario</value>
+          </text>
+          <text id="nt4mc41-3">
+            <value>Prefiero autodescribirme</value>
+          </text>
+          <text id="nt4mc41-4">
+            <value>Prefiero no responder</value>
+          </text>
+          <text id="fs7kn20-0">
+            <value>Sí</value>
+          </text>
+          <text id="fs7kn20-1">
+            <value>No</value>
+          </text>
+          <text id="fs7kn20-2">
+            <value>Prefiero no responder</value>
+          </text>
+          <text id="ub5xl22-0">
+            <value>Menos de 1 mes</value>
+          </text>
+          <text id="ub5xl22-1">
+            <value>1 a 3 meses</value>
+          </text>
+          <text id="ub5xl22-2">
+            <value>4 a 11 meses</value>
+          </text>
+          <text id="ub5xl22-3">
+            <value>1 a 3 años</value>
+          </text>
+          <text id="ub5xl22-4">
+            <value>Más de 3 años</value>
+          </text>
+          <text id="ub5xl22-5">
+            <value>Prefiero no responder</value>
+          </text>
+          <text id="vs9rq92-0">
+            <value>Estudiante a tiempo completo</value>
+          </text>
+          <text id="vs9rq92-1">
+            <value>Estudiante a tiempo parcial</value>
+          </text>
+          <text id="vs9rq92-2">
+            <value>Trabajador/a asalariado/a (por cuenta ajena)</value>
+          </text>
+          <text id="vs9rq92-3">
+            <value>Trabajador/a autónomo/a (por cuenta propia/independiente)</value>
+          </text>
+          <text id="vs9rq92-4">
+            <value>Trabajo doméstico no remunerado</value>
+          </text>
+          <text id="vs9rq92-5">
+            <value>Desempleado/a</value>
+          </text>
+          <text id="vs9rq92-6">
+            <value>Jubilado/a</value>
+          </text>
+          <text id="vs9rq92-7">
+            <value>Otros</value>
+          </text>
+          <text id="vs9rq92-8">
+            <value>Prefiero no responder</value>
+          </text>
+          <text id="xo2ik14-0">
+            <value>Anual</value>
+          </text>
+          <text id="xo2ik14-1">
+            <value>Mensual</value>
+          </text>
+          <text id="xo2ik14-2">
+            <value>Prefiero no responder</value>
+          </text>
+          <text id="ea9vn59-0">
+            <value>Viaje al trabajo (hacia y desde su hogar)</value>
+          </text>
+          <text id="ea9vn59-1">
+            <value>Viaje a centro de estudios oficiales (instituto, universidad, etc.)</value>
+          </text>
+          <text id="ea9vn59-2">
+            <value>Viaje relacionado con el trabajo (reuniones, gestiones, funciones laborales)</value>
+          </text>
+          <text id="ea9vn59-3">
+            <value>Gestiones y trámites personales (médico, compras, banco, etc.)</value>
+          </text>
+          <text id="ea9vn59-4">
+            <value>Actividades (gimnasio, ejercicio, formación, etc.)</value>
+          </text>
+          <text id="ea9vn59-5">
+            <value>Ocio / Vida social (cine, comidas con amistades, etc.)</value>
+          </text>
+          <text id="ea9vn59-6">
+            <value>Paseo en bicicleta sin otro motivo adicional</value>
+          </text>
+          <text id="ea9vn59-7">
+            <value>Acompañar a otras personas (niñas/os, personas mayores, pareja)</value>
+          </text>
+          <text id="ea9vn59-8">
+            <value>Conexión con otros modos de transporte (marcar adicionalmente al motivo en su caso)</value>
+          </text>
+          <text id="ea9vn59-9">
+            <value>Prefiero no responder</value>
+          </text>
+          <text id="lh4oj89-0">
+            <value>A diario / Casi a diario (5 o más días por semana)</value>
+          </text>
+          <text id="lh4oj89-1">
+            <value>Varias veces por semana (2 a 4 días)</value>
+          </text>
+          <text id="lh4oj89-2">
+            <value>Aproximadamente una vez por semana</value>
+          </text>
+          <text id="lh4oj89-3">
+            <value>Algunas veces al mes</value>
+          </text>
+          <text id="lh4oj89-4">
+            <value>Menos de una vez al mes</value>
+          </text>
+          <text id="lh4oj89-5">
+            <value>Prefiero no responder</value>
+          </text>
+          <text id="cv1us80-0">
+            <value>Hacer el desplazamiento de todos modos en una bicicleta sin pedaleo asistido (convencional)</value>
+          </text>
+          <text id="cv1us80-1">
+            <value>Hacer el desplazamiento caminando</value>
+          </text>
+          <text id="cv1us80-2">
+            <value>Hacer el desplazamiento usando un modo diferente de transporte</value>
+          </text>
+          <text id="cv1us80-3">
+            <value>Hacer este viaje, pero a un destino diferente y más cerca</value>
+          </text>
+          <text id="cv1us80-4">
+            <value>No hacer el desplazamiento</value>
+          </text>
+          <text id="hv0mf96-0">
+            <value>1.000€ o menos</value>
+          </text>
+          <text id="hv0mf96-1">
+            <value>De 1.001 a 2.000 €</value>
+          </text>
+          <text id="hv0mf96-2">
+            <value>De 2.001 a 3.000 €</value>
+          </text>
+          <text id="hv0mf96-3">
+            <value>De 3.001 a 4.000 €</value>
+          </text>
+          <text id="hv0mf96-4">
+            <value>De 4.001 a 5.000 €</value>
+          </text>
+          <text id="hv0mf96-5">
+            <value>Más de 5.000 €</value>
+          </text>
+          <text id="hv0mf96-6">
+            <value>Prefiero no responder</value>
+          </text>
+          <text id="gm4wh09-0">
+            <value>Sin ingresos propios</value>
+          </text>
+          <text id="gm4wh09-1">
+            <value>600 € o menos</value>
+          </text>
+          <text id="gm4wh09-2">
+            <value>De 601 a 1.200 €</value>
+          </text>
+          <text id="gm4wh09-3">
+            <value>De 1.201 a 1.800 €</value>
+          </text>
+          <text id="gm4wh09-4">
+            <value>De 1.801 a 2.400 €</value>
+          </text>
+          <text id="gm4wh09-5">
+            <value>De 2.401 a 3.000 €</value>
+          </text>
+          <text id="gm4wh09-6">
+            <value>De 3.001 a 4.500 €</value>
+          </text>
+          <text id="gm4wh09-7">
+            <value>Más de 4.500 €</value>
+          </text>
+          <text id="gm4wh09-8">
+            <value>Prefiero no responder</value>
+          </text>
+          <text id="xa0kb91-0">
+            <value>1</value>
+          </text>
+          <text id="xa0kb91-1">
+            <value>2</value>
+          </text>
+          <text id="xa0kb91-2">
+            <value>3</value>
+          </text>
+          <text id="xa0kb91-3">
+            <value>4</value>
+          </text>
+          <text id="xa0kb91-4">
+            <value>5</value>
+          </text>
+          <text id="xa0kb91-5">
+            <value>Más de 5</value>
+          </text>
+          <text id="xa0kb91-6">
+            <value>Prefiero no responder</value>
+          </text>
+          <text id="ws3fq16-0">
+            <value>0</value>
+          </text>
+          <text id="ws3fq16-1">
+            <value>1</value>
+          </text>
+          <text id="ws3fq16-2">
+            <value>2</value>
+          </text>
+          <text id="ws3fq16-3">
+            <value>3 o más</value>
+          </text>
+          <text id="ws3fq16-4">
+            <value>Prefiero no responder</value>
+          </text>
+          <text id="/ay6g686GSX8RCk3QmyJCA2/_1_edad:label">
+            <value>1. Rango de edad</value>
+          </text>
+          <text id="/ay6g686GSX8RCk3QmyJCA2/_2_sexo_genero:label">
+            <value>2. ¿Cuál es su sexo o género?</value>
+          </text>
+          <text id="/ay6g686GSX8RCk3QmyJCA2/_2_autodescrip:label">
+            <value>Me autodescribo como:</value>
+          </text>
+          <text id="/ay6g686GSX8RCk3QmyJCA2/_3_licencia_conducir:label">
+            <value>3. ¿Dispone de licencia de conducir?</value>
+          </text>
+          <text id="/ay6g686GSX8RCk3QmyJCA2/_4_residencia:label">
+            <value>4. ¿Cuánto tiempo lleva viviendo en su residencia actual?</value>
+          </text>
+          <text id="/ay6g686GSX8RCk3QmyJCA2/_5_situacion_laboral:label">
+            <value>5. Situación laboral</value>
+          </text>
+          <text id="/ay6g686GSX8RCk3QmyJCA2/_5_situacion_laboral:hint">
+            <value>(Marque todas las opciones que correspondan)</value>
+          </text>
+          <text id="/ay6g686GSX8RCk3QmyJCA2/_6_suscripcion:label">
+            <value>6. Su suscripción a Bicicoruña es...</value>
+          </text>
+          <text id="/ay6g686GSX8RCk3QmyJCA2/_7_comodidad_por_via:label">
+            <value>**7. Valore su nivel de comodidad en los siguientes tipos de vías cuando circula en bicicleta por la ciudad**</value>
+          </text>
+          <text id="/ay6g686GSX8RCk3QmyJCA2/_7_comodidad_por_via:hint">
+            <value>(Calificarlas de 0 a 10, donde 10 es lo más cómodo y 0 lo menos cómodo)</value>
+          </text>
+          <text id="/ay6g686GSX8RCk3QmyJCA2/_carril_bici_segregado:label">
+            <value>######Comodidad al circular por carril bici segregado (separado físicamente del tráfico)</value>
+            <value form="image">jr://images/7.1.jpg</value>
+          </text>
+          <text id="/ay6g686GSX8RCk3QmyJCA2/_carril_bici_segregado:hint">
+            <value>(Calificarlas de 0 a 10, donde 10 es lo más cómodo y 0 lo menos cómodo)</value>
+          </text>
+          <text id="/ay6g686GSX8RCk3QmyJCA2/_acera_bici:label">
+            <value>######Comodidad al circular por acera-bici, con carril señalizado en acera compartida con peatones</value>
+            <value form="image">jr://images/7.2.jpg</value>
+          </text>
+          <text id="/ay6g686GSX8RCk3QmyJCA2/_acera_bici:hint">
+            <value>(Calificarlas de 0 a 10, donde 10 es lo más cómodo y 0 lo menos cómodo)</value>
+          </text>
+          <text id="/ay6g686GSX8RCk3QmyJCA2/_sendero_compartido:label">
+            <value>######Comodidad al circular por senderos compartidos con peatones que discurren por áreas verdes, parques y otros espacios públicos de la ciudad</value>
+            <value form="image">jr://images/7.3.jpg</value>
+          </text>
+          <text id="/ay6g686GSX8RCk3QmyJCA2/_sendero_compartido:hint">
+            <value>(Calificarlas de 0 a 10, donde 10 es lo más cómodo y 0 lo menos cómodo)</value>
+          </text>
+          <text id="/ay6g686GSX8RCk3QmyJCA2/_pasarela_peatonal:label">
+            <value>######Comodidad al circular por pasarela peatonal ciclista</value>
+            <value form="image">jr://images/7.4.jpg</value>
+          </text>
+          <text id="/ay6g686GSX8RCk3QmyJCA2/_pasarela_peatonal:hint">
+            <value>(Calificarlas de 0 a 10, donde 10 es lo más cómodo y 0 lo menos cómodo)</value>
+          </text>
+          <text id="/ay6g686GSX8RCk3QmyJCA2/_compartido_trafico_mot_carrilsentido:label">
+            <value>######Comodidad al circular por carril compartido con tráfico motorizado, señalizado con símbolos de bicicleta sobre la calzada en vías de un solo carril por sentido</value>
+            <value form="image">jr://images/7.5.jpg</value>
+          </text>
+          <text id="/ay6g686GSX8RCk3QmyJCA2/_compartido_trafico_mot_carrilsentido:hint">
+            <value>(Calificarlas de 0 a 10, donde 10 es lo más cómodo y 0 lo menos cómodo)</value>
+          </text>
+          <text id="/ay6g686GSX8RCk3QmyJCA2/_compartido_trafico_mot_varioscarriles:label">
+            <value>######Comodidad al circular por carril compartido con tráfico motorizado, señalizado con símbolos de bicicleta sobre la calzada en vías de varios carriles por sentido</value>
+            <value form="image">jr://images/7.6.jpg</value>
+          </text>
+          <text id="/ay6g686GSX8RCk3QmyJCA2/_compartido_trafico_mot_varioscarriles:hint">
+            <value>(Calificarlas de 0 a 10, donde 10 es lo más cómodo y 0 lo menos cómodo)</value>
+          </text>
+          <text id="/ay6g686GSX8RCk3QmyJCA2/_compartido_trafico_mot_sin_30:label">
+            <value>######Comodidad al circular por carril compartido con tráfico motorizado, sin símbolos para bicicletas, con una velocidad máxima de 30 km/h o inferior</value>
+            <value form="image">jr://images/7.7.jpg</value>
+          </text>
+          <text id="/ay6g686GSX8RCk3QmyJCA2/_compartido_trafico_mot_sin_30:hint">
+            <value>(Calificarlas de 0 a 10, donde 10 es lo más cómodo y 0 lo menos cómodo)</value>
+          </text>
+          <text id="/ay6g686GSX8RCk3QmyJCA2/_compartido_trafico_mot_sin_50:label">
+            <value>######Comodidad al circular por carril compartido con tráfico motorizado, sin símbolos para bicicletas, con una velocidad máxima de 50 km/h o superior</value>
+            <value form="image">jr://images/7.8.jpg</value>
+          </text>
+          <text id="/ay6g686GSX8RCk3QmyJCA2/_compartido_trafico_mot_sin_50:hint">
+            <value>(Calificarlas de 0 a 10, donde 10 es lo más cómodo y 0 lo menos cómodo)</value>
+          </text>
+          <text id="/ay6g686GSX8RCk3QmyJCA2/_8_Motivo_s_habitua_ientos_en_Bicicoru_a:label">
+            <value>8. Motivo(s) habitual(es) de sus desplazamientos en Bicicoruña</value>
+          </text>
+          <text id="/ay6g686GSX8RCk3QmyJCA2/_8_Motivo_s_habitua_ientos_en_Bicicoru_a:hint">
+            <value>(Puede marcar varias opciones)</value>
+          </text>
+          <text id="/ay6g686GSX8RCk3QmyJCA2/_9_Con_qu_frecuenc_a_utiliza_Bicicoru_a:label">
+            <value>9. ¿Con qué frecuencia utiliza Bicicoruña?</value>
+          </text>
+          <text id="/ay6g686GSX8RCk3QmyJCA2/_10_Cuando_no_hay_di_normalmente_decide:label">
+            <value>10. Cuando no hay disponibilidad de bicicletas con pedaleo asistido (eléctrica) en la estación de Bicicoruña, normalmente decide:</value>
+          </text>
+          <text id="/ay6g686GSX8RCk3QmyJCA2/_11_Ingresos_mensual_el_hogar_total_neto:label">
+            <value>11. Ingresos mensuales del hogar (total neto)</value>
+          </text>
+          <text id="/ay6g686GSX8RCk3QmyJCA2/_12_Ingreso_personal_mensual_total_neto:label">
+            <value>12. Ingreso personal mensual (total neto)</value>
+          </text>
+          <text id="/ay6g686GSX8RCk3QmyJCA2/_13_N_mero_de_personas_en_el_hogar:label">
+            <value>13. Número de personas en el hogar</value>
+          </text>
+          <text id="/ay6g686GSX8RCk3QmyJCA2/_14_N_mero_de_veh_cu_el_hogar_Coche_Moto:label">
+            <value>14. Número de vehículos motorizados en el hogar (Coche/Moto)</value>
+          </text>
+          <text id="/ay6g686GSX8RCk3QmyJCA2/Texto_de_consentimiento_001:label">
+            <value>**Texto de consentimiento:**</value>
+          </text>
+          <text id="/ay6g686GSX8RCk3QmyJCA2/Texto_de_consentimiento_001:hint">
+            <value>Al continuar, usted confirma que: 
+
+ Tiene 16 años de edad o más. 
+Ha entendido las explicaciones proporcionadas y en qué consiste su participación en el estudio. 
+Acepta voluntariamente participar en este estudio de investigación. 
+Acepta compartir los datos de ruta de sus desplazamientos y sus respuestas de la encuesta con fines de investigación. 
+Entiende que su información se mantendrá confidencial en la medida permitida por la ley. 
+Comprende que puede revocar el consentimiento libremente en cualquier momento.</value>
+          </text>
+        </translation>
+        <translation lang="Galician (gl)">
+          <text id="ph5is83-0">
+            <value>16-17</value>
+          </text>
+          <text id="ph5is83-1">
+            <value>18-24</value>
+          </text>
+          <text id="ph5is83-2">
+            <value>25-34</value>
+          </text>
+          <text id="ph5is83-3">
+            <value>35-44</value>
+          </text>
+          <text id="ph5is83-4">
+            <value>45-54</value>
+          </text>
+          <text id="ph5is83-5">
+            <value>55-64</value>
+          </text>
+          <text id="ph5is83-6">
+            <value>65-74</value>
+          </text>
+          <text id="ph5is83-7">
+            <value>75-85</value>
+          </text>
+          <text id="ph5is83-8">
+            <value>95 ou máis</value>
+          </text>
+          <text id="nt4mc41-0">
+            <value>Muller</value>
+          </text>
+          <text id="nt4mc41-1">
+            <value>Home</value>
+          </text>
+          <text id="nt4mc41-2">
+            <value>Non binario</value>
+          </text>
+          <text id="nt4mc41-3">
+            <value>Prefiro autodescribirme</value>
+          </text>
+          <text id="nt4mc41-4">
+            <value>Prefiro non responder</value>
+          </text>
+          <text id="fs7kn20-0">
+            <value>Si</value>
+          </text>
+          <text id="fs7kn20-1">
+            <value>Non</value>
+          </text>
+          <text id="fs7kn20-2">
+            <value>Prefiro non responder</value>
+          </text>
+          <text id="ub5xl22-0">
+            <value>Menos de 1 mes</value>
+          </text>
+          <text id="ub5xl22-1">
+            <value>1 a 3 meses</value>
+          </text>
+          <text id="ub5xl22-2">
+            <value>4 a 11 meses</value>
+          </text>
+          <text id="ub5xl22-3">
+            <value>1 a 3 anos</value>
+          </text>
+          <text id="ub5xl22-4">
+            <value>Máis de 3 anos</value>
+          </text>
+          <text id="ub5xl22-5">
+            <value>Prefiro non responder</value>
+          </text>
+          <text id="vs9rq92-0">
+            <value>Estudante a tempo completo</value>
+          </text>
+          <text id="vs9rq92-1">
+            <value>Estudante a tempo parcial</value>
+          </text>
+          <text id="vs9rq92-2">
+            <value>Traballador/a asalariado/a (por conta allea)</value>
+          </text>
+          <text id="vs9rq92-3">
+            <value>Traballador/a autónomo/a (por conta propia / independente)</value>
+          </text>
+          <text id="vs9rq92-4">
+            <value>Traballo doméstico non remunerado</value>
+          </text>
+          <text id="vs9rq92-5">
+            <value>Desempregado/a</value>
+          </text>
+          <text id="vs9rq92-6">
+            <value>Xubilado/a</value>
+          </text>
+          <text id="vs9rq92-7">
+            <value>Outros</value>
+          </text>
+          <text id="vs9rq92-8">
+            <value>Prefiro non responder</value>
+          </text>
+          <text id="xo2ik14-0">
+            <value>Anual</value>
+          </text>
+          <text id="xo2ik14-1">
+            <value>Mensual</value>
+          </text>
+          <text id="xo2ik14-2">
+            <value>Prefiro non responder</value>
+          </text>
+          <text id="ea9vn59-0">
+            <value>Viaxe ao traballo (cara e desde o seu fogar)</value>
+          </text>
+          <text id="ea9vn59-1">
+            <value>Viaxe a centro de estudos oficiais (instituto, universidade, etc.)</value>
+          </text>
+          <text id="ea9vn59-2">
+            <value>Viaxe relacionada co traballo (reunións, xestións, funcións laborais)</value>
+          </text>
+          <text id="ea9vn59-3">
+            <value>Xestións e trámites persoais (médico, compras, banco, etc.)</value>
+          </text>
+          <text id="ea9vn59-4">
+            <value>Actividades (ximnasio, exercicio, formación, etc.)</value>
+          </text>
+          <text id="ea9vn59-5">
+            <value>Lecer / Vida social (cine, comidas con amizades, etc.)</value>
+          </text>
+          <text id="ea9vn59-6">
+            <value>Paseo en bicicleta sen outro motivo adicional</value>
+          </text>
+          <text id="ea9vn59-7">
+            <value>Acompañar a outras persoas (nenas/os, persoas maiores, parella)</value>
+          </text>
+          <text id="ea9vn59-8">
+            <value>Conexión con outros modos de transporte (marcar adicionalmente ao motivo, no seu caso)</value>
+          </text>
+          <text id="ea9vn59-9">
+            <value>Prefiro non responder</value>
+          </text>
+          <text id="lh4oj89-0">
+            <value>A diario / Case a diario (5 o más días por semana)</value>
+          </text>
+          <text id="lh4oj89-1">
+            <value>Varias veces por semana (2 a 4 días)</value>
+          </text>
+          <text id="lh4oj89-2">
+            <value>Aproximadamente unha vez por semana</value>
+          </text>
+          <text id="lh4oj89-3">
+            <value>Algunhas veces ao mes</value>
+          </text>
+          <text id="lh4oj89-4">
+            <value>Menos dunha vez ao mes</value>
+          </text>
+          <text id="lh4oj89-5">
+            <value>Prefiro non responder</value>
+          </text>
+          <text id="cv1us80-0">
+            <value>Facer o desprazamento de todos modos nunha bicicleta sen pedaleo asistido (convencional)</value>
+          </text>
+          <text id="cv1us80-1">
+            <value>Facer o desprazamento camiñando</value>
+          </text>
+          <text id="cv1us80-2">
+            <value>Facer o desprazamento usando un modo diferente de transporte</value>
+          </text>
+          <text id="cv1us80-3">
+            <value>Facer esta viaxe, pero a un destino diferente e máis preto</value>
+          </text>
+          <text id="cv1us80-4">
+            <value>Non facer o desprazamento</value>
+          </text>
+          <text id="hv0mf96-0">
+            <value>1.000 € ou menos</value>
+          </text>
+          <text id="hv0mf96-1">
+            <value>De 1.001 a 2.000 €</value>
+          </text>
+          <text id="hv0mf96-2">
+            <value>De 2.001 a 3.000 €</value>
+          </text>
+          <text id="hv0mf96-3">
+            <value>De 3.001 a 4.000 €</value>
+          </text>
+          <text id="hv0mf96-4">
+            <value>De 4.001 a 5.000 €</value>
+          </text>
+          <text id="hv0mf96-5">
+            <value>Máis de 5.000 €</value>
+          </text>
+          <text id="hv0mf96-6">
+            <value>Prefiro non responder</value>
+          </text>
+          <text id="gm4wh09-0">
+            <value>Sen ingresos propios</value>
+          </text>
+          <text id="gm4wh09-1">
+            <value>600 € ou menos</value>
+          </text>
+          <text id="gm4wh09-2">
+            <value>De 601 a 1.200 €</value>
+          </text>
+          <text id="gm4wh09-3">
+            <value>De 1.201 a 1.800 €</value>
+          </text>
+          <text id="gm4wh09-4">
+            <value>De 1.801 a 2.400 €</value>
+          </text>
+          <text id="gm4wh09-5">
+            <value>De 2.401 a 3.000 €</value>
+          </text>
+          <text id="gm4wh09-6">
+            <value>De 3.001 a 4.500 €</value>
+          </text>
+          <text id="gm4wh09-7">
+            <value>Máis de 4.500 €</value>
+          </text>
+          <text id="gm4wh09-8">
+            <value>Prefiro non responder</value>
+          </text>
+          <text id="xa0kb91-0">
+            <value>1</value>
+          </text>
+          <text id="xa0kb91-1">
+            <value>2</value>
+          </text>
+          <text id="xa0kb91-2">
+            <value>3</value>
+          </text>
+          <text id="xa0kb91-3">
+            <value>4</value>
+          </text>
+          <text id="xa0kb91-4">
+            <value>5</value>
+          </text>
+          <text id="xa0kb91-5">
+            <value>Máis de 5</value>
+          </text>
+          <text id="xa0kb91-6">
+            <value>Prefiro non responder</value>
+          </text>
+          <text id="ws3fq16-0">
+            <value>0</value>
+          </text>
+          <text id="ws3fq16-1">
+            <value>1</value>
+          </text>
+          <text id="ws3fq16-2">
+            <value>2</value>
+          </text>
+          <text id="ws3fq16-3">
+            <value>3 ou máis</value>
+          </text>
+          <text id="ws3fq16-4">
+            <value>Prefiro non responder</value>
+          </text>
+          <text id="/ay6g686GSX8RCk3QmyJCA2/_1_edad:label">
+            <value>1. Rango de idade</value>
+          </text>
+          <text id="/ay6g686GSX8RCk3QmyJCA2/_2_sexo_genero:label">
+            <value>2. Cal é o seu sexo ou xénero?</value>
+          </text>
+          <text id="/ay6g686GSX8RCk3QmyJCA2/_2_autodescrip:label">
+            <value>Autodescríbome como:</value>
+          </text>
+          <text id="/ay6g686GSX8RCk3QmyJCA2/_3_licencia_conducir:label">
+            <value>3. Dispón de permiso de conducir?</value>
+          </text>
+          <text id="/ay6g686GSX8RCk3QmyJCA2/_4_residencia:label">
+            <value>4. Canto tempo leva vivindo na súa residencia actual?</value>
+          </text>
+          <text id="/ay6g686GSX8RCk3QmyJCA2/_5_situacion_laboral:label">
+            <value>5. Situación laboral</value>
+          </text>
+          <text id="/ay6g686GSX8RCk3QmyJCA2/_5_situacion_laboral:hint">
+            <value>(Marque todas as que correspondan)</value>
+          </text>
+          <text id="/ay6g686GSX8RCk3QmyJCA2/_6_suscripcion:label">
+            <value>6. A súa subscrición a Bicicoruña é…</value>
+          </text>
+          <text id="/ay6g686GSX8RCk3QmyJCA2/_7_comodidad_por_via:label">
+            <value>**7. Valore o seu nivel de comodidade nos seguintes tipos de vías cando circula en bicicleta pola cidade.**</value>
+          </text>
+          <text id="/ay6g686GSX8RCk3QmyJCA2/_7_comodidad_por_via:hint">
+            <value>(Cualificalas de 0 a 10, onde 10 é o máis cómodo e 0 o menos cómodo)</value>
+          </text>
+          <text id="/ay6g686GSX8RCk3QmyJCA2/_carril_bici_segregado:label">
+            <value>######Comodidade ao circular por carril bici segregado (separado fisicamente del tráfico)</value>
+            <value form="image">jr://images/7.1.jpg</value>
+          </text>
+          <text id="/ay6g686GSX8RCk3QmyJCA2/_carril_bici_segregado:hint">
+            <value>(Cualificalas de 0 a 10, onde 10 é o máis cómodo e 0 o menos cómodo)</value>
+          </text>
+          <text id="/ay6g686GSX8RCk3QmyJCA2/_acera_bici:label">
+            <value>######Comodidade ao circular por beirarrúa-bici, con carril sinalizado en beirarrúa compartida con peóns</value>
+            <value form="image">jr://images/7.2.jpg</value>
+          </text>
+          <text id="/ay6g686GSX8RCk3QmyJCA2/_acera_bici:hint">
+            <value>(Cualificalas de 0 a 10, onde 10 é o máis cómodo e 0 o menos cómodo)</value>
+          </text>
+          <text id="/ay6g686GSX8RCk3QmyJCA2/_sendero_compartido:label">
+            <value>######Comodidade ao circular por sendeiros compartidos con peóns que discorren por áreas verdes, parques e outros espazos públicos da cidade</value>
+            <value form="image">jr://images/7.3.jpg</value>
+          </text>
+          <text id="/ay6g686GSX8RCk3QmyJCA2/_sendero_compartido:hint">
+            <value>(Cualificalas de 0 a 10, onde 10 é o máis cómodo e 0 o menos cómodo)</value>
+          </text>
+          <text id="/ay6g686GSX8RCk3QmyJCA2/_pasarela_peatonal:label">
+            <value>######Comodidade ao circular por pasarela peonil‑ciclista</value>
+            <value form="image">jr://images/7.4.jpg</value>
+          </text>
+          <text id="/ay6g686GSX8RCk3QmyJCA2/_pasarela_peatonal:hint">
+            <value>(Cualificalas de 0 a 10, onde 10 é o máis cómodo e 0 o menos cómodo)</value>
+          </text>
+          <text id="/ay6g686GSX8RCk3QmyJCA2/_compartido_trafico_mot_carrilsentido:label">
+            <value>######Comodidade ao circular por carril compartido con tráfico motorizado, sinalizado con símbolos de bicicleta sobre a calzada en vías dun só carril por sentido</value>
+            <value form="image">jr://images/7.5.jpg</value>
+          </text>
+          <text id="/ay6g686GSX8RCk3QmyJCA2/_compartido_trafico_mot_carrilsentido:hint">
+            <value>(Cualificalas de 0 a 10, onde 10 é o máis cómodo e 0 o menos cómodo)</value>
+          </text>
+          <text id="/ay6g686GSX8RCk3QmyJCA2/_compartido_trafico_mot_varioscarriles:label">
+            <value>######Comodidade ao circular por carril compartido con tráfico motorizado, sinalizado con símbolos de bicicleta sobre a calzada en vías de varios carrís por sentido</value>
+            <value form="image">jr://images/7.6.jpg</value>
+          </text>
+          <text id="/ay6g686GSX8RCk3QmyJCA2/_compartido_trafico_mot_varioscarriles:hint">
+            <value>(Cualificalas de 0 a 10, onde 10 é o máis cómodo e 0 o menos cómodo)</value>
+          </text>
+          <text id="/ay6g686GSX8RCk3QmyJCA2/_compartido_trafico_mot_sin_30:label">
+            <value>######Comodidade ao circular por carril compartido con tráfico motorizado, sen símbolos para bicicletas, cunha velocidade máxima de 30 km/h ou inferior</value>
+            <value form="image">jr://images/7.7.jpg</value>
+          </text>
+          <text id="/ay6g686GSX8RCk3QmyJCA2/_compartido_trafico_mot_sin_30:hint">
+            <value>(Cualificalas de 0 a 10, onde 10 é o máis cómodo e 0 o menos cómodo)</value>
+          </text>
+          <text id="/ay6g686GSX8RCk3QmyJCA2/_compartido_trafico_mot_sin_50:label">
+            <value>######Comodidade ao circular por carril compartido con tráfico motorizado, sen símbolos para bicicletas, cunha velocidade máxima de 50 km/h ou superior</value>
+            <value form="image">jr://images/7.8.jpg</value>
+          </text>
+          <text id="/ay6g686GSX8RCk3QmyJCA2/_compartido_trafico_mot_sin_50:hint">
+            <value>(Cualificalas de 0 a 10, onde 10 é o máis cómodo e 0 o menos cómodo)</value>
+          </text>
+          <text id="/ay6g686GSX8RCk3QmyJCA2/_8_Motivo_s_habitua_ientos_en_Bicicoru_a:label">
+            <value>8. Motivo/s habitual/is dos seus desprazamentos en Bicicoruña</value>
+          </text>
+          <text id="/ay6g686GSX8RCk3QmyJCA2/_8_Motivo_s_habitua_ientos_en_Bicicoru_a:hint">
+            <value>(Pode marcar varias opcións)</value>
+          </text>
+          <text id="/ay6g686GSX8RCk3QmyJCA2/_9_Con_qu_frecuenc_a_utiliza_Bicicoru_a:label">
+            <value>9. Con que frecuencia utiliza Bicicoruña?</value>
+          </text>
+          <text id="/ay6g686GSX8RCk3QmyJCA2/_10_Cuando_no_hay_di_normalmente_decide:label">
+            <value>10. Cando non hai dispoñibilidade de bicicletas con pedaleo asistido (eléctrica) na estación de Bicicoruña, normalmente decide:</value>
+          </text>
+          <text id="/ay6g686GSX8RCk3QmyJCA2/_11_Ingresos_mensual_el_hogar_total_neto:label">
+            <value>11. Ingresos mensuais do fogar (total neto)</value>
+          </text>
+          <text id="/ay6g686GSX8RCk3QmyJCA2/_12_Ingreso_personal_mensual_total_neto:label">
+            <value>12. Ingresos persoais mensuais (total neto)</value>
+          </text>
+          <text id="/ay6g686GSX8RCk3QmyJCA2/_13_N_mero_de_personas_en_el_hogar:label">
+            <value>13. Número de persoas no fogar</value>
+          </text>
+          <text id="/ay6g686GSX8RCk3QmyJCA2/_14_N_mero_de_veh_cu_el_hogar_Coche_Moto:label">
+            <value>14. Número de vehículos motorizados no fogar (Coche/Moto)</value>
+          </text>
+          <text id="/ay6g686GSX8RCk3QmyJCA2/Texto_de_consentimiento_001:label">
+            <value>**Texto de consentimento:**</value>
+          </text>
+          <text id="/ay6g686GSX8RCk3QmyJCA2/Texto_de_consentimiento_001:hint">
+            <value>Ao continuar, vostede confirma que: 
+ 
+Ten 16 anos de idade ou máis.
+Entendeu as explicacións proporcionadas e en que consiste a súa participación no estudo.
+Acepta voluntariamente participar neste estudo de investigación.
+Acepta compartir os datos de ruta dos seus desprazamentos e as súas respostas da enquisa con fins de investigación.
+Entende que a súa información se manterá confidencial na medida permitida pola lei.
+Comprende que pode revogar o consentimento libremente en calquera momento.</value>
+          </text>
+        </translation>
+      </itext>
+      <instance>
+        <ay6g686GSX8RCk3QmyJCA2 id="ay6g686GSX8RCk3QmyJCA2">
+          <start/>
+          <end/>
+          <_1_edad/>
+          <_2_sexo_genero/>
+          <_2_autodescrip/>
+          <_3_licencia_conducir/>
+          <_4_residencia/>
+          <_5_situacion_laboral/>
+          <_6_suscripcion/>
+          <_7_comodidad_por_via/>
+          <_carril_bici_segregado/>
+          <_acera_bici/>
+          <_sendero_compartido/>
+          <_pasarela_peatonal/>
+          <_compartido_trafico_mot_carrilsentido/>
+          <_compartido_trafico_mot_varioscarriles/>
+          <_compartido_trafico_mot_sin_30/>
+          <_compartido_trafico_mot_sin_50/>
+          <_8_Motivo_s_habitua_ientos_en_Bicicoru_a/>
+          <_9_Con_qu_frecuenc_a_utiliza_Bicicoru_a/>
+          <_10_Cuando_no_hay_di_normalmente_decide/>
+          <_11_Ingresos_mensual_el_hogar_total_neto/>
+          <_12_Ingreso_personal_mensual_total_neto/>
+          <_13_N_mero_de_personas_en_el_hogar/>
+          <_14_N_mero_de_veh_cu_el_hogar_Coche_Moto/>
+          <Texto_de_consentimiento_001/>
+          <meta>
+            <instanceID/>
+          </meta>
+        </ay6g686GSX8RCk3QmyJCA2>
+      </instance>
+      <instance id="ph5is83">
+        <root>
+          <item>
+            <itextId>ph5is83-0</itextId>
+            <name>16_17</name>
+          </item>
+          <item>
+            <itextId>ph5is83-1</itextId>
+            <name>18_24</name>
+          </item>
+          <item>
+            <itextId>ph5is83-2</itextId>
+            <name>25_34</name>
+          </item>
+          <item>
+            <itextId>ph5is83-3</itextId>
+            <name>35_44</name>
+          </item>
+          <item>
+            <itextId>ph5is83-4</itextId>
+            <name>45_54</name>
+          </item>
+          <item>
+            <itextId>ph5is83-5</itextId>
+            <name>55_64</name>
+          </item>
+          <item>
+            <itextId>ph5is83-6</itextId>
+            <name>65_74</name>
+          </item>
+          <item>
+            <itextId>ph5is83-7</itextId>
+            <name>75_85</name>
+          </item>
+          <item>
+            <itextId>ph5is83-8</itextId>
+            <name>95_o_mas</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="nt4mc41">
+        <root>
+          <item>
+            <itextId>nt4mc41-0</itextId>
+            <name>mujer</name>
+          </item>
+          <item>
+            <itextId>nt4mc41-1</itextId>
+            <name>hombre</name>
+          </item>
+          <item>
+            <itextId>nt4mc41-2</itextId>
+            <name>no_binario</name>
+          </item>
+          <item>
+            <itextId>nt4mc41-3</itextId>
+            <name>prefiero_autodescribirme</name>
+          </item>
+          <item>
+            <itextId>nt4mc41-4</itextId>
+            <name>prefiero_no_responder</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="fs7kn20">
+        <root>
+          <item>
+            <itextId>fs7kn20-0</itextId>
+            <name>si</name>
+          </item>
+          <item>
+            <itextId>fs7kn20-1</itextId>
+            <name>no</name>
+          </item>
+          <item>
+            <itextId>fs7kn20-2</itextId>
+            <name>prefiero_no_responder</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="ub5xl22">
+        <root>
+          <item>
+            <itextId>ub5xl22-0</itextId>
+            <name>menos_de_1_mes</name>
+          </item>
+          <item>
+            <itextId>ub5xl22-1</itextId>
+            <name>1_a_3_meses</name>
+          </item>
+          <item>
+            <itextId>ub5xl22-2</itextId>
+            <name>4_a_11_meses</name>
+          </item>
+          <item>
+            <itextId>ub5xl22-3</itextId>
+            <name>1_a_3_anos</name>
+          </item>
+          <item>
+            <itextId>ub5xl22-4</itextId>
+            <name>mas_de_3_anos</name>
+          </item>
+          <item>
+            <itextId>ub5xl22-5</itextId>
+            <name>prefiero_no_responder</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="vs9rq92">
+        <root>
+          <item>
+            <itextId>vs9rq92-0</itextId>
+            <name>estudiante_t_completo</name>
+          </item>
+          <item>
+            <itextId>vs9rq92-1</itextId>
+            <name>estudiante_t_parcial</name>
+          </item>
+          <item>
+            <itextId>vs9rq92-2</itextId>
+            <name>trabajador_asalariado</name>
+          </item>
+          <item>
+            <itextId>vs9rq92-3</itextId>
+            <name>trabajador_autonomo</name>
+          </item>
+          <item>
+            <itextId>vs9rq92-4</itextId>
+            <name>trabajo_domestico</name>
+          </item>
+          <item>
+            <itextId>vs9rq92-5</itextId>
+            <name>desempleado</name>
+          </item>
+          <item>
+            <itextId>vs9rq92-6</itextId>
+            <name>jubilado</name>
+          </item>
+          <item>
+            <itextId>vs9rq92-7</itextId>
+            <name>otros</name>
+          </item>
+          <item>
+            <itextId>vs9rq92-8</itextId>
+            <name>prefiero_no_responder</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="xo2ik14">
+        <root>
+          <item>
+            <itextId>xo2ik14-0</itextId>
+            <name>anual</name>
+          </item>
+          <item>
+            <itextId>xo2ik14-1</itextId>
+            <name>mensual</name>
+          </item>
+          <item>
+            <itextId>xo2ik14-2</itextId>
+            <name>prefiero_no_responder</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="ea9vn59">
+        <root>
+          <item>
+            <itextId>ea9vn59-0</itextId>
+            <name>trabajo</name>
+          </item>
+          <item>
+            <itextId>ea9vn59-1</itextId>
+            <name>centro_estudios_of</name>
+          </item>
+          <item>
+            <itextId>ea9vn59-2</itextId>
+            <name>relacionado_con_trabajo</name>
+          </item>
+          <item>
+            <itextId>ea9vn59-3</itextId>
+            <name>gestiones_tramites_pers</name>
+          </item>
+          <item>
+            <itextId>ea9vn59-4</itextId>
+            <name>actividades</name>
+          </item>
+          <item>
+            <itextId>ea9vn59-5</itextId>
+            <name>ocio_vida_social</name>
+          </item>
+          <item>
+            <itextId>ea9vn59-6</itextId>
+            <name>paseo_en_bicicleta</name>
+          </item>
+          <item>
+            <itextId>ea9vn59-7</itextId>
+            <name>acompanar_personas</name>
+          </item>
+          <item>
+            <itextId>ea9vn59-8</itextId>
+            <name>conexion_otros_mod</name>
+          </item>
+          <item>
+            <itextId>ea9vn59-9</itextId>
+            <name>prefiero_no_responder</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="lh4oj89">
+        <root>
+          <item>
+            <itextId>lh4oj89-0</itextId>
+            <name>5_o_mas</name>
+          </item>
+          <item>
+            <itextId>lh4oj89-1</itextId>
+            <name>2_4_dias</name>
+          </item>
+          <item>
+            <itextId>lh4oj89-2</itextId>
+            <name>1_vez_semana</name>
+          </item>
+          <item>
+            <itextId>lh4oj89-3</itextId>
+            <name>alguna_vez_mes</name>
+          </item>
+          <item>
+            <itextId>lh4oj89-4</itextId>
+            <name>menos_1_vez_mes</name>
+          </item>
+          <item>
+            <itextId>lh4oj89-5</itextId>
+            <name>prefiero_no_responder</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="cv1us80">
+        <root>
+          <item>
+            <itextId>cv1us80-0</itextId>
+            <name>uso_convencional</name>
+          </item>
+          <item>
+            <itextId>cv1us80-1</itextId>
+            <name>caminando</name>
+          </item>
+          <item>
+            <itextId>cv1us80-2</itextId>
+            <name>modo_diferente</name>
+          </item>
+          <item>
+            <itextId>cv1us80-3</itextId>
+            <name>cambio_destino</name>
+          </item>
+          <item>
+            <itextId>cv1us80-4</itextId>
+            <name>no_desplazamiento</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="hv0mf96">
+        <root>
+          <item>
+            <itextId>hv0mf96-0</itextId>
+            <name>1000__o_menos</name>
+          </item>
+          <item>
+            <itextId>hv0mf96-1</itextId>
+            <name>1001_a_2000</name>
+          </item>
+          <item>
+            <itextId>hv0mf96-2</itextId>
+            <name>2001_a_3000</name>
+          </item>
+          <item>
+            <itextId>hv0mf96-3</itextId>
+            <name>3001_a_4000</name>
+          </item>
+          <item>
+            <itextId>hv0mf96-4</itextId>
+            <name>4001_a_5000</name>
+          </item>
+          <item>
+            <itextId>hv0mf96-5</itextId>
+            <name>mas_de_5000</name>
+          </item>
+          <item>
+            <itextId>hv0mf96-6</itextId>
+            <name>prefiero_no_responder</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="gm4wh09">
+        <root>
+          <item>
+            <itextId>gm4wh09-0</itextId>
+            <name>sin_ingresos</name>
+          </item>
+          <item>
+            <itextId>gm4wh09-1</itextId>
+            <name>600_o_menos</name>
+          </item>
+          <item>
+            <itextId>gm4wh09-2</itextId>
+            <name>601_a_1200</name>
+          </item>
+          <item>
+            <itextId>gm4wh09-3</itextId>
+            <name>1201_a_1800</name>
+          </item>
+          <item>
+            <itextId>gm4wh09-4</itextId>
+            <name>1801_a_2400</name>
+          </item>
+          <item>
+            <itextId>gm4wh09-5</itextId>
+            <name>2401_a_3000</name>
+          </item>
+          <item>
+            <itextId>gm4wh09-6</itextId>
+            <name>3001_a_4500</name>
+          </item>
+          <item>
+            <itextId>gm4wh09-7</itextId>
+            <name>mas_de_4500</name>
+          </item>
+          <item>
+            <itextId>gm4wh09-8</itextId>
+            <name>prefiero_no_responder</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="xa0kb91">
+        <root>
+          <item>
+            <itextId>xa0kb91-0</itextId>
+            <name>1</name>
+          </item>
+          <item>
+            <itextId>xa0kb91-1</itextId>
+            <name>2</name>
+          </item>
+          <item>
+            <itextId>xa0kb91-2</itextId>
+            <name>3</name>
+          </item>
+          <item>
+            <itextId>xa0kb91-3</itextId>
+            <name>4</name>
+          </item>
+          <item>
+            <itextId>xa0kb91-4</itextId>
+            <name>5</name>
+          </item>
+          <item>
+            <itextId>xa0kb91-5</itextId>
+            <name>mas_de_5</name>
+          </item>
+          <item>
+            <itextId>xa0kb91-6</itextId>
+            <name>prefiero_no_responder</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="ws3fq16">
+        <root>
+          <item>
+            <itextId>ws3fq16-0</itextId>
+            <name>0</name>
+          </item>
+          <item>
+            <itextId>ws3fq16-1</itextId>
+            <name>1</name>
+          </item>
+          <item>
+            <itextId>ws3fq16-2</itextId>
+            <name>2</name>
+          </item>
+          <item>
+            <itextId>ws3fq16-3</itextId>
+            <name>3_o_mas</name>
+          </item>
+          <item>
+            <itextId>ws3fq16-4</itextId>
+            <name>prefiero_no_responder</name>
+          </item>
+        </root>
+      </instance>
+      <bind nodeset="/ay6g686GSX8RCk3QmyJCA2/start" jr:preload="timestamp" type="dateTime" jr:preloadParams="start"/>
+      <bind nodeset="/ay6g686GSX8RCk3QmyJCA2/end" jr:preload="timestamp" type="dateTime" jr:preloadParams="end"/>
+      <bind nodeset="/ay6g686GSX8RCk3QmyJCA2/_1_edad" type="string" required="true()"/>
+      <bind nodeset="/ay6g686GSX8RCk3QmyJCA2/_2_sexo_genero" type="string" required="true()"/>
+      <bind nodeset="/ay6g686GSX8RCk3QmyJCA2/_2_autodescrip" type="string" relevant=" /ay6g686GSX8RCk3QmyJCA2/_2_sexo_genero  = 'prefiero_autodescribirme'" required="true()"/>
+      <bind nodeset="/ay6g686GSX8RCk3QmyJCA2/_3_licencia_conducir" type="string" required="true()"/>
+      <bind nodeset="/ay6g686GSX8RCk3QmyJCA2/_4_residencia" type="string" required="true()"/>
+      <bind nodeset="/ay6g686GSX8RCk3QmyJCA2/_5_situacion_laboral" type="string" required="true()"/>
+      <bind nodeset="/ay6g686GSX8RCk3QmyJCA2/_6_suscripcion" type="string" required="true()"/>
+      <bind nodeset="/ay6g686GSX8RCk3QmyJCA2/_7_comodidad_por_via" readonly="true()" type="string" required="false()"/>
+      <bind nodeset="/ay6g686GSX8RCk3QmyJCA2/_carril_bici_segregado" type="int" required="false()"/>
+      <bind nodeset="/ay6g686GSX8RCk3QmyJCA2/_acera_bici" type="int" required="false()"/>
+      <bind nodeset="/ay6g686GSX8RCk3QmyJCA2/_sendero_compartido" type="int" required="false()"/>
+      <bind nodeset="/ay6g686GSX8RCk3QmyJCA2/_pasarela_peatonal" type="int" required="false()"/>
+      <bind nodeset="/ay6g686GSX8RCk3QmyJCA2/_compartido_trafico_mot_carrilsentido" type="int" required="false()"/>
+      <bind nodeset="/ay6g686GSX8RCk3QmyJCA2/_compartido_trafico_mot_varioscarriles" type="int" required="false()"/>
+      <bind nodeset="/ay6g686GSX8RCk3QmyJCA2/_compartido_trafico_mot_sin_30" type="int" required="false()"/>
+      <bind nodeset="/ay6g686GSX8RCk3QmyJCA2/_compartido_trafico_mot_sin_50" type="int" required="false()"/>
+      <bind nodeset="/ay6g686GSX8RCk3QmyJCA2/_8_Motivo_s_habitua_ientos_en_Bicicoru_a" type="string" required="true()"/>
+      <bind nodeset="/ay6g686GSX8RCk3QmyJCA2/_9_Con_qu_frecuenc_a_utiliza_Bicicoru_a" type="string" required="true()"/>
+      <bind nodeset="/ay6g686GSX8RCk3QmyJCA2/_10_Cuando_no_hay_di_normalmente_decide" type="string" required="true()"/>
+      <bind nodeset="/ay6g686GSX8RCk3QmyJCA2/_11_Ingresos_mensual_el_hogar_total_neto" type="string" required="true()"/>
+      <bind nodeset="/ay6g686GSX8RCk3QmyJCA2/_12_Ingreso_personal_mensual_total_neto" type="string" required="true()"/>
+      <bind nodeset="/ay6g686GSX8RCk3QmyJCA2/_13_N_mero_de_personas_en_el_hogar" type="string" required="true()"/>
+      <bind nodeset="/ay6g686GSX8RCk3QmyJCA2/_14_N_mero_de_veh_cu_el_hogar_Coche_Moto" type="string" required="true()"/>
+      <bind nodeset="/ay6g686GSX8RCk3QmyJCA2/Texto_de_consentimiento_001" readonly="true()" type="string" required="false()"/>
+      <bind nodeset="/ay6g686GSX8RCk3QmyJCA2/meta/instanceID" type="string" readonly="true()" jr:preload="uid"/>
+    </model>
+  </h:head>
+  <h:body class="pages">
+    <select1 ref="/ay6g686GSX8RCk3QmyJCA2/_1_edad">
+      <label ref="jr:itext('/ay6g686GSX8RCk3QmyJCA2/_1_edad:label')"/>
+      <itemset nodeset="instance('ph5is83')/root/item">
+        <value ref="name"/>
+        <label ref="jr:itext(itextId)"/>
+      </itemset>
+    </select1>
+    <select1 ref="/ay6g686GSX8RCk3QmyJCA2/_2_sexo_genero">
+      <label ref="jr:itext('/ay6g686GSX8RCk3QmyJCA2/_2_sexo_genero:label')"/>
+      <itemset nodeset="instance('nt4mc41')/root/item">
+        <value ref="name"/>
+        <label ref="jr:itext(itextId)"/>
+      </itemset>
+    </select1>
+    <input ref="/ay6g686GSX8RCk3QmyJCA2/_2_autodescrip">
+      <label ref="jr:itext('/ay6g686GSX8RCk3QmyJCA2/_2_autodescrip:label')"/>
+    </input>
+    <select1 ref="/ay6g686GSX8RCk3QmyJCA2/_3_licencia_conducir">
+      <label ref="jr:itext('/ay6g686GSX8RCk3QmyJCA2/_3_licencia_conducir:label')"/>
+      <itemset nodeset="instance('fs7kn20')/root/item">
+        <value ref="name"/>
+        <label ref="jr:itext(itextId)"/>
+      </itemset>
+    </select1>
+    <select1 ref="/ay6g686GSX8RCk3QmyJCA2/_4_residencia">
+      <label ref="jr:itext('/ay6g686GSX8RCk3QmyJCA2/_4_residencia:label')"/>
+      <itemset nodeset="instance('ub5xl22')/root/item">
+        <value ref="name"/>
+        <label ref="jr:itext(itextId)"/>
+      </itemset>
+    </select1>
+    <select ref="/ay6g686GSX8RCk3QmyJCA2/_5_situacion_laboral">
+      <label ref="jr:itext('/ay6g686GSX8RCk3QmyJCA2/_5_situacion_laboral:label')"/>
+      <hint ref="jr:itext('/ay6g686GSX8RCk3QmyJCA2/_5_situacion_laboral:hint')"/>
+      <itemset nodeset="instance('vs9rq92')/root/item">
+        <value ref="name"/>
+        <label ref="jr:itext(itextId)"/>
+      </itemset>
+    </select>
+    <select1 ref="/ay6g686GSX8RCk3QmyJCA2/_6_suscripcion">
+      <label ref="jr:itext('/ay6g686GSX8RCk3QmyJCA2/_6_suscripcion:label')"/>
+      <itemset nodeset="instance('xo2ik14')/root/item">
+        <value ref="name"/>
+        <label ref="jr:itext(itextId)"/>
+      </itemset>
+    </select1>
+    <input ref="/ay6g686GSX8RCk3QmyJCA2/_7_comodidad_por_via">
+      <label ref="jr:itext('/ay6g686GSX8RCk3QmyJCA2/_7_comodidad_por_via:label')"/>
+      <hint ref="jr:itext('/ay6g686GSX8RCk3QmyJCA2/_7_comodidad_por_via:hint')"/>
+    </input>
+    <range ref="/ay6g686GSX8RCk3QmyJCA2/_carril_bici_segregado" start="0" end="10" step="1">
+      <label ref="jr:itext('/ay6g686GSX8RCk3QmyJCA2/_carril_bici_segregado:label')"/>
+      <hint ref="jr:itext('/ay6g686GSX8RCk3QmyJCA2/_carril_bici_segregado:hint')"/>
+    </range>
+    <range ref="/ay6g686GSX8RCk3QmyJCA2/_acera_bici" start="0" end="10" step="1">
+      <label ref="jr:itext('/ay6g686GSX8RCk3QmyJCA2/_acera_bici:label')"/>
+      <hint ref="jr:itext('/ay6g686GSX8RCk3QmyJCA2/_acera_bici:hint')"/>
+    </range>
+    <range ref="/ay6g686GSX8RCk3QmyJCA2/_sendero_compartido" start="0" end="10" step="1">
+      <label ref="jr:itext('/ay6g686GSX8RCk3QmyJCA2/_sendero_compartido:label')"/>
+      <hint ref="jr:itext('/ay6g686GSX8RCk3QmyJCA2/_sendero_compartido:hint')"/>
+    </range>
+    <range ref="/ay6g686GSX8RCk3QmyJCA2/_pasarela_peatonal" start="0" end="10" step="1">
+      <label ref="jr:itext('/ay6g686GSX8RCk3QmyJCA2/_pasarela_peatonal:label')"/>
+      <hint ref="jr:itext('/ay6g686GSX8RCk3QmyJCA2/_pasarela_peatonal:hint')"/>
+    </range>
+    <range ref="/ay6g686GSX8RCk3QmyJCA2/_compartido_trafico_mot_carrilsentido" start="0" end="10" step="1">
+      <label ref="jr:itext('/ay6g686GSX8RCk3QmyJCA2/_compartido_trafico_mot_carrilsentido:label')"/>
+      <hint ref="jr:itext('/ay6g686GSX8RCk3QmyJCA2/_compartido_trafico_mot_carrilsentido:hint')"/>
+    </range>
+    <range ref="/ay6g686GSX8RCk3QmyJCA2/_compartido_trafico_mot_varioscarriles" start="0" end="10" step="1">
+      <label ref="jr:itext('/ay6g686GSX8RCk3QmyJCA2/_compartido_trafico_mot_varioscarriles:label')"/>
+      <hint ref="jr:itext('/ay6g686GSX8RCk3QmyJCA2/_compartido_trafico_mot_varioscarriles:hint')"/>
+    </range>
+    <range ref="/ay6g686GSX8RCk3QmyJCA2/_compartido_trafico_mot_sin_30" start="0" end="10" step="1">
+      <label ref="jr:itext('/ay6g686GSX8RCk3QmyJCA2/_compartido_trafico_mot_sin_30:label')"/>
+      <hint ref="jr:itext('/ay6g686GSX8RCk3QmyJCA2/_compartido_trafico_mot_sin_30:hint')"/>
+    </range>
+    <range ref="/ay6g686GSX8RCk3QmyJCA2/_compartido_trafico_mot_sin_50" start="0" end="10" step="1">
+      <label ref="jr:itext('/ay6g686GSX8RCk3QmyJCA2/_compartido_trafico_mot_sin_50:label')"/>
+      <hint ref="jr:itext('/ay6g686GSX8RCk3QmyJCA2/_compartido_trafico_mot_sin_50:hint')"/>
+    </range>
+    <select ref="/ay6g686GSX8RCk3QmyJCA2/_8_Motivo_s_habitua_ientos_en_Bicicoru_a">
+      <label ref="jr:itext('/ay6g686GSX8RCk3QmyJCA2/_8_Motivo_s_habitua_ientos_en_Bicicoru_a:label')"/>
+      <hint ref="jr:itext('/ay6g686GSX8RCk3QmyJCA2/_8_Motivo_s_habitua_ientos_en_Bicicoru_a:hint')"/>
+      <itemset nodeset="instance('ea9vn59')/root/item">
+        <value ref="name"/>
+        <label ref="jr:itext(itextId)"/>
+      </itemset>
+    </select>
+    <select1 ref="/ay6g686GSX8RCk3QmyJCA2/_9_Con_qu_frecuenc_a_utiliza_Bicicoru_a">
+      <label ref="jr:itext('/ay6g686GSX8RCk3QmyJCA2/_9_Con_qu_frecuenc_a_utiliza_Bicicoru_a:label')"/>
+      <itemset nodeset="instance('lh4oj89')/root/item">
+        <value ref="name"/>
+        <label ref="jr:itext(itextId)"/>
+      </itemset>
+    </select1>
+    <select1 ref="/ay6g686GSX8RCk3QmyJCA2/_10_Cuando_no_hay_di_normalmente_decide">
+      <label ref="jr:itext('/ay6g686GSX8RCk3QmyJCA2/_10_Cuando_no_hay_di_normalmente_decide:label')"/>
+      <itemset nodeset="instance('cv1us80')/root/item">
+        <value ref="name"/>
+        <label ref="jr:itext(itextId)"/>
+      </itemset>
+    </select1>
+    <select1 ref="/ay6g686GSX8RCk3QmyJCA2/_11_Ingresos_mensual_el_hogar_total_neto">
+      <label ref="jr:itext('/ay6g686GSX8RCk3QmyJCA2/_11_Ingresos_mensual_el_hogar_total_neto:label')"/>
+      <itemset nodeset="instance('hv0mf96')/root/item">
+        <value ref="name"/>
+        <label ref="jr:itext(itextId)"/>
+      </itemset>
+    </select1>
+    <select1 ref="/ay6g686GSX8RCk3QmyJCA2/_12_Ingreso_personal_mensual_total_neto">
+      <label ref="jr:itext('/ay6g686GSX8RCk3QmyJCA2/_12_Ingreso_personal_mensual_total_neto:label')"/>
+      <itemset nodeset="instance('gm4wh09')/root/item">
+        <value ref="name"/>
+        <label ref="jr:itext(itextId)"/>
+      </itemset>
+    </select1>
+    <select1 ref="/ay6g686GSX8RCk3QmyJCA2/_13_N_mero_de_personas_en_el_hogar">
+      <label ref="jr:itext('/ay6g686GSX8RCk3QmyJCA2/_13_N_mero_de_personas_en_el_hogar:label')"/>
+      <itemset nodeset="instance('xa0kb91')/root/item">
+        <value ref="name"/>
+        <label ref="jr:itext(itextId)"/>
+      </itemset>
+    </select1>
+    <select1 ref="/ay6g686GSX8RCk3QmyJCA2/_14_N_mero_de_veh_cu_el_hogar_Coche_Moto">
+      <label ref="jr:itext('/ay6g686GSX8RCk3QmyJCA2/_14_N_mero_de_veh_cu_el_hogar_Coche_Moto:label')"/>
+      <itemset nodeset="instance('ws3fq16')/root/item">
+        <value ref="name"/>
+        <label ref="jr:itext(itextId)"/>
+      </itemset>
+    </select1>
+    <input ref="/ay6g686GSX8RCk3QmyJCA2/Texto_de_consentimiento_001">
+      <label ref="jr:itext('/ay6g686GSX8RCk3QmyJCA2/Texto_de_consentimiento_001:label')"/>
+      <hint ref="jr:itext('/ay6g686GSX8RCk3QmyJCA2/Texto_de_consentimiento_001:hint')"/>
+    </input>
+  </h:body>
+</h:html>
