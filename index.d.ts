@@ -158,6 +158,12 @@ export type VehicleLibraryConfig = {
   // Receives the following variables: duration, subgroup,
   // and unpacked fields of the vehicle object
   fee_expression: string;
+  accessories?: VehicleLibraryAccessory[];
+};
+
+export type VehicleLibraryAccessory = {
+  value: string;
+  label: { [lang: string]: string };
 };
 
 export type TranslationTree = {
