@@ -1,6 +1,6 @@
 {
     "url_abbreviation": "sc-ebike-library",
-    "version": 4,
+    "version": 5,
     "ts": 1785340752,
     "server": {
         "connectUrl": "https://openpath-stage.nlr.gov/api/",
@@ -62,7 +62,16 @@
         "trip-labels": "MULTILABEL"
     },
     "vehicle_library": {
-        "fee_expression": "((duration>(5/60))*5 + (duration>5)*30 + (duration>24)*65 + (duration>72)*100 + (duration>144)*180) * (1 - 0.5*(subgroup=='discount'))"
+        "fee_expression": "((duration>(5/60))*5 + (duration>5)*30 + (duration>24)*65 + (duration>72)*100 + (duration>144)*180) * (1 - 0.5*(subgroup=='discount'))",
+        "accessories": [
+            {
+                "value": "panniers",
+                "label": {
+                    "en": "Panniers",
+                    "es": "Alforjas"
+                }
+            }
+        ]
     },
     "display_config": {
         "use_imperial": true
@@ -119,6 +128,7 @@
                     "subtitle": "Confirm your rental to unlock the bike",
                     "rental-title": "Bike Rental",
                     "rental-subtitle": "You're charged based on how long you keep the bike",
+                    "do-you-plan-long-rental": "Do you plan to keep the bike for 1 week or longer?",
                     "hold-notice": "We'll place a temporary ${{amount}} authorization hold on your saved payment method. It is released when the bike is checked in, and you are only charged for your usage."
                 },
                 "return": {
