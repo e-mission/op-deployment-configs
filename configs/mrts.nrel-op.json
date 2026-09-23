@@ -79,7 +79,6 @@
         "data_uuids_columns_exclude": [],
         "token_prefix": "nrelop",
         "token_generate": true,
-        "token_page": false,
         "overview_users": true,
         "overview_active_users": true,
         "overview_trips": true,
