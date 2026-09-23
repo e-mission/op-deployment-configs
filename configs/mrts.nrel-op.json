@@ -7,7 +7,7 @@
         "aggregate_call_auth": "user_only"
     },
     "opcode": {
-        "autogen": false,
+        "autogen": true,
         "subgroups": [
             "default",
             "test"
