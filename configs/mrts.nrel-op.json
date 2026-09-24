@@ -19,7 +19,7 @@
         "start_year": "2026",
         "mode_studied": "",
         "program_admin_email": "nikhilgadham1@gmail.com",
-        "program_admin_contact": "Nikhil Gadham, Graduate Research Assistant (Doctoral), CTIER, The University of Memphis (ngadham@memphis.edu, phone: (901)-236-2872",
+        "program_admin_contact": "Nikhil Gadham, Graduate Research Assistant (Doctoral), CTIER, The University of Memphis; email: ngadham@memphis.edu; phone: (901) 236-2872",
         "deployment_partner_name": "The University of Memphis",
         "translated_text": {
             "en": {
@@ -35,16 +35,6 @@
                     "How can smartphone-based passive travel data from OpenPATH complement traditional household travel survey data?",
                     "How can the combined survey and OpenPATH data support analysis of travel behavior and transportation needs in the Memphis region?"
                 ]
-            },
-            "": {
-                "deployment_partner_name": "",
-                "deployment_name": "",
-                "summary_line_1": "",
-                "summary_line_2": "",
-                "summary_line_3": "",
-                "short_textual_description": "",
-                "why_we_collect": "",
-                "research_questions": []
             }
         }
     },
