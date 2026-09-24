@@ -1,6 +1,6 @@
 {
     "url_abbreviation": "mrts",
-    "version": 1,
+    "version": 2,
     "ts": 1786644280,
     "server": {
         "connectUrl": "https://mrts-openpath.nlr.gov/api/",
