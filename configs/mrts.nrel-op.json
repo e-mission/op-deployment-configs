@@ -41,7 +41,7 @@
     "survey_info": {
         "surveys": {
             "UserProfileSurvey": {
-                "formPath": "https://raw.githubusercontent.com/e-mission/op-deployment-configs/main/survey_resources/mrts/MRTS_v4.xml",
+                "formPath": "https://raw.githubusercontent.com/e-mission/op-deployment-configs/main/survey_resources/mrts/MRTS_v5.xml",
                 "version": 1,
                 "compatibleWith": 1,
                 "dataKey": "manual/demographic_survey",
