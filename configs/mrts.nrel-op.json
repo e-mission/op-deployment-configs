@@ -51,7 +51,7 @@
     "survey_info": {
         "surveys": {
             "UserProfileSurvey": {
-                "formPath": "https://raw.githubusercontent.com/e-mission/op-deployment-configs/main/survey_resources/mrts/MemphisRegionalTravelSurvey.xml",
+                "formPath": "https://raw.githubusercontent.com/e-mission/op-deployment-configs/main/survey_resources/mrts/MemphisRegionalTravelSurvey_Fixed.xml",
                 "version": 1,
                 "compatibleWith": 1,
                 "dataKey": "manual/demographic_survey",
