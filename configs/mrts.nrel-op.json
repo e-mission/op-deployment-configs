@@ -7,7 +7,7 @@
         "aggregate_call_auth": "user_only"
     },
     "opcode": {
-        "autogen": false,
+        "autogen": true,
         "subgroups": [
             "default",
             "test"
@@ -51,7 +51,7 @@
     "survey_info": {
         "surveys": {
             "UserProfileSurvey": {
-                "formPath": "https://raw.githubusercontent.com/e-mission/op-deployment-configs/main/survey_resources/mrts/mrts-onboarding-v0.xml",
+                "formPath": "https://raw.githubusercontent.com/e-mission/op-deployment-configs/main/survey_resources/mrts/MemphisRegionalTravelSurvey.xml",
                 "version": 1,
                 "compatibleWith": 1,
                 "dataKey": "manual/demographic_survey",
@@ -79,6 +79,7 @@
         "data_uuids_columns_exclude": [],
         "token_prefix": "nrelop",
         "token_generate": true,
+        "token_page": false
         "overview_users": true,
         "overview_active_users": true,
         "overview_trips": true,
@@ -92,7 +93,7 @@
         "options_uuids": false,
         "options_emails": false,
         "admin_access": [
-            "ngadham@memphi.edu",
+            "ngadham@memphis.edu",
             "smishra3@memphis.edu"
         ]
     }
