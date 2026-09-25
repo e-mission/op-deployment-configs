@@ -1,13 +1,13 @@
 {
     "url_abbreviation": "mrts",
-    "version": 1,
+    "version": 2,
     "ts": 1786644280,
     "server": {
         "connectUrl": "https://mrts-openpath.nlr.gov/api/",
         "aggregate_call_auth": "user_only"
     },
     "opcode": {
-        "autogen": false,
+        "autogen": true,
         "subgroups": [
             "default",
             "test"
@@ -19,7 +19,7 @@
         "start_year": "2026",
         "mode_studied": "",
         "program_admin_email": "nikhilgadham1@gmail.com",
-        "program_admin_contact": "Nikhil Gadham, Graduate Research Assistant (Doctoral), CTIER, The University of Memphis (ngadham@memphis.edu, phone: (901)-236-2872",
+        "program_admin_contact": "Nikhil Gadham, Graduate Research Assistant (Doctoral), CTIER, The University of Memphis; email: ngadham@memphis.edu; phone: (901) 236-2872",
         "deployment_partner_name": "The University of Memphis",
         "translated_text": {
             "en": {
@@ -35,23 +35,13 @@
                     "How can smartphone-based passive travel data from OpenPATH complement traditional household travel survey data?",
                     "How can the combined survey and OpenPATH data support analysis of travel behavior and transportation needs in the Memphis region?"
                 ]
-            },
-            "": {
-                "deployment_partner_name": "",
-                "deployment_name": "",
-                "summary_line_1": "",
-                "summary_line_2": "",
-                "summary_line_3": "",
-                "short_textual_description": "",
-                "why_we_collect": "",
-                "research_questions": []
             }
         }
     },
     "survey_info": {
         "surveys": {
             "UserProfileSurvey": {
-                "formPath": "https://raw.githubusercontent.com/e-mission/op-deployment-configs/main/survey_resources/mrts/mrts-onboarding-v0.xml",
+                "formPath": "https://raw.githubusercontent.com/e-mission/op-deployment-configs/main/survey_resources/mrts/MRTS_Final_Draft.xml",
                 "version": 1,
                 "compatibleWith": 1,
                 "dataKey": "manual/demographic_survey",
@@ -92,7 +82,7 @@
         "options_uuids": false,
         "options_emails": false,
         "admin_access": [
-            "ngadham@memphi.edu",
+            "ngadham@memphis.edu",
             "smishra3@memphis.edu"
         ]
     }
