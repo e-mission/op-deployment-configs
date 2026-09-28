@@ -1,0 +1,1991 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:odk="http://www.opendatakit.org/xforms">
+  <h:head>
+    <h:title>MRTS_v6</h:title>
+    <model odk:xforms-version="1.0.0">
+      <itext>
+        <translation lang="en" default="true()">
+          <text id="/aUPeHxQL7uL5eryUJGkHtg/personal/a1_identity/AGE:hint">
+            <value>Enter your age in whole years. Example: 32</value>
+          </text>
+          <text id="/aUPeHxQL7uL5eryUJGkHtg/personal/a2_edu_emp/OCCUPATION:hint">
+            <value>Example: Teacher, Nurse, Engineer, Driver, Manager</value>
+          </text>
+          <text id="/aUPeHxQL7uL5eryUJGkHtg/personal/a2_edu_emp/INDUSTRY:hint">
+            <value>Example: Healthcare, Education, Construction, Retail, Technology</value>
+          </text>
+          <text id="/aUPeHxQL7uL5eryUJGkHtg/personal/a2_edu_emp/DRV4WRK:hint">
+            <value>Include deliveries, service calls, client visits. Exclude tractors or off-road vehicles.</value>
+          </text>
+          <text id="/aUPeHxQL7uL5eryUJGkHtg/personal/a2_edu_emp/DRV4WRK_HHVEH:hint">
+            <value>A non-household vehicle is any vehicle not directly owned/leased by a household member.</value>
+          </text>
+          <text id="/aUPeHxQL7uL5eryUJGkHtg/personal/a3_work/WORK_START_TIME:hint">
+            <value>Local time (24-hour or AM/PM)</value>
+          </text>
+          <text id="/aUPeHxQL7uL5eryUJGkHtg/personal/a3_work/WORK_END_TIME:hint">
+            <value>Local time</value>
+          </text>
+          <text id="/aUPeHxQL7uL5eryUJGkHtg/personal/a3_work/TELEWORK:hint">
+            <value>Enter 0 if you never telework. Maximum 5.</value>
+          </text>
+          <text id="/aUPeHxQL7uL5eryUJGkHtg/personal/a4_school/SCHOOL_DAYS:hint">
+            <value>Enter 0 if you attend entirely online.</value>
+          </text>
+          <text id="/aUPeHxQL7uL5eryUJGkHtg/personal/a4_school/OTHER_ACTIVITY_NAME:hint">
+            <value>Example: Church, YMCA, Community Center, Volunteer site</value>
+          </text>
+          <text id="/aUPeHxQL7uL5eryUJGkHtg/personal/a5_commute/COMMUTE_TIME:hint">
+            <value>Example: 20 for a 20-minute drive. Enter the average door-to-door time.</value>
+          </text>
+          <text id="/aUPeHxQL7uL5eryUJGkHtg/personal/a5_commute/COMMUTE_DISTANCE:hint">
+            <value>Example: 8.5 for 8.5 miles. Estimate is fine.</value>
+          </text>
+          <text id="/aUPeHxQL7uL5eryUJGkHtg/household/b1_home/COUNTY:hint">
+            <value>Memphis is in Shelby County.</value>
+          </text>
+          <text id="/aUPeHxQL7uL5eryUJGkHtg/household/b2_composition/HH_SIZE:hint">
+            <value>Count everyone who usually lives here — adults, children, and any others.</value>
+          </text>
+          <text id="/aUPeHxQL7uL5eryUJGkHtg/household/b3_vehicles/VEHICLE_HH:hint">
+            <value>Count only vehicles you actually use. Do not count motorcycles or commercial vehicles.</value>
+          </text>
+          <text id="/aUPeHxQL7uL5eryUJGkHtg/household/b4_services/PACKAGE_DELIVERY:hint">
+            <value>Count all deliveries from Amazon, FedEx, UPS, USPS, etc. Enter 0 if none.</value>
+          </text>
+          <text id="/aUPeHxQL7uL5eryUJGkHtg/vehicle/c1_veh_id/VEH_YEAR:hint">
+            <value>Enter the 4-digit year shown on the registration or door jamb sticker. Example: 2019</value>
+          </text>
+          <text id="/aUPeHxQL7uL5eryUJGkHtg/vehicle/c1_veh_id/VEH_MAKE:hint">
+            <value>Example: Toyota, Ford, Honda, Chevrolet, Hyundai</value>
+          </text>
+          <text id="/aUPeHxQL7uL5eryUJGkHtg/vehicle/c1_veh_id/VEH_MODEL:hint">
+            <value>Example: Camry, F-150, Civic, Silverado, RAV4</value>
+          </text>
+          <text id="/aUPeHxQL7uL5eryUJGkHtg/vehicle/c2_veh_use/SEATING:hint">
+            <value>Most sedans = 5 seats. Minivans = 7–8 seats.</value>
+          </text>
+          <text id="/aUPeHxQL7uL5eryUJGkHtg/vehicle/c3_ev/EV_RANGE:hint">
+            <value>Found on the window sticker or at fueleconomy.gov.</value>
+          </text>
+        </translation>
+      </itext>
+      <instance>
+        <aUPeHxQL7uL5eryUJGkHtg id="MRTS_Enrollment_V9">
+          <personal>
+            <a1_identity>
+              <intro_note/>
+              <GENDER/>
+              <AGE/>
+              <MARITAL/>
+              <RACE/>
+              <HISPANIC/>
+              <LANGUAGE/>
+              <DISABILITY/>
+              <DISABILITY_TYPE/>
+            </a1_identity>
+            <a2_edu_emp>
+              <EDUCATION/>
+              <STUDENT/>
+              <SCHOOL_LEVEL/>
+              <EMPLOYMENT/>
+              <OCCUPATION/>
+              <INDUSTRY/>
+              <DRV4WRK/>
+              <DRV4WRK_HHVEH/>
+              <DRV4WRK_RES/>
+              <DRV4WRK_STOPS/>
+            </a2_edu_emp>
+            <a3_work>
+              <WORK_OUTSIDE/>
+              <WORKPLACE_TYPE/>
+              <WORK_START_TIME/>
+              <WORK_END_TIME/>
+              <TELEWORK/>
+              <MULTIJOB/>
+              <NUM_JOBS/>
+            </a3_work>
+            <a4_school>
+              <SCHOOL_DAYS/>
+              <OTHER_ACTIVITY/>
+              <OTHER_ACTIVITY_NAME/>
+            </a4_school>
+            <a5_commute>
+              <WORK_MODE/>
+              <SCHOOL_MODE/>
+              <COMMUTE_TIME/>
+              <COMMUTE_DISTANCE/>
+              <DRIVER_LICENSE/>
+              <DRIVE_FREQ/>
+              <BIKE_ACCESS/>
+              <TRANSIT_PASS/>
+              <RIDEHAIL_USE/>
+              <trvl_ex_note/>
+              <TRVL_WALK/>
+              <TRVL_BIKE/>
+              <TRVL_BIKESHARE/>
+              <TRVL_ESCOOTER/>
+              <TRVL_TAXI/>
+              <TRVL_TNC/>
+              <TRVL_TRANSIT/>
+            </a5_commute>
+          </personal>
+          <household>
+            <HH_ID/>
+            <b1_home>
+              <COUNTY/>
+              <RESIDENCE_TYPE/>
+              <HOME_OWNERSHIP/>
+              <YEARS_HOME/>
+            </b1_home>
+            <b2_composition>
+              <HH_SIZE/>
+              <HH_ADULTS/>
+              <HH_CHILDREN/>
+              <HH_CHILD_U5/>
+              <HH_WORKERS/>
+              <HH_STUDENTS/>
+              <HH_LICENSED/>
+              <HH_DISABILITY/>
+              <HHINC_RANGE/>
+              <GOV_ASSIST/>
+            </b2_composition>
+            <b3_vehicles>
+              <VEHICLE_HH/>
+              <EV_HH/>
+              <HYBRID_HH/>
+              <PHEV_HH/>
+              <BIKE_HH/>
+              <MOTORCYCLE_HH/>
+            </b3_vehicles>
+            <b4_services>
+              <INTERNET/>
+              <TELEWORK_HH/>
+              <TELEWORK_DAYS/>
+              <ONLINE_SCHOOL/>
+              <FOOD_DELIVERY/>
+              <GROCERY_DELIVERY/>
+              <ONLINE_SHOPPING/>
+              <PACKAGE_DELIVERY/>
+            </b4_services>
+            <b5_neighborhood>
+              <TRANSIT_ACCESS/>
+              <TRANSIT_DISTANCE/>
+              <WALKABILITY/>
+              <BIKEABILITY/>
+              <TRANSIT_SAT/>
+              <ROAD_SAT/>
+              <SIDEWALK_SAT/>
+            </b5_neighborhood>
+            <b6_future>
+              <MOVE_PLAN/>
+              <MOVE_REASON/>
+              <FUTURE_CONTACT/>
+              <CONTACT_METHOD/>
+              <HH_COMMENTS/>
+            </b6_future>
+          </household>
+          <vehicle jr:template="">
+            <VEH_ID/>
+            <c1_veh_id>
+              <veh_intro/>
+              <OWNERSHIP/>
+              <VEH_YEAR/>
+              <VEH_MAKE/>
+              <VEH_MODEL/>
+              <BODY_TYPE/>
+              <FUEL_TYPE/>
+            </c1_veh_id>
+            <c2_veh_use>
+              <PRIMARY_DRIVER/>
+              <REGULAR_USERS/>
+              <AVAILABLE_DAILY/>
+              <DAYS_AVAILABLE/>
+              <SEATING/>
+            </c2_veh_use>
+            <c3_ev>
+              <ev_note/>
+              <EV_RANGE/>
+              <CHARGING_LOCATION/>
+              <CHARGING_FREQ/>
+            </c3_ev>
+            <c4_usage>
+              <WORK_USE/>
+              <SCHOOL_USE/>
+              <ACCESSIBLE/>
+              <TOLL_TAG/>
+              <EV_REPLACE/>
+              <EV_BARRIER/>
+              <VEH_COMMENTS/>
+            </c4_usage>
+          </vehicle>
+          <vehicle>
+            <VEH_ID/>
+            <c1_veh_id>
+              <veh_intro/>
+              <OWNERSHIP/>
+              <VEH_YEAR/>
+              <VEH_MAKE/>
+              <VEH_MODEL/>
+              <BODY_TYPE/>
+              <FUEL_TYPE/>
+            </c1_veh_id>
+            <c2_veh_use>
+              <PRIMARY_DRIVER/>
+              <REGULAR_USERS/>
+              <AVAILABLE_DAILY/>
+              <DAYS_AVAILABLE/>
+              <SEATING/>
+            </c2_veh_use>
+            <c3_ev>
+              <ev_note/>
+              <EV_RANGE/>
+              <CHARGING_LOCATION/>
+              <CHARGING_FREQ/>
+            </c3_ev>
+            <c4_usage>
+              <WORK_USE/>
+              <SCHOOL_USE/>
+              <ACCESSIBLE/>
+              <TOLL_TAG/>
+              <EV_REPLACE/>
+              <EV_BARRIER/>
+              <VEH_COMMENTS/>
+            </c4_usage>
+          </vehicle>
+          <closing>
+            <closing_note/>
+            <FUTURE_SURVEY/>
+            <ENROLLMENT_COMMENTS/>
+          </closing>
+          <meta>
+            <instanceID/>
+            <instanceName/>
+          </meta>
+        </aUPeHxQL7uL5eryUJGkHtg>
+      </instance>
+      <instance id="yes_no">
+        <root>
+          <item>
+            <name>yes</name>
+            <label>Yes</label>
+          </item>
+          <item>
+            <name>no</name>
+            <label>No</label>
+          </item>
+        </root>
+      </instance>
+      <instance id="gender">
+        <root>
+          <item>
+            <name>male</name>
+            <label>Male</label>
+          </item>
+          <item>
+            <name>female</name>
+            <label>Female</label>
+          </item>
+          <item>
+            <name>non_binary</name>
+            <label>Non-binary / Gender non-conforming</label>
+          </item>
+          <item>
+            <name>another</name>
+            <label>Another gender identity</label>
+          </item>
+          <item>
+            <name>pnta</name>
+            <label>Prefer not to answer</label>
+          </item>
+        </root>
+      </instance>
+      <instance id="marital">
+        <root>
+          <item>
+            <name>single</name>
+            <label>Single / Never Married</label>
+          </item>
+          <item>
+            <name>married</name>
+            <label>Married</label>
+          </item>
+          <item>
+            <name>widowed</name>
+            <label>Widowed</label>
+          </item>
+          <item>
+            <name>divorced</name>
+            <label>Divorced</label>
+          </item>
+          <item>
+            <name>separated</name>
+            <label>Separated</label>
+          </item>
+          <item>
+            <name>domestic_partnership</name>
+            <label>Domestic Partnership</label>
+          </item>
+        </root>
+      </instance>
+      <instance id="race">
+        <root>
+          <item>
+            <name>white</name>
+            <label>White</label>
+          </item>
+          <item>
+            <name>black</name>
+            <label>Black / African American</label>
+          </item>
+          <item>
+            <name>asian</name>
+            <label>Asian</label>
+          </item>
+          <item>
+            <name>aian</name>
+            <label>American Indian / Alaska Native</label>
+          </item>
+          <item>
+            <name>nhpi</name>
+            <label>Native Hawaiian / Pacific Islander</label>
+          </item>
+          <item>
+            <name>other</name>
+            <label>Other</label>
+          </item>
+          <item>
+            <name>multiple</name>
+            <label>Multiple / Mixed</label>
+          </item>
+        </root>
+      </instance>
+      <instance id="language">
+        <root>
+          <item>
+            <name>english</name>
+            <label>English</label>
+          </item>
+          <item>
+            <name>spanish</name>
+            <label>Spanish</label>
+          </item>
+          <item>
+            <name>other</name>
+            <label>Other</label>
+          </item>
+        </root>
+      </instance>
+      <instance id="disability_type">
+        <root>
+          <item>
+            <name>mobility</name>
+            <label>Mobility impairment</label>
+          </item>
+          <item>
+            <name>vision</name>
+            <label>Vision impairment</label>
+          </item>
+          <item>
+            <name>hearing</name>
+            <label>Hearing impairment</label>
+          </item>
+          <item>
+            <name>cognitive</name>
+            <label>Cognitive / intellectual disability</label>
+          </item>
+          <item>
+            <name>multiple</name>
+            <label>Multiple disabilities</label>
+          </item>
+          <item>
+            <name>other</name>
+            <label>Other</label>
+          </item>
+        </root>
+      </instance>
+      <instance id="education">
+        <root>
+          <item>
+            <name>less_hs</name>
+            <label>Less than High School</label>
+          </item>
+          <item>
+            <name>hs</name>
+            <label>High School Diploma / GED</label>
+          </item>
+          <item>
+            <name>some_college</name>
+            <label>Some College (no degree)</label>
+          </item>
+          <item>
+            <name>associate</name>
+            <label>Associate Degree</label>
+          </item>
+          <item>
+            <name>bachelors</name>
+            <label>Bachelor's Degree</label>
+          </item>
+          <item>
+            <name>masters</name>
+            <label>Master's Degree</label>
+          </item>
+          <item>
+            <name>doctorate</name>
+            <label>Doctorate / Professional Degree</label>
+          </item>
+          <item>
+            <name>other</name>
+            <label>Other</label>
+          </item>
+        </root>
+      </instance>
+      <instance id="school_level">
+        <root>
+          <item>
+            <name>k8</name>
+            <label>K–8 (Elementary / Middle)</label>
+          </item>
+          <item>
+            <name>high_school</name>
+            <label>High School</label>
+          </item>
+          <item>
+            <name>college</name>
+            <label>College / University</label>
+          </item>
+          <item>
+            <name>graduate</name>
+            <label>Graduate / Professional School</label>
+          </item>
+          <item>
+            <name>vocational</name>
+            <label>Vocational / Trade School</label>
+          </item>
+          <item>
+            <name>other</name>
+            <label>Other</label>
+          </item>
+        </root>
+      </instance>
+      <instance id="employment">
+        <root>
+          <item>
+            <name>full_time</name>
+            <label>Employed full-time (35+ hrs/week)</label>
+          </item>
+          <item>
+            <name>part_time</name>
+            <label>Employed part-time (&lt; 35 hrs/week)</label>
+          </item>
+          <item>
+            <name>self_employed</name>
+            <label>Self-employed / Freelance</label>
+          </item>
+          <item>
+            <name>homemaker</name>
+            <label>Homemaker</label>
+          </item>
+          <item>
+            <name>retired</name>
+            <label>Retired</label>
+          </item>
+          <item>
+            <name>student</name>
+            <label>Student (not employed)</label>
+          </item>
+          <item>
+            <name>unemployed</name>
+            <label>Unemployed, seeking work</label>
+          </item>
+          <item>
+            <name>unable</name>
+            <label>Unable to work</label>
+          </item>
+          <item>
+            <name>other</name>
+            <label>Other</label>
+          </item>
+        </root>
+      </instance>
+      <instance id="workplace_type">
+        <root>
+          <item>
+            <name>fixed</name>
+            <label>Fixed workplace (single location)</label>
+          </item>
+          <item>
+            <name>multiple</name>
+            <label>Multiple locations / field work</label>
+          </item>
+          <item>
+            <name>home</name>
+            <label>Primarily works from home</label>
+          </item>
+          <item>
+            <name>hybrid</name>
+            <label>Hybrid (mix of home and office)</label>
+          </item>
+        </root>
+      </instance>
+      <instance id="travel_mode">
+        <root>
+          <item>
+            <name>walk</name>
+            <label>Walk / On foot</label>
+          </item>
+          <item>
+            <name>bicycle</name>
+            <label>Bicycle</label>
+          </item>
+          <item>
+            <name>e_bike</name>
+            <label>E-bike</label>
+          </item>
+          <item>
+            <name>scooter</name>
+            <label>Scooter / Moped</label>
+          </item>
+          <item>
+            <name>motorcycle</name>
+            <label>Motorcycle</label>
+          </item>
+          <item>
+            <name>drive_alone</name>
+            <label>Drive alone (personal vehicle)</label>
+          </item>
+          <item>
+            <name>carpool</name>
+            <label>Carpool / Drive with others</label>
+          </item>
+          <item>
+            <name>vanpool</name>
+            <label>Vanpool</label>
+          </item>
+          <item>
+            <name>bus</name>
+            <label>Bus / MATA</label>
+          </item>
+          <item>
+            <name>rail</name>
+            <label>Rail / Commuter train</label>
+          </item>
+          <item>
+            <name>taxi</name>
+            <label>Taxi</label>
+          </item>
+          <item>
+            <name>ridehail</name>
+            <label>Ride-hailing (Uber / Lyft)</label>
+          </item>
+          <item>
+            <name>paratransit</name>
+            <label>Paratransit / ADA service</label>
+          </item>
+          <item>
+            <name>other</name>
+            <label>Other</label>
+          </item>
+        </root>
+      </instance>
+      <instance id="driver_license">
+        <root>
+          <item>
+            <name>yes</name>
+            <label>Yes, valid license</label>
+          </item>
+          <item>
+            <name>learner</name>
+            <label>Learner permit only</label>
+          </item>
+          <item>
+            <name>cdl</name>
+            <label>Commercial Driver License (CDL)</label>
+          </item>
+          <item>
+            <name>no</name>
+            <label>No driver's license</label>
+          </item>
+        </root>
+      </instance>
+      <instance id="drive_freq">
+        <root>
+          <item>
+            <name>daily</name>
+            <label>Every day or almost every day</label>
+          </item>
+          <item>
+            <name>several_week</name>
+            <label>Several times a week</label>
+          </item>
+          <item>
+            <name>occasionally</name>
+            <label>Occasionally (a few times a month)</label>
+          </item>
+          <item>
+            <name>rarely</name>
+            <label>Rarely</label>
+          </item>
+          <item>
+            <name>never</name>
+            <label>Never</label>
+          </item>
+        </root>
+      </instance>
+      <instance id="bike_access">
+        <root>
+          <item>
+            <name>personal</name>
+            <label>Yes – personal bicycle</label>
+          </item>
+          <item>
+            <name>household</name>
+            <label>Yes – shared household bicycle</label>
+          </item>
+          <item>
+            <name>bikeshare</name>
+            <label>Yes – bikeshare / dockless</label>
+          </item>
+          <item>
+            <name>no</name>
+            <label>No</label>
+          </item>
+        </root>
+      </instance>
+      <instance id="transit_pass">
+        <root>
+          <item>
+            <name>monthly</name>
+            <label>Yes – monthly/annual pass</label>
+          </item>
+          <item>
+            <name>occasionally</name>
+            <label>Yes – occasional/day pass</label>
+          </item>
+          <item>
+            <name>no</name>
+            <label>No</label>
+          </item>
+        </root>
+      </instance>
+      <instance id="ridehail_use">
+        <root>
+          <item>
+            <name>never</name>
+            <label>Never</label>
+          </item>
+          <item>
+            <name>rarely</name>
+            <label>Rarely (a few times a year)</label>
+          </item>
+          <item>
+            <name>monthly</name>
+            <label>Monthly</label>
+          </item>
+          <item>
+            <name>weekly</name>
+            <label>Weekly</label>
+          </item>
+          <item>
+            <name>daily</name>
+            <label>Daily or almost daily</label>
+          </item>
+        </root>
+      </instance>
+      <instance id="residence_type">
+        <root>
+          <item>
+            <name>sfr</name>
+            <label>Single-family detached house</label>
+          </item>
+          <item>
+            <name>townhouse</name>
+            <label>Townhouse / Row house</label>
+          </item>
+          <item>
+            <name>duplex</name>
+            <label>Duplex / Triplex</label>
+          </item>
+          <item>
+            <name>apartment</name>
+            <label>Apartment / Condo (low-rise)</label>
+          </item>
+          <item>
+            <name>apartment_hi</name>
+            <label>Apartment / Condo (high-rise)</label>
+          </item>
+          <item>
+            <name>mobile_home</name>
+            <label>Mobile home / Manufactured home</label>
+          </item>
+          <item>
+            <name>other</name>
+            <label>Other</label>
+          </item>
+        </root>
+      </instance>
+      <instance id="home_ownership">
+        <root>
+          <item>
+            <name>own</name>
+            <label>Own / Buying (mortgage)</label>
+          </item>
+          <item>
+            <name>rent</name>
+            <label>Rent</label>
+          </item>
+          <item>
+            <name>other</name>
+            <label>Other arrangement</label>
+          </item>
+        </root>
+      </instance>
+      <instance id="years_home">
+        <root>
+          <item>
+            <name>lt1</name>
+            <label>Less than 1 year</label>
+          </item>
+          <item>
+            <name>1_5</name>
+            <label>1–5 years</label>
+          </item>
+          <item>
+            <name>6_10</name>
+            <label>6–10 years</label>
+          </item>
+          <item>
+            <name>gt10</name>
+            <label>More than 10 years</label>
+          </item>
+        </root>
+      </instance>
+      <instance id="hhinc">
+        <root>
+          <item>
+            <name>lt25k</name>
+            <label>Under $25,000</label>
+          </item>
+          <item>
+            <name>25_49k</name>
+            <label>$25,000 – $49,999</label>
+          </item>
+          <item>
+            <name>50_74k</name>
+            <label>$50,000 – $74,999</label>
+          </item>
+          <item>
+            <name>75_99k</name>
+            <label>$75,000 – $99,999</label>
+          </item>
+          <item>
+            <name>100_149k</name>
+            <label>$100,000 – $149,999</label>
+          </item>
+          <item>
+            <name>150_199k</name>
+            <label>$150,000 – $199,999</label>
+          </item>
+          <item>
+            <name>ge200k</name>
+            <label>$200,000 or more</label>
+          </item>
+          <item>
+            <name>pnta</name>
+            <label>Prefer not to answer</label>
+          </item>
+        </root>
+      </instance>
+      <instance id="internet">
+        <root>
+          <item>
+            <name>fiber</name>
+            <label>Fiber</label>
+          </item>
+          <item>
+            <name>cable</name>
+            <label>Cable / DSL</label>
+          </item>
+          <item>
+            <name>cellular</name>
+            <label>Cellular / Mobile data</label>
+          </item>
+          <item>
+            <name>satellite</name>
+            <label>Satellite</label>
+          </item>
+          <item>
+            <name>none</name>
+            <label>No internet access</label>
+          </item>
+        </root>
+      </instance>
+      <instance id="transit_dist">
+        <root>
+          <item>
+            <name>lt025</name>
+            <label>Less than ¼ mile (about a 5-min walk)</label>
+          </item>
+          <item>
+            <name>025_05</name>
+            <label>¼ – ½ mile (5–10 min walk)</label>
+          </item>
+          <item>
+            <name>05_1</name>
+            <label>½ – 1 mile (10–20 min walk)</label>
+          </item>
+          <item>
+            <name>gt1</name>
+            <label>More than 1 mile</label>
+          </item>
+        </root>
+      </instance>
+      <instance id="rating5">
+        <root>
+          <item>
+            <name>1</name>
+            <label>1 – Very Poor / Very Dissatisfied</label>
+          </item>
+          <item>
+            <name>2</name>
+            <label>2 – Poor / Dissatisfied</label>
+          </item>
+          <item>
+            <name>3</name>
+            <label>3 – Fair / Neutral</label>
+          </item>
+          <item>
+            <name>4</name>
+            <label>4 – Good / Satisfied</label>
+          </item>
+          <item>
+            <name>5</name>
+            <label>5 – Excellent / Very Satisfied</label>
+          </item>
+        </root>
+      </instance>
+      <instance id="move_reason">
+        <root>
+          <item>
+            <name>employment</name>
+            <label>Employment / Job change</label>
+          </item>
+          <item>
+            <name>housing</name>
+            <label>Housing cost or quality</label>
+          </item>
+          <item>
+            <name>education</name>
+            <label>Education</label>
+          </item>
+          <item>
+            <name>family</name>
+            <label>Family / Personal reasons</label>
+          </item>
+          <item>
+            <name>other</name>
+            <label>Other</label>
+          </item>
+        </root>
+      </instance>
+      <instance id="contact_method">
+        <root>
+          <item>
+            <name>email</name>
+            <label>Email</label>
+          </item>
+          <item>
+            <name>phone</name>
+            <label>Phone call</label>
+          </item>
+          <item>
+            <name>sms</name>
+            <label>SMS / Text message</label>
+          </item>
+        </root>
+      </instance>
+      <instance id="veh_ownership">
+        <root>
+          <item>
+            <name>owned</name>
+            <label>Owned</label>
+          </item>
+          <item>
+            <name>leased</name>
+            <label>Leased</label>
+          </item>
+          <item>
+            <name>employer</name>
+            <label>Employer-owned / Company car</label>
+          </item>
+          <item>
+            <name>borrowed</name>
+            <label>Borrowed / Shared with non-household</label>
+          </item>
+          <item>
+            <name>other</name>
+            <label>Other</label>
+          </item>
+        </root>
+      </instance>
+      <instance id="body_type">
+        <root>
+          <item>
+            <name>sedan</name>
+            <label>Sedan</label>
+          </item>
+          <item>
+            <name>suv</name>
+            <label>SUV</label>
+          </item>
+          <item>
+            <name>pickup</name>
+            <label>Pickup Truck</label>
+          </item>
+          <item>
+            <name>van</name>
+            <label>Van / Minivan</label>
+          </item>
+          <item>
+            <name>wagon</name>
+            <label>Station Wagon / Crossover</label>
+          </item>
+          <item>
+            <name>hatchback</name>
+            <label>Hatchback</label>
+          </item>
+          <item>
+            <name>coupe</name>
+            <label>Coupe</label>
+          </item>
+          <item>
+            <name>motorcycle</name>
+            <label>Motorcycle</label>
+          </item>
+          <item>
+            <name>rv</name>
+            <label>RV / Motorhome</label>
+          </item>
+          <item>
+            <name>other</name>
+            <label>Other</label>
+          </item>
+        </root>
+      </instance>
+      <instance id="fuel_type">
+        <root>
+          <item>
+            <name>gasoline</name>
+            <label>Gasoline</label>
+          </item>
+          <item>
+            <name>diesel</name>
+            <label>Diesel</label>
+          </item>
+          <item>
+            <name>hybrid</name>
+            <label>Hybrid (HEV — not plug-in)</label>
+          </item>
+          <item>
+            <name>phev</name>
+            <label>Plug-in Hybrid (PHEV)</label>
+          </item>
+          <item>
+            <name>bev</name>
+            <label>Battery Electric (BEV — no gasoline)</label>
+          </item>
+          <item>
+            <name>cng</name>
+            <label>Compressed Natural Gas (CNG)</label>
+          </item>
+          <item>
+            <name>other</name>
+            <label>Other</label>
+          </item>
+        </root>
+      </instance>
+      <instance id="driver_role">
+        <root>
+          <item>
+            <name>self</name>
+            <label>Myself (respondent)</label>
+          </item>
+          <item>
+            <name>spouse</name>
+            <label>Spouse / Partner</label>
+          </item>
+          <item>
+            <name>adult_child</name>
+            <label>Adult child (18+)</label>
+          </item>
+          <item>
+            <name>other_adult</name>
+            <label>Other adult in household</label>
+          </item>
+          <item>
+            <name>na</name>
+            <label>Not applicable</label>
+          </item>
+        </root>
+      </instance>
+      <instance id="charging_loc">
+        <root>
+          <item>
+            <name>home</name>
+            <label>Home</label>
+          </item>
+          <item>
+            <name>workplace</name>
+            <label>Workplace</label>
+          </item>
+          <item>
+            <name>public</name>
+            <label>Public charging station</label>
+          </item>
+          <item>
+            <name>other</name>
+            <label>Other</label>
+          </item>
+        </root>
+      </instance>
+      <instance id="charging_freq">
+        <root>
+          <item>
+            <name>daily</name>
+            <label>Daily</label>
+          </item>
+          <item>
+            <name>several_wk</name>
+            <label>Several times a week</label>
+          </item>
+          <item>
+            <name>weekly</name>
+            <label>Weekly</label>
+          </item>
+          <item>
+            <name>as_needed</name>
+            <label>As needed (range-based)</label>
+          </item>
+        </root>
+      </instance>
+      <instance id="freq4">
+        <root>
+          <item>
+            <name>daily</name>
+            <label>Daily</label>
+          </item>
+          <item>
+            <name>weekly</name>
+            <label>Weekly</label>
+          </item>
+          <item>
+            <name>monthly</name>
+            <label>Monthly</label>
+          </item>
+          <item>
+            <name>rarely</name>
+            <label>Rarely</label>
+          </item>
+          <item>
+            <name>never</name>
+            <label>Never</label>
+          </item>
+        </root>
+      </instance>
+      <instance id="county">
+        <root>
+          <item>
+            <name>shelby</name>
+            <label>Shelby County, TN (Memphis)</label>
+          </item>
+          <item>
+            <name>fayette</name>
+            <label>Fayette County, TN</label>
+          </item>
+          <item>
+            <name>tipton</name>
+            <label>Tipton County, TN</label>
+          </item>
+          <item>
+            <name>crittenden</name>
+            <label>Crittenden County, AR</label>
+          </item>
+          <item>
+            <name>desoto</name>
+            <label>DeSoto County, MS</label>
+          </item>
+          <item>
+            <name>marshall</name>
+            <label>Marshall County, MS</label>
+          </item>
+          <item>
+            <name>benton</name>
+            <label>Benton County, MS</label>
+          </item>
+          <item>
+            <name>tate</name>
+            <label>Tate County, MS</label>
+          </item>
+          <item>
+            <name>other</name>
+            <label>Other</label>
+          </item>
+        </root>
+      </instance>
+      <instance id="ev_replace">
+        <root>
+          <item>
+            <name>yes</name>
+            <label>Yes, I would consider it</label>
+          </item>
+          <item>
+            <name>maybe</name>
+            <label>Unsure / Maybe</label>
+          </item>
+          <item>
+            <name>no</name>
+            <label>No, I would not</label>
+          </item>
+        </root>
+      </instance>
+      <instance id="ev_barrier">
+        <root>
+          <item>
+            <name>cost</name>
+            <label>Purchase price too high</label>
+          </item>
+          <item>
+            <name>charging</name>
+            <label>Lack of public charging stations</label>
+          </item>
+          <item>
+            <name>range</name>
+            <label>Insufficient driving range</label>
+          </item>
+          <item>
+            <name>reliability</name>
+            <label>Reliability concerns</label>
+          </item>
+          <item>
+            <name>other</name>
+            <label>Other</label>
+          </item>
+        </root>
+      </instance>
+      <bind nodeset="/aUPeHxQL7uL5eryUJGkHtg/personal/a1_identity/intro_note" readonly="true()" type="string"/>
+      <bind nodeset="/aUPeHxQL7uL5eryUJGkHtg/personal/a1_identity/GENDER" type="string" required="true()"/>
+      <bind nodeset="/aUPeHxQL7uL5eryUJGkHtg/personal/a1_identity/AGE" type="int" required="true()" constraint=" /aUPeHxQL7uL5eryUJGkHtg/personal/a1_identity/AGE &gt;=16 and  /aUPeHxQL7uL5eryUJGkHtg/personal/a1_identity/AGE &lt;=110" jr:constraintMsg="Please enter a valid age (16–110)."/>
+      <bind nodeset="/aUPeHxQL7uL5eryUJGkHtg/personal/a1_identity/MARITAL" type="string" required="true()"/>
+      <bind nodeset="/aUPeHxQL7uL5eryUJGkHtg/personal/a1_identity/RACE" type="string" required="true()"/>
+      <bind nodeset="/aUPeHxQL7uL5eryUJGkHtg/personal/a1_identity/HISPANIC" type="string" required="true()"/>
+      <bind nodeset="/aUPeHxQL7uL5eryUJGkHtg/personal/a1_identity/LANGUAGE" type="string" required="true()"/>
+      <bind nodeset="/aUPeHxQL7uL5eryUJGkHtg/personal/a1_identity/DISABILITY" type="string" required="true()"/>
+      <bind nodeset="/aUPeHxQL7uL5eryUJGkHtg/personal/a1_identity/DISABILITY_TYPE" type="string" relevant=" /aUPeHxQL7uL5eryUJGkHtg/personal/a1_identity/DISABILITY ='yes'" required="true()"/>
+      <bind nodeset="/aUPeHxQL7uL5eryUJGkHtg/personal/a2_edu_emp/EDUCATION" type="string" required="true()"/>
+      <bind nodeset="/aUPeHxQL7uL5eryUJGkHtg/personal/a2_edu_emp/STUDENT" type="string" required="true()"/>
+      <bind nodeset="/aUPeHxQL7uL5eryUJGkHtg/personal/a2_edu_emp/SCHOOL_LEVEL" type="string" relevant=" /aUPeHxQL7uL5eryUJGkHtg/personal/a2_edu_emp/STUDENT ='yes'" required="true()"/>
+      <bind nodeset="/aUPeHxQL7uL5eryUJGkHtg/personal/a2_edu_emp/EMPLOYMENT" type="string" required="true()"/>
+      <bind nodeset="/aUPeHxQL7uL5eryUJGkHtg/personal/a2_edu_emp/OCCUPATION" type="string" relevant=" /aUPeHxQL7uL5eryUJGkHtg/personal/a2_edu_emp/EMPLOYMENT ='full_time' or  /aUPeHxQL7uL5eryUJGkHtg/personal/a2_edu_emp/EMPLOYMENT ='part_time' or  /aUPeHxQL7uL5eryUJGkHtg/personal/a2_edu_emp/EMPLOYMENT ='self_employed'" required="true()"/>
+      <bind nodeset="/aUPeHxQL7uL5eryUJGkHtg/personal/a2_edu_emp/INDUSTRY" type="string" relevant=" /aUPeHxQL7uL5eryUJGkHtg/personal/a2_edu_emp/EMPLOYMENT ='full_time' or  /aUPeHxQL7uL5eryUJGkHtg/personal/a2_edu_emp/EMPLOYMENT ='part_time' or  /aUPeHxQL7uL5eryUJGkHtg/personal/a2_edu_emp/EMPLOYMENT ='self_employed'" required="true()"/>
+      <bind nodeset="/aUPeHxQL7uL5eryUJGkHtg/personal/a2_edu_emp/DRV4WRK" type="string" relevant=" /aUPeHxQL7uL5eryUJGkHtg/personal/a2_edu_emp/EMPLOYMENT  = 'full_time' or  /aUPeHxQL7uL5eryUJGkHtg/personal/a2_edu_emp/EMPLOYMENT  = 'part_time' or  /aUPeHxQL7uL5eryUJGkHtg/personal/a2_edu_emp/EMPLOYMENT  = 'self_employed'"/>
+      <bind nodeset="/aUPeHxQL7uL5eryUJGkHtg/personal/a2_edu_emp/DRV4WRK_HHVEH" type="string" relevant=" /aUPeHxQL7uL5eryUJGkHtg/personal/a2_edu_emp/DRV4WRK  = 'yes'"/>
+      <bind nodeset="/aUPeHxQL7uL5eryUJGkHtg/personal/a2_edu_emp/DRV4WRK_RES" type="string" relevant=" /aUPeHxQL7uL5eryUJGkHtg/personal/a2_edu_emp/DRV4WRK  = 'yes'"/>
+      <bind nodeset="/aUPeHxQL7uL5eryUJGkHtg/personal/a2_edu_emp/DRV4WRK_STOPS" type="string" relevant=" /aUPeHxQL7uL5eryUJGkHtg/personal/a2_edu_emp/DRV4WRK  = 'yes' and  /aUPeHxQL7uL5eryUJGkHtg/personal/a2_edu_emp/DRV4WRK_RES  = 'no'"/>
+      <bind nodeset="/aUPeHxQL7uL5eryUJGkHtg/personal/a3_work/WORK_OUTSIDE" type="string" relevant=" /aUPeHxQL7uL5eryUJGkHtg/personal/a2_edu_emp/EMPLOYMENT ='full_time' or  /aUPeHxQL7uL5eryUJGkHtg/personal/a2_edu_emp/EMPLOYMENT ='part_time' or  /aUPeHxQL7uL5eryUJGkHtg/personal/a2_edu_emp/EMPLOYMENT ='self_employed'" required="true()"/>
+      <bind nodeset="/aUPeHxQL7uL5eryUJGkHtg/personal/a3_work/WORKPLACE_TYPE" type="string" relevant=" /aUPeHxQL7uL5eryUJGkHtg/personal/a3_work/WORK_OUTSIDE ='yes'" required="true()"/>
+      <bind nodeset="/aUPeHxQL7uL5eryUJGkHtg/personal/a3_work/WORK_START_TIME" type="time" relevant=" /aUPeHxQL7uL5eryUJGkHtg/personal/a3_work/WORK_OUTSIDE ='yes'" required="true()"/>
+      <bind nodeset="/aUPeHxQL7uL5eryUJGkHtg/personal/a3_work/WORK_END_TIME" type="time" relevant=" /aUPeHxQL7uL5eryUJGkHtg/personal/a3_work/WORK_OUTSIDE ='yes'" required="true()"/>
+      <bind nodeset="/aUPeHxQL7uL5eryUJGkHtg/personal/a3_work/TELEWORK" type="int" relevant=" /aUPeHxQL7uL5eryUJGkHtg/personal/a3_work/WORK_OUTSIDE ='yes'" required="true()" constraint=" /aUPeHxQL7uL5eryUJGkHtg/personal/a3_work/TELEWORK &gt;=0 and  /aUPeHxQL7uL5eryUJGkHtg/personal/a3_work/TELEWORK &lt;=5" jr:constraintMsg="Please enter 0 to 5."/>
+      <bind nodeset="/aUPeHxQL7uL5eryUJGkHtg/personal/a3_work/MULTIJOB" type="string" relevant=" /aUPeHxQL7uL5eryUJGkHtg/personal/a2_edu_emp/EMPLOYMENT ='full_time' or  /aUPeHxQL7uL5eryUJGkHtg/personal/a2_edu_emp/EMPLOYMENT ='part_time' or  /aUPeHxQL7uL5eryUJGkHtg/personal/a2_edu_emp/EMPLOYMENT ='self_employed'" required="true()"/>
+      <bind nodeset="/aUPeHxQL7uL5eryUJGkHtg/personal/a3_work/NUM_JOBS" type="int" relevant=" /aUPeHxQL7uL5eryUJGkHtg/personal/a3_work/MULTIJOB ='yes'" required="true()" constraint=" /aUPeHxQL7uL5eryUJGkHtg/personal/a3_work/NUM_JOBS &gt;=2" jr:constraintMsg="Please enter 2 or more jobs."/>
+      <bind nodeset="/aUPeHxQL7uL5eryUJGkHtg/personal/a4_school/SCHOOL_DAYS" type="int" relevant=" /aUPeHxQL7uL5eryUJGkHtg/personal/a2_edu_emp/STUDENT ='yes'" required="true()" constraint=" /aUPeHxQL7uL5eryUJGkHtg/personal/a4_school/SCHOOL_DAYS &gt;=0 and  /aUPeHxQL7uL5eryUJGkHtg/personal/a4_school/SCHOOL_DAYS &lt;=7" jr:constraintMsg="Please enter 0 to 7."/>
+      <bind nodeset="/aUPeHxQL7uL5eryUJGkHtg/personal/a4_school/OTHER_ACTIVITY" type="string" required="true()"/>
+      <bind nodeset="/aUPeHxQL7uL5eryUJGkHtg/personal/a4_school/OTHER_ACTIVITY_NAME" type="string" relevant=" /aUPeHxQL7uL5eryUJGkHtg/personal/a4_school/OTHER_ACTIVITY ='yes'" required="true()"/>
+      <bind nodeset="/aUPeHxQL7uL5eryUJGkHtg/personal/a5_commute/WORK_MODE" type="string" relevant=" /aUPeHxQL7uL5eryUJGkHtg/personal/a3_work/WORK_OUTSIDE ='yes'" required="true()"/>
+      <bind nodeset="/aUPeHxQL7uL5eryUJGkHtg/personal/a5_commute/SCHOOL_MODE" type="string" relevant=" /aUPeHxQL7uL5eryUJGkHtg/personal/a2_edu_emp/STUDENT ='yes' and  /aUPeHxQL7uL5eryUJGkHtg/personal/a4_school/SCHOOL_DAYS &gt;0" required="true()"/>
+      <bind nodeset="/aUPeHxQL7uL5eryUJGkHtg/personal/a5_commute/COMMUTE_TIME" type="int" relevant=" /aUPeHxQL7uL5eryUJGkHtg/personal/a3_work/WORK_OUTSIDE ='yes'" required="true()" constraint=" /aUPeHxQL7uL5eryUJGkHtg/personal/a5_commute/COMMUTE_TIME &gt;0 and  /aUPeHxQL7uL5eryUJGkHtg/personal/a5_commute/COMMUTE_TIME &lt;=180" jr:constraintMsg="Please enter 1–180 minutes."/>
+      <bind nodeset="/aUPeHxQL7uL5eryUJGkHtg/personal/a5_commute/COMMUTE_DISTANCE" type="decimal" relevant=" /aUPeHxQL7uL5eryUJGkHtg/personal/a3_work/WORK_OUTSIDE ='yes'" required="true()" constraint=" /aUPeHxQL7uL5eryUJGkHtg/personal/a5_commute/COMMUTE_DISTANCE &gt;0 and  /aUPeHxQL7uL5eryUJGkHtg/personal/a5_commute/COMMUTE_DISTANCE &lt;=200" jr:constraintMsg="Please enter 0.1–200 miles."/>
+      <bind nodeset="/aUPeHxQL7uL5eryUJGkHtg/personal/a5_commute/DRIVER_LICENSE" type="string" required="true()"/>
+      <bind nodeset="/aUPeHxQL7uL5eryUJGkHtg/personal/a5_commute/DRIVE_FREQ" type="string" required="true()"/>
+      <bind nodeset="/aUPeHxQL7uL5eryUJGkHtg/personal/a5_commute/BIKE_ACCESS" type="string" required="true()"/>
+      <bind nodeset="/aUPeHxQL7uL5eryUJGkHtg/personal/a5_commute/TRANSIT_PASS" type="string" required="true()"/>
+      <bind nodeset="/aUPeHxQL7uL5eryUJGkHtg/personal/a5_commute/RIDEHAIL_USE" type="string" required="true()"/>
+      <bind nodeset="/aUPeHxQL7uL5eryUJGkHtg/personal/a5_commute/trvl_ex_note" readonly="true()" type="string"/>
+      <bind nodeset="/aUPeHxQL7uL5eryUJGkHtg/personal/a5_commute/TRVL_WALK" type="string"/>
+      <bind nodeset="/aUPeHxQL7uL5eryUJGkHtg/personal/a5_commute/TRVL_BIKE" type="string"/>
+      <bind nodeset="/aUPeHxQL7uL5eryUJGkHtg/personal/a5_commute/TRVL_BIKESHARE" type="string"/>
+      <bind nodeset="/aUPeHxQL7uL5eryUJGkHtg/personal/a5_commute/TRVL_ESCOOTER" type="string"/>
+      <bind nodeset="/aUPeHxQL7uL5eryUJGkHtg/personal/a5_commute/TRVL_TAXI" type="string"/>
+      <bind nodeset="/aUPeHxQL7uL5eryUJGkHtg/personal/a5_commute/TRVL_TNC" type="string"/>
+      <bind nodeset="/aUPeHxQL7uL5eryUJGkHtg/personal/a5_commute/TRVL_TRANSIT" type="string"/>
+      <bind nodeset="/aUPeHxQL7uL5eryUJGkHtg/household/HH_ID" type="string" calculate="concat('MRTS-',format-date(today(),'%Y%m%d'),'-',substr(once(uuid()),1,8))"/>
+      <bind nodeset="/aUPeHxQL7uL5eryUJGkHtg/household/b1_home/COUNTY" type="string" required="true()"/>
+      <bind nodeset="/aUPeHxQL7uL5eryUJGkHtg/household/b1_home/RESIDENCE_TYPE" type="string" required="true()"/>
+      <bind nodeset="/aUPeHxQL7uL5eryUJGkHtg/household/b1_home/HOME_OWNERSHIP" type="string" required="true()"/>
+      <bind nodeset="/aUPeHxQL7uL5eryUJGkHtg/household/b1_home/YEARS_HOME" type="string" required="true()"/>
+      <bind nodeset="/aUPeHxQL7uL5eryUJGkHtg/household/b2_composition/HH_SIZE" type="int" required="true()" constraint=" /aUPeHxQL7uL5eryUJGkHtg/household/b2_composition/HH_SIZE &gt;=1" jr:constraintMsg="Please enter at least 1."/>
+      <bind nodeset="/aUPeHxQL7uL5eryUJGkHtg/household/b2_composition/HH_ADULTS" type="int" required="true()" constraint=" /aUPeHxQL7uL5eryUJGkHtg/household/b2_composition/HH_ADULTS &gt;=0" jr:constraintMsg="Please enter 0 or more."/>
+      <bind nodeset="/aUPeHxQL7uL5eryUJGkHtg/household/b2_composition/HH_CHILDREN" type="int" required="true()" constraint=" /aUPeHxQL7uL5eryUJGkHtg/household/b2_composition/HH_CHILDREN &gt;=0 and ( /aUPeHxQL7uL5eryUJGkHtg/household/b2_composition/HH_ADULTS + /aUPeHxQL7uL5eryUJGkHtg/household/b2_composition/HH_CHILDREN ) = /aUPeHxQL7uL5eryUJGkHtg/household/b2_composition/HH_SIZE" jr:constraintMsg="Adults and children must add up to household size."/>
+      <bind nodeset="/aUPeHxQL7uL5eryUJGkHtg/household/b2_composition/HH_CHILD_U5" type="int" relevant=" /aUPeHxQL7uL5eryUJGkHtg/household/b2_composition/HH_CHILDREN &gt;0" required="true()" constraint=" /aUPeHxQL7uL5eryUJGkHtg/household/b2_composition/HH_CHILD_U5 &gt;=0 and /aUPeHxQL7uL5eryUJGkHtg/household/b2_composition/HH_CHILD_U5 &lt;= /aUPeHxQL7uL5eryUJGkHtg/household/b2_composition/HH_CHILDREN" jr:constraintMsg="Cannot exceed the number of children."/>
+      <bind nodeset="/aUPeHxQL7uL5eryUJGkHtg/household/b2_composition/HH_WORKERS" type="int" required="true()" constraint=" /aUPeHxQL7uL5eryUJGkHtg/household/b2_composition/HH_WORKERS &gt;=0" jr:constraintMsg="Please enter 0 or more."/>
+      <bind nodeset="/aUPeHxQL7uL5eryUJGkHtg/household/b2_composition/HH_STUDENTS" type="int" required="true()" constraint=" /aUPeHxQL7uL5eryUJGkHtg/household/b2_composition/HH_STUDENTS &gt;=0" jr:constraintMsg="Please enter 0 or more."/>
+      <bind nodeset="/aUPeHxQL7uL5eryUJGkHtg/household/b2_composition/HH_LICENSED" type="int" required="true()" constraint=" /aUPeHxQL7uL5eryUJGkHtg/household/b2_composition/HH_LICENSED &gt;=0" jr:constraintMsg="Please enter 0 or more."/>
+      <bind nodeset="/aUPeHxQL7uL5eryUJGkHtg/household/b2_composition/HH_DISABILITY" type="int" required="true()" constraint=" /aUPeHxQL7uL5eryUJGkHtg/household/b2_composition/HH_DISABILITY &gt;=0" jr:constraintMsg="Please enter 0 or more."/>
+      <bind nodeset="/aUPeHxQL7uL5eryUJGkHtg/household/b2_composition/HHINC_RANGE" type="string" required="true()"/>
+      <bind nodeset="/aUPeHxQL7uL5eryUJGkHtg/household/b2_composition/GOV_ASSIST" type="string" required="true()"/>
+      <bind nodeset="/aUPeHxQL7uL5eryUJGkHtg/household/b3_vehicles/VEHICLE_HH" type="int" required="true()" constraint=" /aUPeHxQL7uL5eryUJGkHtg/household/b3_vehicles/VEHICLE_HH &gt;=0" jr:constraintMsg="Please enter 0 or more."/>
+      <bind nodeset="/aUPeHxQL7uL5eryUJGkHtg/household/b3_vehicles/EV_HH" type="int" relevant=" /aUPeHxQL7uL5eryUJGkHtg/household/b3_vehicles/VEHICLE_HH &gt;0" required="true()" constraint=" /aUPeHxQL7uL5eryUJGkHtg/household/b3_vehicles/EV_HH &gt;=0" jr:constraintMsg="Please enter 0 or more."/>
+      <bind nodeset="/aUPeHxQL7uL5eryUJGkHtg/household/b3_vehicles/HYBRID_HH" type="int" relevant=" /aUPeHxQL7uL5eryUJGkHtg/household/b3_vehicles/VEHICLE_HH &gt;0" required="true()" constraint=" /aUPeHxQL7uL5eryUJGkHtg/household/b3_vehicles/HYBRID_HH &gt;=0" jr:constraintMsg="Please enter 0 or more."/>
+      <bind nodeset="/aUPeHxQL7uL5eryUJGkHtg/household/b3_vehicles/PHEV_HH" type="int" relevant=" /aUPeHxQL7uL5eryUJGkHtg/household/b3_vehicles/VEHICLE_HH &gt;0" required="true()" constraint=" /aUPeHxQL7uL5eryUJGkHtg/household/b3_vehicles/PHEV_HH &gt;=0" jr:constraintMsg="Please enter 0 or more."/>
+      <bind nodeset="/aUPeHxQL7uL5eryUJGkHtg/household/b3_vehicles/BIKE_HH" type="int" required="true()" constraint=" /aUPeHxQL7uL5eryUJGkHtg/household/b3_vehicles/BIKE_HH &gt;=0" jr:constraintMsg="Please enter 0 or more."/>
+      <bind nodeset="/aUPeHxQL7uL5eryUJGkHtg/household/b3_vehicles/MOTORCYCLE_HH" type="int" required="true()" constraint=" /aUPeHxQL7uL5eryUJGkHtg/household/b3_vehicles/MOTORCYCLE_HH &gt;=0" jr:constraintMsg="Please enter 0 or more."/>
+      <bind nodeset="/aUPeHxQL7uL5eryUJGkHtg/household/b4_services/INTERNET" type="string" required="true()"/>
+      <bind nodeset="/aUPeHxQL7uL5eryUJGkHtg/household/b4_services/TELEWORK_HH" type="string" required="true()"/>
+      <bind nodeset="/aUPeHxQL7uL5eryUJGkHtg/household/b4_services/TELEWORK_DAYS" type="int" relevant=" /aUPeHxQL7uL5eryUJGkHtg/household/b4_services/TELEWORK_HH ='yes'" required="true()" constraint=" /aUPeHxQL7uL5eryUJGkHtg/household/b4_services/TELEWORK_DAYS &gt;=1 and  /aUPeHxQL7uL5eryUJGkHtg/household/b4_services/TELEWORK_DAYS &lt;=7" jr:constraintMsg="Please enter 1–7 days (you indicated someone in your household teleworks)."/>
+      <bind nodeset="/aUPeHxQL7uL5eryUJGkHtg/household/b4_services/ONLINE_SCHOOL" type="string" required="true()"/>
+      <bind nodeset="/aUPeHxQL7uL5eryUJGkHtg/household/b4_services/FOOD_DELIVERY" type="string" relevant=" /aUPeHxQL7uL5eryUJGkHtg/household/b4_services/INTERNET !='none'" required="true()"/>
+      <bind nodeset="/aUPeHxQL7uL5eryUJGkHtg/household/b4_services/GROCERY_DELIVERY" type="string" relevant=" /aUPeHxQL7uL5eryUJGkHtg/household/b4_services/INTERNET !='none'" required="true()"/>
+      <bind nodeset="/aUPeHxQL7uL5eryUJGkHtg/household/b4_services/ONLINE_SHOPPING" type="string" required="true()"/>
+      <bind nodeset="/aUPeHxQL7uL5eryUJGkHtg/household/b4_services/PACKAGE_DELIVERY" type="int" required="true()" constraint=" /aUPeHxQL7uL5eryUJGkHtg/household/b4_services/PACKAGE_DELIVERY &gt;=0" jr:constraintMsg="Please enter 0 or more."/>
+      <bind nodeset="/aUPeHxQL7uL5eryUJGkHtg/household/b5_neighborhood/TRANSIT_ACCESS" type="string" required="true()"/>
+      <bind nodeset="/aUPeHxQL7uL5eryUJGkHtg/household/b5_neighborhood/TRANSIT_DISTANCE" type="string" relevant=" /aUPeHxQL7uL5eryUJGkHtg/household/b5_neighborhood/TRANSIT_ACCESS ='yes'" required="true()"/>
+      <bind nodeset="/aUPeHxQL7uL5eryUJGkHtg/household/b5_neighborhood/WALKABILITY" type="string" required="true()"/>
+      <bind nodeset="/aUPeHxQL7uL5eryUJGkHtg/household/b5_neighborhood/BIKEABILITY" type="string" required="true()"/>
+      <bind nodeset="/aUPeHxQL7uL5eryUJGkHtg/household/b5_neighborhood/TRANSIT_SAT" type="string" required="true()"/>
+      <bind nodeset="/aUPeHxQL7uL5eryUJGkHtg/household/b5_neighborhood/ROAD_SAT" type="string" required="true()"/>
+      <bind nodeset="/aUPeHxQL7uL5eryUJGkHtg/household/b5_neighborhood/SIDEWALK_SAT" type="string" required="true()"/>
+      <bind nodeset="/aUPeHxQL7uL5eryUJGkHtg/household/b6_future/MOVE_PLAN" type="string" required="true()"/>
+      <bind nodeset="/aUPeHxQL7uL5eryUJGkHtg/household/b6_future/MOVE_REASON" type="string" relevant=" /aUPeHxQL7uL5eryUJGkHtg/household/b6_future/MOVE_PLAN ='yes'" required="true()"/>
+      <bind nodeset="/aUPeHxQL7uL5eryUJGkHtg/household/b6_future/FUTURE_CONTACT" type="string" required="true()"/>
+      <bind nodeset="/aUPeHxQL7uL5eryUJGkHtg/household/b6_future/CONTACT_METHOD" type="string" relevant=" /aUPeHxQL7uL5eryUJGkHtg/household/b6_future/FUTURE_CONTACT ='yes'" required="true()"/>
+      <bind nodeset="/aUPeHxQL7uL5eryUJGkHtg/household/b6_future/HH_COMMENTS" type="string"/>
+      <bind nodeset="/aUPeHxQL7uL5eryUJGkHtg/vehicle/VEH_ID" type="string" calculate="concat('VEH-',position())"/>
+      <bind nodeset="/aUPeHxQL7uL5eryUJGkHtg/vehicle/c1_veh_id/veh_intro" readonly="true()" type="string"/>
+      <bind nodeset="/aUPeHxQL7uL5eryUJGkHtg/vehicle/c1_veh_id/OWNERSHIP" type="string" required="true()"/>
+      <bind nodeset="/aUPeHxQL7uL5eryUJGkHtg/vehicle/c1_veh_id/VEH_YEAR" type="int" required="true()" constraint=" ../VEH_YEAR &gt;=1960 and  ../VEH_YEAR &lt;=2026" jr:constraintMsg="Please enter a year between 1960 and 2026."/>
+      <bind nodeset="/aUPeHxQL7uL5eryUJGkHtg/vehicle/c1_veh_id/VEH_MAKE" type="string" required="true()"/>
+      <bind nodeset="/aUPeHxQL7uL5eryUJGkHtg/vehicle/c1_veh_id/VEH_MODEL" type="string" required="true()"/>
+      <bind nodeset="/aUPeHxQL7uL5eryUJGkHtg/vehicle/c1_veh_id/BODY_TYPE" type="string" required="true()"/>
+      <bind nodeset="/aUPeHxQL7uL5eryUJGkHtg/vehicle/c1_veh_id/FUEL_TYPE" type="string" required="true()"/>
+      <bind nodeset="/aUPeHxQL7uL5eryUJGkHtg/vehicle/c2_veh_use/PRIMARY_DRIVER" type="string" required="true()"/>
+      <bind nodeset="/aUPeHxQL7uL5eryUJGkHtg/vehicle/c2_veh_use/REGULAR_USERS" type="int" required="true()" constraint=" ../REGULAR_USERS &gt;=1" jr:constraintMsg="Please enter at least 1."/>
+      <bind nodeset="/aUPeHxQL7uL5eryUJGkHtg/vehicle/c2_veh_use/AVAILABLE_DAILY" type="string" required="true()"/>
+      <bind nodeset="/aUPeHxQL7uL5eryUJGkHtg/vehicle/c2_veh_use/DAYS_AVAILABLE" type="int" relevant=" ../AVAILABLE_DAILY ='no'" required="true()" constraint=" ../DAYS_AVAILABLE &gt;=0 and  ../DAYS_AVAILABLE &lt;=7" jr:constraintMsg="Please enter 0–7."/>
+      <bind nodeset="/aUPeHxQL7uL5eryUJGkHtg/vehicle/c2_veh_use/SEATING" type="int" required="true()" constraint=" ../SEATING &gt;=1" jr:constraintMsg="Please enter at least 1 seat (motorcycles = 1, most cars = 5)."/>
+      <bind nodeset="/aUPeHxQL7uL5eryUJGkHtg/vehicle/c3_ev/ev_note" readonly="true()" type="string" relevant=" ../../c1_veh_id/FUEL_TYPE ='bev' or  ../../c1_veh_id/FUEL_TYPE ='phev'"/>
+      <bind nodeset="/aUPeHxQL7uL5eryUJGkHtg/vehicle/c3_ev/EV_RANGE" type="int" relevant=" ../../c1_veh_id/FUEL_TYPE ='bev' or  ../../c1_veh_id/FUEL_TYPE ='phev'" required="true()"/>
+      <bind nodeset="/aUPeHxQL7uL5eryUJGkHtg/vehicle/c3_ev/CHARGING_LOCATION" type="string" relevant=" ../../c1_veh_id/FUEL_TYPE ='bev' or  ../../c1_veh_id/FUEL_TYPE ='phev'" required="true()"/>
+      <bind nodeset="/aUPeHxQL7uL5eryUJGkHtg/vehicle/c3_ev/CHARGING_FREQ" type="string" relevant=" ../../c1_veh_id/FUEL_TYPE ='bev' or  ../../c1_veh_id/FUEL_TYPE ='phev'" required="true()"/>
+      <bind nodeset="/aUPeHxQL7uL5eryUJGkHtg/vehicle/c4_usage/WORK_USE" type="string" required="true()"/>
+      <bind nodeset="/aUPeHxQL7uL5eryUJGkHtg/vehicle/c4_usage/SCHOOL_USE" type="string" required="true()"/>
+      <bind nodeset="/aUPeHxQL7uL5eryUJGkHtg/vehicle/c4_usage/ACCESSIBLE" type="string" required="true()"/>
+      <bind nodeset="/aUPeHxQL7uL5eryUJGkHtg/vehicle/c4_usage/TOLL_TAG" type="string" required="true()"/>
+      <bind nodeset="/aUPeHxQL7uL5eryUJGkHtg/vehicle/c4_usage/EV_REPLACE" type="string" required="true()"/>
+      <bind nodeset="/aUPeHxQL7uL5eryUJGkHtg/vehicle/c4_usage/EV_BARRIER" type="string" relevant=" ../EV_REPLACE ='no'" required="true()"/>
+      <bind nodeset="/aUPeHxQL7uL5eryUJGkHtg/vehicle/c4_usage/VEH_COMMENTS" type="string"/>
+      <bind nodeset="/aUPeHxQL7uL5eryUJGkHtg/closing/closing_note" readonly="true()" type="string"/>
+      <bind nodeset="/aUPeHxQL7uL5eryUJGkHtg/closing/FUTURE_SURVEY" type="string" required="true()"/>
+      <bind nodeset="/aUPeHxQL7uL5eryUJGkHtg/closing/ENROLLMENT_COMMENTS" type="string"/>
+      <bind nodeset="/aUPeHxQL7uL5eryUJGkHtg/meta/instanceID" type="string" readonly="true()" jr:preload="uid"/>
+      <bind nodeset="/aUPeHxQL7uL5eryUJGkHtg/meta/instanceName" type="string" calculate="concat('MRTS-',format-date(today(),'%Y%m%d'),'-',substr(once(uuid()),1,8))"/>
+    </model>
+  </h:head>
+  <h:body class="pages">
+    <group ref="/aUPeHxQL7uL5eryUJGkHtg/personal">
+      <label>Section A: Personal Characteristics</label>
+      <group appearance="field-list" ref="/aUPeHxQL7uL5eryUJGkHtg/personal/a1_identity">
+        <label>A1: Personal Information</label>
+        <input ref="/aUPeHxQL7uL5eryUJGkHtg/personal/a1_identity/intro_note">
+          <label>Welcome! Please answer the following questions about yourself and your household. Your responses are confidential and used only for transportation research.</label>
+        </input>
+        <select1 ref="/aUPeHxQL7uL5eryUJGkHtg/personal/a1_identity/GENDER">
+          <label>What is your gender?</label>
+          <itemset nodeset="instance('gender')/root/item">
+            <value ref="name"/>
+            <label ref="label"/>
+          </itemset>
+        </select1>
+        <input ref="/aUPeHxQL7uL5eryUJGkHtg/personal/a1_identity/AGE">
+          <label>What is your age?</label>
+          <hint ref="jr:itext('/aUPeHxQL7uL5eryUJGkHtg/personal/a1_identity/AGE:hint')"/>
+        </input>
+        <select1 ref="/aUPeHxQL7uL5eryUJGkHtg/personal/a1_identity/MARITAL">
+          <label>What is your marital status?</label>
+          <itemset nodeset="instance('marital')/root/item">
+            <value ref="name"/>
+            <label ref="label"/>
+          </itemset>
+        </select1>
+        <select ref="/aUPeHxQL7uL5eryUJGkHtg/personal/a1_identity/RACE">
+          <label>Which race or races best describe you? (Select all that apply)</label>
+          <itemset nodeset="instance('race')/root/item">
+            <value ref="name"/>
+            <label ref="label"/>
+          </itemset>
+        </select>
+        <select1 ref="/aUPeHxQL7uL5eryUJGkHtg/personal/a1_identity/HISPANIC">
+          <label>Are you of Hispanic or Latino origin?</label>
+          <itemset nodeset="instance('yes_no')/root/item">
+            <value ref="name"/>
+            <label ref="label"/>
+          </itemset>
+        </select1>
+        <select1 ref="/aUPeHxQL7uL5eryUJGkHtg/personal/a1_identity/LANGUAGE">
+          <label>What language is primarily spoken in your home?</label>
+          <itemset nodeset="instance('language')/root/item">
+            <value ref="name"/>
+            <label ref="label"/>
+          </itemset>
+        </select1>
+        <select1 ref="/aUPeHxQL7uL5eryUJGkHtg/personal/a1_identity/DISABILITY">
+          <label>Do you have a disability or health condition that limits your ability to travel?</label>
+          <itemset nodeset="instance('yes_no')/root/item">
+            <value ref="name"/>
+            <label ref="label"/>
+          </itemset>
+        </select1>
+        <select1 ref="/aUPeHxQL7uL5eryUJGkHtg/personal/a1_identity/DISABILITY_TYPE">
+          <label>What type of disability affects your travel?</label>
+          <itemset nodeset="instance('disability_type')/root/item">
+            <value ref="name"/>
+            <label ref="label"/>
+          </itemset>
+        </select1>
+      </group>
+      <group appearance="field-list" ref="/aUPeHxQL7uL5eryUJGkHtg/personal/a2_edu_emp">
+        <label>A2: Education &amp; Employment</label>
+        <select1 ref="/aUPeHxQL7uL5eryUJGkHtg/personal/a2_edu_emp/EDUCATION">
+          <label>What is the highest level of education you have completed?</label>
+          <itemset nodeset="instance('education')/root/item">
+            <value ref="name"/>
+            <label ref="label"/>
+          </itemset>
+        </select1>
+        <select1 ref="/aUPeHxQL7uL5eryUJGkHtg/personal/a2_edu_emp/STUDENT">
+          <label>Are you currently enrolled in school or a training program?</label>
+          <itemset nodeset="instance('yes_no')/root/item">
+            <value ref="name"/>
+            <label ref="label"/>
+          </itemset>
+        </select1>
+        <select1 ref="/aUPeHxQL7uL5eryUJGkHtg/personal/a2_edu_emp/SCHOOL_LEVEL">
+          <label>What level of school do you attend?</label>
+          <itemset nodeset="instance('school_level')/root/item">
+            <value ref="name"/>
+            <label ref="label"/>
+          </itemset>
+        </select1>
+        <select1 ref="/aUPeHxQL7uL5eryUJGkHtg/personal/a2_edu_emp/EMPLOYMENT">
+          <label>What is your current employment status?</label>
+          <itemset nodeset="instance('employment')/root/item">
+            <value ref="name"/>
+            <label ref="label"/>
+          </itemset>
+        </select1>
+        <input ref="/aUPeHxQL7uL5eryUJGkHtg/personal/a2_edu_emp/OCCUPATION">
+          <label>What is your occupation or job title?</label>
+          <hint ref="jr:itext('/aUPeHxQL7uL5eryUJGkHtg/personal/a2_edu_emp/OCCUPATION:hint')"/>
+        </input>
+        <input ref="/aUPeHxQL7uL5eryUJGkHtg/personal/a2_edu_emp/INDUSTRY">
+          <label>What industry do you work in?</label>
+          <hint ref="jr:itext('/aUPeHxQL7uL5eryUJGkHtg/personal/a2_edu_emp/INDUSTRY:hint')"/>
+        </input>
+        <select1 ref="/aUPeHxQL7uL5eryUJGkHtg/personal/a2_edu_emp/DRV4WRK">
+          <label>Not including your commute to/from work, are you regularly required to drive a vehicle as part of your job?</label>
+          <hint ref="jr:itext('/aUPeHxQL7uL5eryUJGkHtg/personal/a2_edu_emp/DRV4WRK:hint')"/>
+          <itemset nodeset="instance('yes_no')/root/item">
+            <value ref="name"/>
+            <label ref="label"/>
+          </itemset>
+        </select1>
+        <select1 ref="/aUPeHxQL7uL5eryUJGkHtg/personal/a2_edu_emp/DRV4WRK_HHVEH">
+          <label>When you drive for your job, do you use a vehicle owned or leased by your household?</label>
+          <hint ref="jr:itext('/aUPeHxQL7uL5eryUJGkHtg/personal/a2_edu_emp/DRV4WRK_HHVEH:hint')"/>
+          <itemset nodeset="instance('yes_no')/root/item">
+            <value ref="name"/>
+            <label ref="label"/>
+          </itemset>
+        </select1>
+        <select1 ref="/aUPeHxQL7uL5eryUJGkHtg/personal/a2_edu_emp/DRV4WRK_RES">
+          <label>When driving for your job, do you make trips to residential addresses to pick-up/drop-off a person or an order, or to perform work duties?</label>
+          <itemset nodeset="instance('yes_no')/root/item">
+            <value ref="name"/>
+            <label ref="label"/>
+          </itemset>
+        </select1>
+        <select1 ref="/aUPeHxQL7uL5eryUJGkHtg/personal/a2_edu_emp/DRV4WRK_STOPS">
+          <label>When driving for work, do you make frequent stops such as deliveries or service calls?</label>
+          <itemset nodeset="instance('yes_no')/root/item">
+            <value ref="name"/>
+            <label ref="label"/>
+          </itemset>
+        </select1>
+      </group>
+      <group appearance="field-list" ref="/aUPeHxQL7uL5eryUJGkHtg/personal/a3_work">
+        <label>A3: Work Location &amp; Schedule</label>
+        <select1 ref="/aUPeHxQL7uL5eryUJGkHtg/personal/a3_work/WORK_OUTSIDE">
+          <label>Do you usually travel to a workplace outside your home?</label>
+          <itemset nodeset="instance('yes_no')/root/item">
+            <value ref="name"/>
+            <label ref="label"/>
+          </itemset>
+        </select1>
+        <select1 ref="/aUPeHxQL7uL5eryUJGkHtg/personal/a3_work/WORKPLACE_TYPE">
+          <label>Which best describes your work arrangement?</label>
+          <itemset nodeset="instance('workplace_type')/root/item">
+            <value ref="name"/>
+            <label ref="label"/>
+          </itemset>
+        </select1>
+        <input ref="/aUPeHxQL7uL5eryUJGkHtg/personal/a3_work/WORK_START_TIME">
+          <label>What time do you usually start work?</label>
+          <hint ref="jr:itext('/aUPeHxQL7uL5eryUJGkHtg/personal/a3_work/WORK_START_TIME:hint')"/>
+        </input>
+        <input ref="/aUPeHxQL7uL5eryUJGkHtg/personal/a3_work/WORK_END_TIME">
+          <label>What time do you usually finish work?</label>
+          <hint ref="jr:itext('/aUPeHxQL7uL5eryUJGkHtg/personal/a3_work/WORK_END_TIME:hint')"/>
+        </input>
+        <input ref="/aUPeHxQL7uL5eryUJGkHtg/personal/a3_work/TELEWORK">
+          <label>On average, how many days per week do you work from home (telework)?</label>
+          <hint ref="jr:itext('/aUPeHxQL7uL5eryUJGkHtg/personal/a3_work/TELEWORK:hint')"/>
+        </input>
+        <select1 ref="/aUPeHxQL7uL5eryUJGkHtg/personal/a3_work/MULTIJOB">
+          <label>Do you currently hold more than one job?</label>
+          <itemset nodeset="instance('yes_no')/root/item">
+            <value ref="name"/>
+            <label ref="label"/>
+          </itemset>
+        </select1>
+        <input ref="/aUPeHxQL7uL5eryUJGkHtg/personal/a3_work/NUM_JOBS">
+          <label>How many jobs do you currently hold?</label>
+        </input>
+      </group>
+      <group appearance="field-list" ref="/aUPeHxQL7uL5eryUJGkHtg/personal/a4_school">
+        <label>A4: School &amp; Regular Activities</label>
+        <input ref="/aUPeHxQL7uL5eryUJGkHtg/personal/a4_school/SCHOOL_DAYS">
+          <label>On average, how many days per week do you attend school in person?</label>
+          <hint ref="jr:itext('/aUPeHxQL7uL5eryUJGkHtg/personal/a4_school/SCHOOL_DAYS:hint')"/>
+        </input>
+        <select1 ref="/aUPeHxQL7uL5eryUJGkHtg/personal/a4_school/OTHER_ACTIVITY">
+          <label>Do you regularly travel to another fixed location at least once a week? (e.g., gym, place of worship, volunteer work)</label>
+          <itemset nodeset="instance('yes_no')/root/item">
+            <value ref="name"/>
+            <label ref="label"/>
+          </itemset>
+        </select1>
+        <input ref="/aUPeHxQL7uL5eryUJGkHtg/personal/a4_school/OTHER_ACTIVITY_NAME">
+          <label>What is the name or type of this activity?</label>
+          <hint ref="jr:itext('/aUPeHxQL7uL5eryUJGkHtg/personal/a4_school/OTHER_ACTIVITY_NAME:hint')"/>
+        </input>
+      </group>
+      <group appearance="field-list" ref="/aUPeHxQL7uL5eryUJGkHtg/personal/a5_commute">
+        <label>A5: Commute &amp; Travel Behavior</label>
+        <select1 ref="/aUPeHxQL7uL5eryUJGkHtg/personal/a5_commute/WORK_MODE">
+          <label>What is your usual mode of transportation to work?</label>
+          <itemset nodeset="instance('travel_mode')/root/item">
+            <value ref="name"/>
+            <label ref="label"/>
+          </itemset>
+        </select1>
+        <select1 ref="/aUPeHxQL7uL5eryUJGkHtg/personal/a5_commute/SCHOOL_MODE">
+          <label>What is your usual mode of transportation to school?</label>
+          <itemset nodeset="instance('travel_mode')/root/item">
+            <value ref="name"/>
+            <label ref="label"/>
+          </itemset>
+        </select1>
+        <input ref="/aUPeHxQL7uL5eryUJGkHtg/personal/a5_commute/COMMUTE_TIME">
+          <label>About how long does your one-way commute to work typically take? (Minutes)</label>
+          <hint ref="jr:itext('/aUPeHxQL7uL5eryUJGkHtg/personal/a5_commute/COMMUTE_TIME:hint')"/>
+        </input>
+        <input ref="/aUPeHxQL7uL5eryUJGkHtg/personal/a5_commute/COMMUTE_DISTANCE">
+          <label>About how far is your one-way commute to work? (Miles)</label>
+          <hint ref="jr:itext('/aUPeHxQL7uL5eryUJGkHtg/personal/a5_commute/COMMUTE_DISTANCE:hint')"/>
+        </input>
+        <select1 ref="/aUPeHxQL7uL5eryUJGkHtg/personal/a5_commute/DRIVER_LICENSE">
+          <label>Do you have a valid driver's license?</label>
+          <itemset nodeset="instance('driver_license')/root/item">
+            <value ref="name"/>
+            <label ref="label"/>
+          </itemset>
+        </select1>
+        <select1 ref="/aUPeHxQL7uL5eryUJGkHtg/personal/a5_commute/DRIVE_FREQ">
+          <label>How often do you drive a motor vehicle?</label>
+          <itemset nodeset="instance('drive_freq')/root/item">
+            <value ref="name"/>
+            <label ref="label"/>
+          </itemset>
+        </select1>
+        <select1 ref="/aUPeHxQL7uL5eryUJGkHtg/personal/a5_commute/BIKE_ACCESS">
+          <label>Do you have access to a working bicycle?</label>
+          <itemset nodeset="instance('bike_access')/root/item">
+            <value ref="name"/>
+            <label ref="label"/>
+          </itemset>
+        </select1>
+        <select1 ref="/aUPeHxQL7uL5eryUJGkHtg/personal/a5_commute/TRANSIT_PASS">
+          <label>Do you currently have a public transit pass (MATA or other)?</label>
+          <itemset nodeset="instance('transit_pass')/root/item">
+            <value ref="name"/>
+            <label ref="label"/>
+          </itemset>
+        </select1>
+        <select1 ref="/aUPeHxQL7uL5eryUJGkHtg/personal/a5_commute/RIDEHAIL_USE">
+          <label>How often do you use ride-hailing services such as Uber or Lyft?</label>
+          <itemset nodeset="instance('ridehail_use')/root/item">
+            <value ref="name"/>
+            <label ref="label"/>
+          </itemset>
+        </select1>
+        <input ref="/aUPeHxQL7uL5eryUJGkHtg/personal/a5_commute/trvl_ex_note">
+          <label>In the past 7 days (not counting today), did you use any of the following ways to get around?</label>
+        </input>
+        <select1 ref="/aUPeHxQL7uL5eryUJGkHtg/personal/a5_commute/TRVL_WALK">
+          <label>Walk (excluding exercise walks, e.g., walking somewhere to do something)</label>
+          <itemset nodeset="instance('yes_no')/root/item">
+            <value ref="name"/>
+            <label ref="label"/>
+          </itemset>
+        </select1>
+        <select1 ref="/aUPeHxQL7uL5eryUJGkHtg/personal/a5_commute/TRVL_BIKE">
+          <label>Personal bicycle (your own bike)</label>
+          <itemset nodeset="instance('yes_no')/root/item">
+            <value ref="name"/>
+            <label ref="label"/>
+          </itemset>
+        </select1>
+        <select1 ref="/aUPeHxQL7uL5eryUJGkHtg/personal/a5_commute/TRVL_BIKESHARE">
+          <label>Bike share (docked or dockless)</label>
+          <itemset nodeset="instance('yes_no')/root/item">
+            <value ref="name"/>
+            <label ref="label"/>
+          </itemset>
+        </select1>
+        <select1 ref="/aUPeHxQL7uL5eryUJGkHtg/personal/a5_commute/TRVL_ESCOOTER">
+          <label>Shared e-scooter (e.g., Bird, Lime)</label>
+          <itemset nodeset="instance('yes_no')/root/item">
+            <value ref="name"/>
+            <label ref="label"/>
+          </itemset>
+        </select1>
+        <select1 ref="/aUPeHxQL7uL5eryUJGkHtg/personal/a5_commute/TRVL_TAXI">
+          <label>Taxi</label>
+          <itemset nodeset="instance('yes_no')/root/item">
+            <value ref="name"/>
+            <label ref="label"/>
+          </itemset>
+        </select1>
+        <select1 ref="/aUPeHxQL7uL5eryUJGkHtg/personal/a5_commute/TRVL_TNC">
+          <label>Ride-hailing service (Uber, Lyft)</label>
+          <itemset nodeset="instance('yes_no')/root/item">
+            <value ref="name"/>
+            <label ref="label"/>
+          </itemset>
+        </select1>
+        <select1 ref="/aUPeHxQL7uL5eryUJGkHtg/personal/a5_commute/TRVL_TRANSIT">
+          <label>Public transit (MATA bus, or any other bus/train)</label>
+          <itemset nodeset="instance('yes_no')/root/item">
+            <value ref="name"/>
+            <label ref="label"/>
+          </itemset>
+        </select1>
+      </group>
+    </group>
+    <group ref="/aUPeHxQL7uL5eryUJGkHtg/household">
+      <label>Section B: Household Characteristics</label>
+      <group appearance="field-list" ref="/aUPeHxQL7uL5eryUJGkHtg/household/b1_home">
+        <label>B1: Housing Characteristics</label>
+        <select1 ref="/aUPeHxQL7uL5eryUJGkHtg/household/b1_home/COUNTY">
+          <label>What county do you live in?</label>
+          <hint ref="jr:itext('/aUPeHxQL7uL5eryUJGkHtg/household/b1_home/COUNTY:hint')"/>
+          <itemset nodeset="instance('county')/root/item">
+            <value ref="name"/>
+            <label ref="label"/>
+          </itemset>
+        </select1>
+        <select1 ref="/aUPeHxQL7uL5eryUJGkHtg/household/b1_home/RESIDENCE_TYPE">
+          <label>What type of residence do you live in?</label>
+          <itemset nodeset="instance('residence_type')/root/item">
+            <value ref="name"/>
+            <label ref="label"/>
+          </itemset>
+        </select1>
+        <select1 ref="/aUPeHxQL7uL5eryUJGkHtg/household/b1_home/HOME_OWNERSHIP">
+          <label>Do you own or rent your residence?</label>
+          <itemset nodeset="instance('home_ownership')/root/item">
+            <value ref="name"/>
+            <label ref="label"/>
+          </itemset>
+        </select1>
+        <select1 ref="/aUPeHxQL7uL5eryUJGkHtg/household/b1_home/YEARS_HOME">
+          <label>How long have you lived at your current address?</label>
+          <itemset nodeset="instance('years_home')/root/item">
+            <value ref="name"/>
+            <label ref="label"/>
+          </itemset>
+        </select1>
+      </group>
+      <group appearance="field-list" ref="/aUPeHxQL7uL5eryUJGkHtg/household/b2_composition">
+        <label>B2: Household Members</label>
+        <input ref="/aUPeHxQL7uL5eryUJGkHtg/household/b2_composition/HH_SIZE">
+          <label>Including yourself, how many people live in your household?</label>
+          <hint ref="jr:itext('/aUPeHxQL7uL5eryUJGkHtg/household/b2_composition/HH_SIZE:hint')"/>
+        </input>
+        <input ref="/aUPeHxQL7uL5eryUJGkHtg/household/b2_composition/HH_ADULTS">
+          <label>How many adults (age 18 or older) live in your household?</label>
+        </input>
+        <input ref="/aUPeHxQL7uL5eryUJGkHtg/household/b2_composition/HH_CHILDREN">
+          <label>How many children (under age 18) live in your household?</label>
+        </input>
+        <input ref="/aUPeHxQL7uL5eryUJGkHtg/household/b2_composition/HH_CHILD_U5">
+          <label>How many children under age 5 live in your household?</label>
+        </input>
+        <input ref="/aUPeHxQL7uL5eryUJGkHtg/household/b2_composition/HH_WORKERS">
+          <label>How many household members currently work for pay?</label>
+        </input>
+        <input ref="/aUPeHxQL7uL5eryUJGkHtg/household/b2_composition/HH_STUDENTS">
+          <label>How many household members currently attend school?</label>
+        </input>
+        <input ref="/aUPeHxQL7uL5eryUJGkHtg/household/b2_composition/HH_LICENSED">
+          <label>How many household members hold a valid driver's license?</label>
+        </input>
+        <input ref="/aUPeHxQL7uL5eryUJGkHtg/household/b2_composition/HH_DISABILITY">
+          <label>How many household members have a disability that limits their travel?</label>
+        </input>
+        <select1 ref="/aUPeHxQL7uL5eryUJGkHtg/household/b2_composition/HHINC_RANGE">
+          <label>What was your household's total income (before taxes) in the past 12 months?</label>
+          <itemset nodeset="instance('hhinc')/root/item">
+            <value ref="name"/>
+            <label ref="label"/>
+          </itemset>
+        </select1>
+        <select1 ref="/aUPeHxQL7uL5eryUJGkHtg/household/b2_composition/GOV_ASSIST">
+          <label>Does anyone in your household receive government assistance (e.g., SNAP, WIC, housing voucher, Medicaid)?</label>
+          <itemset nodeset="instance('yes_no')/root/item">
+            <value ref="name"/>
+            <label ref="label"/>
+          </itemset>
+        </select1>
+      </group>
+      <group appearance="field-list" ref="/aUPeHxQL7uL5eryUJGkHtg/household/b3_vehicles">
+        <label>B3: Household Vehicles &amp; Mobility Options</label>
+        <input ref="/aUPeHxQL7uL5eryUJGkHtg/household/b3_vehicles/VEHICLE_HH">
+          <label>How many motor vehicles (cars, trucks, SUVs, vans) are available for regular use by your household?</label>
+          <hint ref="jr:itext('/aUPeHxQL7uL5eryUJGkHtg/household/b3_vehicles/VEHICLE_HH:hint')"/>
+        </input>
+        <input ref="/aUPeHxQL7uL5eryUJGkHtg/household/b3_vehicles/EV_HH">
+          <label>How many of those vehicles are battery electric vehicles (BEV — electric only, no gasoline)?</label>
+        </input>
+        <input ref="/aUPeHxQL7uL5eryUJGkHtg/household/b3_vehicles/HYBRID_HH">
+          <label>How many are standard hybrids (HEV — not plug-in)?</label>
+        </input>
+        <input ref="/aUPeHxQL7uL5eryUJGkHtg/household/b3_vehicles/PHEV_HH">
+          <label>How many are plug-in hybrids (PHEV)?</label>
+        </input>
+        <input ref="/aUPeHxQL7uL5eryUJGkHtg/household/b3_vehicles/BIKE_HH">
+          <label>How many bicycles (regular or e-bike) are available in your household?</label>
+        </input>
+        <input ref="/aUPeHxQL7uL5eryUJGkHtg/household/b3_vehicles/MOTORCYCLE_HH">
+          <label>How many motorcycles or scooters are available?</label>
+        </input>
+      </group>
+      <group appearance="field-list" ref="/aUPeHxQL7uL5eryUJGkHtg/household/b4_services">
+        <label>B4: Online Services &amp; Telework</label>
+        <select1 ref="/aUPeHxQL7uL5eryUJGkHtg/household/b4_services/INTERNET">
+          <label>What type of internet access does your household have?</label>
+          <itemset nodeset="instance('internet')/root/item">
+            <value ref="name"/>
+            <label ref="label"/>
+          </itemset>
+        </select1>
+        <select1 ref="/aUPeHxQL7uL5eryUJGkHtg/household/b4_services/TELEWORK_HH">
+          <label>Does anyone in your household regularly work from home (telework)?</label>
+          <itemset nodeset="instance('yes_no')/root/item">
+            <value ref="name"/>
+            <label ref="label"/>
+          </itemset>
+        </select1>
+        <input ref="/aUPeHxQL7uL5eryUJGkHtg/household/b4_services/TELEWORK_DAYS">
+          <label>On average, how many days per week do household members telework (combined)?</label>
+        </input>
+        <select1 ref="/aUPeHxQL7uL5eryUJGkHtg/household/b4_services/ONLINE_SCHOOL">
+          <label>Does anyone in your household attend school entirely online (virtual/remote)?</label>
+          <itemset nodeset="instance('yes_no')/root/item">
+            <value ref="name"/>
+            <label ref="label"/>
+          </itemset>
+        </select1>
+        <select1 ref="/aUPeHxQL7uL5eryUJGkHtg/household/b4_services/FOOD_DELIVERY">
+          <label>How often does your household order prepared meals for delivery (DoorDash, Uber Eats, etc.)?</label>
+          <itemset nodeset="instance('freq4')/root/item">
+            <value ref="name"/>
+            <label ref="label"/>
+          </itemset>
+        </select1>
+        <select1 ref="/aUPeHxQL7uL5eryUJGkHtg/household/b4_services/GROCERY_DELIVERY">
+          <label>How often does your household order groceries for home delivery?</label>
+          <itemset nodeset="instance('freq4')/root/item">
+            <value ref="name"/>
+            <label ref="label"/>
+          </itemset>
+        </select1>
+        <select1 ref="/aUPeHxQL7uL5eryUJGkHtg/household/b4_services/ONLINE_SHOPPING">
+          <label>How often does your household shop online (non-grocery)?</label>
+          <itemset nodeset="instance('freq4')/root/item">
+            <value ref="name"/>
+            <label ref="label"/>
+          </itemset>
+        </select1>
+        <input ref="/aUPeHxQL7uL5eryUJGkHtg/household/b4_services/PACKAGE_DELIVERY">
+          <label>About how many package deliveries does your household receive per week?</label>
+          <hint ref="jr:itext('/aUPeHxQL7uL5eryUJGkHtg/household/b4_services/PACKAGE_DELIVERY:hint')"/>
+        </input>
+      </group>
+      <group appearance="field-list" ref="/aUPeHxQL7uL5eryUJGkHtg/household/b5_neighborhood">
+        <label>B5: Neighborhood &amp; Transportation Access</label>
+        <select1 ref="/aUPeHxQL7uL5eryUJGkHtg/household/b5_neighborhood/TRANSIT_ACCESS">
+          <label>Is there a public transit stop within walking distance of your home?</label>
+          <itemset nodeset="instance('yes_no')/root/item">
+            <value ref="name"/>
+            <label ref="label"/>
+          </itemset>
+        </select1>
+        <select1 ref="/aUPeHxQL7uL5eryUJGkHtg/household/b5_neighborhood/TRANSIT_DISTANCE">
+          <label>Approximately how far is the nearest transit stop from your home?</label>
+          <itemset nodeset="instance('transit_dist')/root/item">
+            <value ref="name"/>
+            <label ref="label"/>
+          </itemset>
+        </select1>
+        <select1 ref="/aUPeHxQL7uL5eryUJGkHtg/household/b5_neighborhood/WALKABILITY">
+          <label>How would you rate the walkability of your neighborhood? (1 = Very Poor, 5 = Excellent)</label>
+          <itemset nodeset="instance('rating5')/root/item">
+            <value ref="name"/>
+            <label ref="label"/>
+          </itemset>
+        </select1>
+        <select1 ref="/aUPeHxQL7uL5eryUJGkHtg/household/b5_neighborhood/BIKEABILITY">
+          <label>How would you rate bicycling conditions in your neighborhood? (1 = Very Poor, 5 = Excellent)</label>
+          <itemset nodeset="instance('rating5')/root/item">
+            <value ref="name"/>
+            <label ref="label"/>
+          </itemset>
+        </select1>
+        <select1 ref="/aUPeHxQL7uL5eryUJGkHtg/household/b5_neighborhood/TRANSIT_SAT">
+          <label>How satisfied are you with public transit service in your area? (1 = Very Dissatisfied, 5 = Very Satisfied)</label>
+          <itemset nodeset="instance('rating5')/root/item">
+            <value ref="name"/>
+            <label ref="label"/>
+          </itemset>
+        </select1>
+        <select1 ref="/aUPeHxQL7uL5eryUJGkHtg/household/b5_neighborhood/ROAD_SAT">
+          <label>How satisfied are you with road conditions in your area? (1 = Very Dissatisfied, 5 = Very Satisfied)</label>
+          <itemset nodeset="instance('rating5')/root/item">
+            <value ref="name"/>
+            <label ref="label"/>
+          </itemset>
+        </select1>
+        <select1 ref="/aUPeHxQL7uL5eryUJGkHtg/household/b5_neighborhood/SIDEWALK_SAT">
+          <label>How satisfied are you with sidewalk and pedestrian infrastructure? (1 = Very Dissatisfied, 5 = Very Satisfied)</label>
+          <itemset nodeset="instance('rating5')/root/item">
+            <value ref="name"/>
+            <label ref="label"/>
+          </itemset>
+        </select1>
+      </group>
+      <group appearance="field-list" ref="/aUPeHxQL7uL5eryUJGkHtg/household/b6_future">
+        <label>B6: Future Contact</label>
+        <select1 ref="/aUPeHxQL7uL5eryUJGkHtg/household/b6_future/MOVE_PLAN">
+          <label>Does your household expect to move within the next 12 months?</label>
+          <itemset nodeset="instance('yes_no')/root/item">
+            <value ref="name"/>
+            <label ref="label"/>
+          </itemset>
+        </select1>
+        <select1 ref="/aUPeHxQL7uL5eryUJGkHtg/household/b6_future/MOVE_REASON">
+          <label>What is the primary reason for moving?</label>
+          <itemset nodeset="instance('move_reason')/root/item">
+            <value ref="name"/>
+            <label ref="label"/>
+          </itemset>
+        </select1>
+        <select1 ref="/aUPeHxQL7uL5eryUJGkHtg/household/b6_future/FUTURE_CONTACT">
+          <label>May we contact you for future transportation studies?</label>
+          <itemset nodeset="instance('yes_no')/root/item">
+            <value ref="name"/>
+            <label ref="label"/>
+          </itemset>
+        </select1>
+        <select1 ref="/aUPeHxQL7uL5eryUJGkHtg/household/b6_future/CONTACT_METHOD">
+          <label>What is your preferred contact method?</label>
+          <itemset nodeset="instance('contact_method')/root/item">
+            <value ref="name"/>
+            <label ref="label"/>
+          </itemset>
+        </select1>
+        <input appearance="multiline" ref="/aUPeHxQL7uL5eryUJGkHtg/household/b6_future/HH_COMMENTS">
+          <label>Do you have any additional comments about your household or neighborhood? (Optional)</label>
+        </input>
+      </group>
+    </group>
+    <group ref="/aUPeHxQL7uL5eryUJGkHtg/vehicle">
+      <label>Section C: Vehicle Characteristics</label>
+      <repeat nodeset="/aUPeHxQL7uL5eryUJGkHtg/vehicle" jr:count=" /aUPeHxQL7uL5eryUJGkHtg/household/b3_vehicles/VEHICLE_HH ">
+        <group appearance="field-list" ref="/aUPeHxQL7uL5eryUJGkHtg/vehicle/c1_veh_id">
+          <label>C1: Vehicle Identification</label>
+          <input ref="/aUPeHxQL7uL5eryUJGkHtg/vehicle/c1_veh_id/veh_intro">
+            <label>Please answer the following questions about each vehicle available to your household.</label>
+          </input>
+          <select1 ref="/aUPeHxQL7uL5eryUJGkHtg/vehicle/c1_veh_id/OWNERSHIP">
+            <label>What is the ownership type of this vehicle?</label>
+            <itemset nodeset="instance('veh_ownership')/root/item">
+              <value ref="name"/>
+              <label ref="label"/>
+            </itemset>
+          </select1>
+          <input ref="/aUPeHxQL7uL5eryUJGkHtg/vehicle/c1_veh_id/VEH_YEAR">
+            <label>What is the model year of this vehicle?</label>
+            <hint ref="jr:itext('/aUPeHxQL7uL5eryUJGkHtg/vehicle/c1_veh_id/VEH_YEAR:hint')"/>
+          </input>
+          <input ref="/aUPeHxQL7uL5eryUJGkHtg/vehicle/c1_veh_id/VEH_MAKE">
+            <label>What is the make (brand) of this vehicle?</label>
+            <hint ref="jr:itext('/aUPeHxQL7uL5eryUJGkHtg/vehicle/c1_veh_id/VEH_MAKE:hint')"/>
+          </input>
+          <input ref="/aUPeHxQL7uL5eryUJGkHtg/vehicle/c1_veh_id/VEH_MODEL">
+            <label>What is the model of this vehicle?</label>
+            <hint ref="jr:itext('/aUPeHxQL7uL5eryUJGkHtg/vehicle/c1_veh_id/VEH_MODEL:hint')"/>
+          </input>
+          <select1 ref="/aUPeHxQL7uL5eryUJGkHtg/vehicle/c1_veh_id/BODY_TYPE">
+            <label>What type of vehicle is this?</label>
+            <itemset nodeset="instance('body_type')/root/item">
+              <value ref="name"/>
+              <label ref="label"/>
+            </itemset>
+          </select1>
+          <select1 ref="/aUPeHxQL7uL5eryUJGkHtg/vehicle/c1_veh_id/FUEL_TYPE">
+            <label>What is the primary fuel type of this vehicle?</label>
+            <itemset nodeset="instance('fuel_type')/root/item">
+              <value ref="name"/>
+              <label ref="label"/>
+            </itemset>
+          </select1>
+        </group>
+        <group appearance="field-list" ref="/aUPeHxQL7uL5eryUJGkHtg/vehicle/c2_veh_use">
+          <label>C2: Vehicle Use &amp; Availability</label>
+          <select1 ref="/aUPeHxQL7uL5eryUJGkHtg/vehicle/c2_veh_use/PRIMARY_DRIVER">
+            <label>Who is the primary driver of this vehicle (drives it most often)?</label>
+            <itemset nodeset="instance('driver_role')/root/item">
+              <value ref="name"/>
+              <label ref="label"/>
+            </itemset>
+          </select1>
+          <input ref="/aUPeHxQL7uL5eryUJGkHtg/vehicle/c2_veh_use/REGULAR_USERS">
+            <label>How many household members regularly use this vehicle?</label>
+          </input>
+          <select1 ref="/aUPeHxQL7uL5eryUJGkHtg/vehicle/c2_veh_use/AVAILABLE_DAILY">
+            <label>Is this vehicle available every day for household use?</label>
+            <itemset nodeset="instance('yes_no')/root/item">
+              <value ref="name"/>
+              <label ref="label"/>
+            </itemset>
+          </select1>
+          <input ref="/aUPeHxQL7uL5eryUJGkHtg/vehicle/c2_veh_use/DAYS_AVAILABLE">
+            <label>On average, how many days per week is this vehicle available?</label>
+          </input>
+          <input ref="/aUPeHxQL7uL5eryUJGkHtg/vehicle/c2_veh_use/SEATING">
+            <label>How many seats does this vehicle have (including the driver's seat)?</label>
+            <hint ref="jr:itext('/aUPeHxQL7uL5eryUJGkHtg/vehicle/c2_veh_use/SEATING:hint')"/>
+          </input>
+        </group>
+        <group appearance="field-list" ref="/aUPeHxQL7uL5eryUJGkHtg/vehicle/c3_ev">
+          <label>C3: Electric Vehicle Details</label>
+          <input ref="/aUPeHxQL7uL5eryUJGkHtg/vehicle/c3_ev/ev_note">
+            <label>The next questions apply to plug-in electric vehicles (battery electric vehicles [BEV] and plug-in hybrid electric vehicles [PHEV]).</label>
+          </input>
+          <input ref="/aUPeHxQL7uL5eryUJGkHtg/vehicle/c3_ev/EV_RANGE">
+            <label>What is the EPA-rated electric driving range? (Miles per charge)</label>
+            <hint ref="jr:itext('/aUPeHxQL7uL5eryUJGkHtg/vehicle/c3_ev/EV_RANGE:hint')"/>
+          </input>
+          <select1 ref="/aUPeHxQL7uL5eryUJGkHtg/vehicle/c3_ev/CHARGING_LOCATION">
+            <label>Where is this vehicle usually charged?</label>
+            <itemset nodeset="instance('charging_loc')/root/item">
+              <value ref="name"/>
+              <label ref="label"/>
+            </itemset>
+          </select1>
+          <select1 ref="/aUPeHxQL7uL5eryUJGkHtg/vehicle/c3_ev/CHARGING_FREQ">
+            <label>How often is this vehicle charged?</label>
+            <itemset nodeset="instance('charging_freq')/root/item">
+              <value ref="name"/>
+              <label ref="label"/>
+            </itemset>
+          </select1>
+        </group>
+        <group appearance="field-list" ref="/aUPeHxQL7uL5eryUJGkHtg/vehicle/c4_usage">
+          <label>C4: Vehicle Usage Patterns</label>
+          <select1 ref="/aUPeHxQL7uL5eryUJGkHtg/vehicle/c4_usage/WORK_USE">
+            <label>Is this vehicle used for work-related travel (business trips, client visits)?</label>
+            <itemset nodeset="instance('yes_no')/root/item">
+              <value ref="name"/>
+              <label ref="label"/>
+            </itemset>
+          </select1>
+          <select1 ref="/aUPeHxQL7uL5eryUJGkHtg/vehicle/c4_usage/SCHOOL_USE">
+            <label>Is this vehicle used for school transportation (dropping off or picking up children)?</label>
+            <itemset nodeset="instance('yes_no')/root/item">
+              <value ref="name"/>
+              <label ref="label"/>
+            </itemset>
+          </select1>
+          <select1 ref="/aUPeHxQL7uL5eryUJGkHtg/vehicle/c4_usage/ACCESSIBLE">
+            <label>Is this vehicle equipped for a person with a disability (hand controls, wheelchair lift, ramp)?</label>
+            <itemset nodeset="instance('yes_no')/root/item">
+              <value ref="name"/>
+              <label ref="label"/>
+            </itemset>
+          </select1>
+          <select1 ref="/aUPeHxQL7uL5eryUJGkHtg/vehicle/c4_usage/TOLL_TAG">
+            <label>Does this vehicle have an electronic toll transponder (E-ZPass, K-Tag, etc.)?</label>
+            <itemset nodeset="instance('yes_no')/root/item">
+              <value ref="name"/>
+              <label ref="label"/>
+            </itemset>
+          </select1>
+          <select1 ref="/aUPeHxQL7uL5eryUJGkHtg/vehicle/c4_usage/EV_REPLACE">
+            <label>Would you consider replacing this vehicle with a battery electric vehicle (BEV)?</label>
+            <itemset nodeset="instance('ev_replace')/root/item">
+              <value ref="name"/>
+              <label ref="label"/>
+            </itemset>
+          </select1>
+          <select1 ref="/aUPeHxQL7uL5eryUJGkHtg/vehicle/c4_usage/EV_BARRIER">
+            <label>What is the primary reason you would not consider an electric vehicle?</label>
+            <itemset nodeset="instance('ev_barrier')/root/item">
+              <value ref="name"/>
+              <label ref="label"/>
+            </itemset>
+          </select1>
+          <input appearance="multiline" ref="/aUPeHxQL7uL5eryUJGkHtg/vehicle/c4_usage/VEH_COMMENTS">
+            <label>Any additional comments about this vehicle? (Optional)</label>
+          </input>
+        </group>
+      </repeat>
+    </group>
+    <group appearance="field-list" ref="/aUPeHxQL7uL5eryUJGkHtg/closing">
+      <label>Section D: Final Questions</label>
+      <input ref="/aUPeHxQL7uL5eryUJGkHtg/closing/closing_note">
+        <label>Thank you for completing the enrollment survey! The OpenPATH app is already running on your device and will passively record your trips for one week. For each trip the app detects, please open the app and confirm the mode of travel (e.g., car, bus, walk) and the purpose (e.g., work, shopping). That's all — no further setup is needed.</label>
+      </input>
+      <select1 ref="/aUPeHxQL7uL5eryUJGkHtg/closing/FUTURE_SURVEY">
+        <label>Would you be willing to complete a short follow-up survey after the one-week study period?</label>
+        <itemset nodeset="instance('yes_no')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <input appearance="multiline" ref="/aUPeHxQL7uL5eryUJGkHtg/closing/ENROLLMENT_COMMENTS">
+        <label>Do you have any questions or comments before beginning the study? (Optional)</label>
+      </input>
+    </group>
+  </h:body>
+</h:html>
