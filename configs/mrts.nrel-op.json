@@ -1,6 +1,6 @@
 {
     "url_abbreviation": "mrts",
-    "version": 2,
+    "version": 3,
     "ts": 1786644280,
     "server": {
         "connectUrl": "https://mrts-openpath.nlr.gov/api/",
@@ -41,7 +41,7 @@
     "survey_info": {
         "surveys": {
             "UserProfileSurvey": {
-                "formPath": "https://raw.githubusercontent.com/e-mission/op-deployment-configs/main/survey_resources/mrts/MRTS_Final_Draft.xml",
+                "formPath": "https://raw.githubusercontent.com/e-mission/op-deployment-configs/main/survey_resources/mrts/MRTS_V3.xml",
                 "version": 1,
                 "compatibleWith": 1,
                 "dataKey": "manual/demographic_survey",
