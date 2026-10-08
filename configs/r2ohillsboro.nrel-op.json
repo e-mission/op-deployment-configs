@@ -65,7 +65,7 @@
     },
     "admin_dashboard": {
         "data_trips_columns_exclude": [],
-        "additional_trip_columns": [],
+        "additional_trip_columns": ['data.inferred_labels'],
         "data_uuids_columns_exclude": [],
         "token_prefix": "nrelop",
         "token_generate": true,
