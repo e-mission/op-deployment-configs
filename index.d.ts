@@ -158,6 +158,7 @@ export type VehicleLibraryConfig = {
   // Receives the following variables: duration, subgroup,
   // and unpacked fields of the vehicle object
   fee_expression: string;
+  hold_amount_by_subgroup?: { [subgroup: string]: number };
   accessories?: VehicleLibraryAccessory[];
 };
 

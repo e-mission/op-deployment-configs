@@ -1,6 +1,6 @@
 {
     "url_abbreviation": "sc-ebike-library",
-    "version": 5,
+    "version": 6,
     "ts": 1785340752,
     "server": {
         "connectUrl": "https://openpath-stage.nlr.gov/api/",
@@ -10,6 +10,8 @@
         "autogen": true,
         "subgroups": [
             "discount",
+            "free",
+            "trusted",
             "public",
             "group",
             "test"
@@ -62,7 +64,15 @@
         "trip-labels": "MULTILABEL"
     },
     "vehicle_library": {
-        "fee_expression": "((duration>(5/60))*5 + (duration>5)*30 + (duration>24)*65 + (duration>72)*100 + (duration>144)*180) * (1 - 0.5*(subgroup=='discount'))",
+        "fee_expression": "((duration>(5/60))*5 + (duration>5)*30 + (duration>24)*65 + (duration>72)*100 + (duration>144)*180) * (1 - 0.7*(subgroup=='discount')) * (subgroup!='free') * (subgroup!='trusted')",
+        "hold_amount_by_subgroup": {
+            "discount": 190,
+            "public": 380,
+            "group": 0,
+            "test": 380,
+            "free": 1,
+            "trusted": 0
+        },
         "accessories": [
             {
                 "value": "panniers",
