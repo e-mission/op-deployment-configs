@@ -1,11 +1,7 @@
 {
     "url_abbreviation": "sc-ebike-library",
-    "version": 7,
+    "version": 8,
     "ts": 1785340752,
-    "server": {
-        "connectUrl": "https://openpath-stage.nlr.gov/api/",
-        "aggregate_call_auth": "user_only"
-    },
     "opcode": {
         "autogen": true,
         "subgroups": [
@@ -64,7 +60,7 @@
         "trip-labels": "MULTILABEL"
     },
     "vehicle_library": {
-        "fee_expression": "((duration>(5/60))*5 + (duration>5)*30 + (duration>24)*65 + (duration>72)*100 + (duration>144)*180) * (1 - 0.7*(subgroup=='discount')) * (subgroup!='free') * (subgroup!='trusted')",
+        "fee_expression": "duration * 1.5 * (duration >= (5/60)) * ((subgroup=='test') + (subgroup=='public') + 0.3*(subgroup=='discount'))",
         "hold_amount_by_subgroup": {
             "discount": 190,
             "public": 380,
