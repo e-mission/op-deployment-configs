@@ -56,7 +56,7 @@ cognito_client = cc.build_cognito_client(args.local)
 sts_client = cc.build_sts_client(args.local)
 AWS_REGION = cc.get_region(args.local)
 
-def get_users(pool_id, cognito_client):
+def get_cognito_users(pool_id, cognito_client):
     try:
         # note that this is not strictly required in our case since we only support
         # < 5 admin users. But it is good to refactor so we can bake in that assumption
@@ -80,14 +80,10 @@ def get_verified_arn(sts_client):
         identity_arn = "arn:aws:ses:" + AWS_REGION + ":" + AWS_ACCT_ID + ":identity/mailer.nlr.gov"
     return identity_arn
 
-def email_extract():
-    with open (config_path) as config_file:
-        data = json.load(config_file)
-        admindash_prefs = data['admin_dashboard']
-        emails = [i.strip().lstrip() for i in admindash_prefs.get('admin_access', [])]
-        columns_exclude = admindash_prefs['data_trips_columns_exclude']
-        map_trip_lines_enabled = admindash_prefs['map_trip_lines']
-    return emails, map_trip_lines_enabled, columns_exclude
+def read_config(config_path):
+    with open(config_path) as config_file:
+        config = json.load(config_file)
+    return config
 
 def create_account(pool_id, email, cognito_client):
     response = cognito_client.admin_create_user(
@@ -106,20 +102,33 @@ def create_account(pool_id, email, cognito_client):
                 )
     return response
 
-def format_email(program_name, map_trip_lines_enabled, columns_exclude):
-    with open(maindir + '/email_automation/welcome-template.txt', 'r') as f:
+def format_email(program_name, admin_dash_config):
+    with open(maindir + '/email_automation/welcome-template.html', 'r') as f:
         html = f.read()
         html = html.replace('<ProgramName>', program_name)
+        map_trip_lines_enabled = admin_dash_config.get('map_trip_lines', False)
         if map_trip_lines_enabled:
-            html = html.replace ('<map_trip_lines>', 'Additionally, you can view individual user-origin destination points using the "Map Lines" option from the map page.')
+            html = html.replace ('{map_trip_lines}', 'Additionally, you can view individual user-origin destination points using the "Map Lines" option from the map page.')
         else:
-            html = html.replace ('<map_trip_lines>', '')
-        if 'data.start_loc.coordinates' in columns_exclude or 'data.end_loc.coordinates' in columns_exclude:
-            html = html.replace ('<columns_exclude>', 'Per your requested configuration, your trip table excludes trip start/end coordinates for greater anonymity. Let us know if you need them to be enabled for improved analysis.')
-        elif columns_exclude == '':
-            html = html.replace ('<columns_exclude>', 'Since you indicated that you want to map the data to infrastructure updates, your configuration includes trip start/end in the trip table. Let us know if you would like to exclude those for greater anonymity.')
+            html = html.replace ('{map_trip_lines}', '')
+
+        data_trips_columns_exclude = admin_dash_config.get('data_trips_columns_exclude', [])
+        data_uuids_columns_exclude = admin_dash_config.get('data_uuids_columns_exclude', [])
+        data_trajectories_columns_exclude = admin_dash_config.get('data_trajectories_columns_exclude', [])
+        if data_trips_columns_exclude or data_uuids_columns_exclude or data_trajectories_columns_exclude:
+            columns_exclude_text = 'Per your requested configuration, your data tables will exclude the following columns for greater anonymity:\n'
+            if data_uuids_columns_exclude:
+                columns_exclude_text += 'Users: ' + ', '.join(data_uuids_columns_exclude) + '\n'
+            if data_trips_columns_exclude:
+                columns_exclude_text += 'Trips: ' + ', '.join(data_trips_columns_exclude) + '\n'
+            if data_trajectories_columns_exclude:
+                columns_exclude_text += 'Trajectories: ' + ', '.join(data_trajectories_columns_exclude) + '\n'
+            columns_exclude_text += 'Let us know if you would like to adjust these settings at any point.'
+            html = html.replace('{columns_exclude}', columns_exclude_text)
+        else:
+            html = html.replace ('{columns_exclude}', 'Your data tables will include all available columns. Let us know if you would like to adjust these settings for greater anonymity or otherwise.')
         return html
-        
+
 
 def update_user_pool(pool_id, pool_name, html, identity_arn, cognito_client):
   response = cognito_client.update_user_pool(
@@ -149,10 +158,13 @@ is_userpool_exist, pool_id = cc.get_userpool_id(pool_name, cognito_client, verbo
 
  # Start by checking for the User Pool. If the User Pool does not yet exist, wait until it is set up to add users. 
 if is_userpool_exist:
-    #extract email addresses from config file
-    emails, map_trip_lines_enabled, columns_exclude = email_extract()
-    users = get_users(pool_id, cognito_client)
-    for user in users:
+    config = read_config(config_path)
+    admin_dash_config = config['admin_dashboard']
+    emails = admin_dash_config.get('admin_access', [])
+    cognito_users = get_cognito_users(pool_id, cognito_client)
+    
+    # Remove users who are in the pool but not in admin_access
+    for user in cognito_users:
         for attr_dict in user["Attributes"]:
             if attr_dict["Name"] == "email":
                 user_email = attr_dict["Value"]
@@ -160,12 +172,12 @@ if is_userpool_exist:
                     remove_user(pool_id, user_email)
                     print(f"{user_email} removed from pool.")
         
-    #Loop over each email address. Check if they're in the user pool.
+    # Add users who are in admin_access but not in the pool, and send welcome email
     for email in emails:
-        if not str(users).find(email) > 1:
+        if not str(cognito_users).find(email) > 1:
             #If user not in pool, format the email template for their welcome email, update the user pool, and create an account for them.
             print(email + " not in user pool! Creating account...")
-            html = format_email(program_name, map_trip_lines_enabled, columns_exclude)
+            html = format_email(program_name, admin_dash_config)
             identity_arn = get_verified_arn(sts_client)
             update_user_pool(pool_id, pool_name, html, identity_arn, cognito_client)
             response = create_account(pool_id, email, cognito_client)
