@@ -1,0 +1,19 @@
+{
+  "MODE": [
+    {"value":"e_bike"},
+    {"value":"bike"},
+    {"value":"non_bike"}
+  ],
+  "translations": {
+    "sp": {
+      "e_bike": "Bicicoruña: Bicicleta eléctrica",
+      "bike": "Bicicoruña: Bicicleta convencional",
+      "non_bike": "No es un viaje en Bicicoruña"
+    },
+    "gl": {
+      "e_bike": "Bicicoruña: Bicicleta eléctrica",
+      "bike": "Bicicoruña: Bicicleta convencional",
+      "non_bike": "Non é unha viaxe en Bicicoruña"
+    }
+  }
+}
