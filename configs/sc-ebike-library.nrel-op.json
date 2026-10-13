@@ -1,13 +1,13 @@
 {
     "url_abbreviation": "sc-ebike-library",
-    "version": 9,
+    "version": 10,
     "ts": 1785340752,
     "server": {
         "connectUrl": "https://sc-ebike-library-openpath.nlr.gov/api/",
         "aggregate_call_auth": "user_only"
     },
     "opcode": {
-        "autogen": true,
+        "autogen": false,
         "subgroups": [
             "discount",
             "free",
