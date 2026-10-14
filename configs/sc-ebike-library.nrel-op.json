@@ -1,6 +1,6 @@
 {
     "url_abbreviation": "sc-ebike-library",
-    "version": 10,
+    "version": 11,
     "ts": 1785340752,
     "server": {
         "connectUrl": "https://sc-ebike-library-openpath.nlr.gov/api/",
@@ -64,7 +64,15 @@
         "trip-labels": "MULTILABEL"
     },
     "vehicle_library": {
-        "fee_expression": "duration * 1.5 * (duration >= (5/60)) * ((subgroup=='test') + (subgroup=='public') + 0.3*(subgroup=='discount'))",
+        "fee_expression": "(5*duration*(duration<=5) + 35*(duration>5)*(duration<=24) + (35 + (duration-24)*(30/24))*(duration>24)*(duration<=168) + (215 + (duration-168)*(24/24))*(duration>168)) * ((subgroup=='test') + (subgroup=='public') + 0.3*(subgroup=='discount'))",
+        "fee_description": {
+            "en": {
+                "base": "The first 5 hours are $5 per hour. If your rental lasts longer than 5 hours, the total for the first 24 hours is $35. From 24 hours through day 7, additional time is charged at $30 per day, prorated hourly. After day 7, additional time is charged at $24 per day, prorated hourly.",
+                "subgroup_notes": {
+                    "discount": "Discount members pay 30% of these rates."
+                }
+            }
+        },
         "hold_amount_by_subgroup": {
             "discount": 190,
             "public": 380,
