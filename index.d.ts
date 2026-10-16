@@ -159,9 +159,12 @@ export type VehicleLibraryConfig = {
   // and unpacked fields of the vehicle object
   fee_expression: string;
   fee_description?: {
-    [language: string]: {
-      base: string;
-      subgroup_notes?: { [subgroup: string]: string };
+    rates?: {
+      label: { [language: string]: string };
+      duration_hours: [number, number];
+    }[];
+    subgroup_notes?: {
+      [subgroup: string]: { [language: string]: string };
     };
   };
   hold_amount_by_subgroup?: { [subgroup: string]: number };
