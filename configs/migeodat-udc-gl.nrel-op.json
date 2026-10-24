@@ -22,6 +22,10 @@
         "program_admin_contact": "Luis Enrique Ramos, UMB (email: enrique.ramos@umb.edu, phone: 787-509-5942)",
         "deployment_partner_name": "Universidade da Coruña | UMass Boston",
         "translated_text": {
+            "en": {
+                "deployment_partner_name": "Universidade da Coruña | UMass Boston",
+                "deployment_name": "[MIGEODAT Fill in this placeholder | Bicicoruña | A Coruña]",
+            },
             "lo": {
                 "deployment_partner_name": "Universidade da Coruña | UMass Boston",
                 "deployment_name": "[MIGEODAT Rutas en servizos de bicicleta compartida | Bicicoruña | A Coruña]",
