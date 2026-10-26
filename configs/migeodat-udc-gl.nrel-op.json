@@ -24,7 +24,13 @@
         "translated_text": {
             "en": {
                 "deployment_partner_name": "Universidade da Coruña | UMass Boston",
-                "deployment_name": "[MIGEODAT Fill in this placeholder | Bicicoruña | A Coruña]"
+                "deployment_name": "[MIGEODAT Fill in this placeholder | Bicicoruña | A Coruña]",
+                "summary_line_1": "Placeholder",
+                "summary_line_2": "Placeholder",
+                "summary_line_3": "Placeholder",
+                "short_textual_description": "Placeholder",
+                "why_we_collect": "Placeholder",
+                "research_questions": []
             },
             "lo": {
                 "deployment_partner_name": "Universidade da Coruña | UMass Boston",
