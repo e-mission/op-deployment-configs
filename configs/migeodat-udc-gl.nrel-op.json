@@ -22,17 +22,7 @@
         "program_admin_contact": "Luis Enrique Ramos, UMB (email: enrique.ramos@umb.edu, phone: 787-509-5942)",
         "deployment_partner_name": "Universidade da Coruña | UMass Boston",
         "translated_text": {
-            "en": {
-                "deployment_partner_name": "Universidade da Coruña | UMass Boston",
-                "deployment_name": "[MIGEODAT Fill in this placeholder | Bicicoruña | A Coruña]",
-                "summary_line_1": "Placeholder",
-                "summary_line_2": "Placeholder",
-                "summary_line_3": "Placeholder",
-                "short_textual_description": "Placeholder",
-                "why_we_collect": "Placeholder",
-                "research_questions": []
-            },
-            "lo": {
+            "gl": {
                 "deployment_partner_name": "Universidade da Coruña | UMass Boston",
                 "deployment_name": "[MIGEODAT Rutas en servizos de bicicleta compartida | Bicicoruña | A Coruña]",
                 "summary_line_1": "Permite rexistrar percorridos realizados en Bicicoruña para entender mellor a experiencia das persoas usuarias do servizo.",
@@ -50,6 +40,16 @@
                 "summary_line_3": "La aplicación permite hacer un seguimiento de uso de energía y emisiones asociadas a los desplazamientos.",
                 "short_textual_description": "Bienvenida/o a la encuesta del proyecto MIGEODAT de la Universidad de A Coruña (UDC) y de la University of Massachusetts Boston (UMass Boston) para el análisis de la movilidad ciclista urbana.  Este estudio se centra en conocer las rutas seguidas por las personas usuarias de Bicicoruña en sus desplazamientos habituales. El cuestionario que verá tras aceptar estos términos de uso debe llevar aproximadamente de 4 a 5 minutos. Recoge información socioeconómica y también preferencias, pero no nombre, DNI/NIE ni otros datos de identificación personal. Sus respuestas son importantes, pues, junto con los datos de ruta de sus desplazamientos, ayudarán al equipo investigador a comprender mejor a las personas usuarias de Bicicoruña y a mejorar la planificación y el diseño de redes de bicicletas compartidas en A Coruña y en otros lugares. Además, si lo desea, podrán ampliar su colaboración realizando una sencilla labor de etiquetado de cada viaje, indicando simplemente si cada desplazamiento ha incluido el uso de Bicicoruña o no y, también, el tipo de bicicleta utilizada.",
                 "why_we_collect": "La recogida de los datos de sus recorridos realizados en Bicicoruña, asociados a sus respuestas en la encuesta, permite entender mejor la experiencia de las personas usuarias del servicio y las diferentes maneras en las que perciben la red. Estos registros permiten mejorar la planificación de servicios e infraestructuras de bicicleta compartida en la ciudad, lo que ayuda a hacer de la bicicleta un modo más atractivo para los desplazamientos diarios, contribuyendo a la movilidad sostenible.",
+                "research_questions": []
+            },
+            "en": {
+                "deployment_partner_name": "Universidade da Coruña | UMass Boston",
+                "deployment_name": "[MIGEODAT Routes in Bike-Sharing Services | Bicicoruña | A Coruña]",
+                "summary_line_1": "Records trips made with Bicicoruña to better understand the experience of the service's users.",
+                "summary_line_2": "These records help improve the planning of shared bicycle services and infrastructure in the city.",
+                "summary_line_3": "The app tracks energy use and the emissions associated with trips.",
+                "short_textual_description": "Welcome to the survey for the MIGEODAT project of the University of A Coruña (UDC) and the University of Massachusetts Boston (UMass Boston), which analyzes urban cycling mobility. This study focuses on learning about the routes followed by Bicicoruña users on their regular trips. The questionnaire you will see after accepting these terms of use should take approximately 4 to 5 minutes. It collects socioeconomic information as well as preferences, but not your name, national ID (DNI/NIE) number or any other personally identifying data. Your answers are important because, together with the route data from your trips, they will help the research team better understand Bicicoruña users and improve the planning and design of shared bicycle networks in A Coruña and elsewhere. In addition, if you wish, you can extend your participation by doing a simple labeling task for each trip, simply indicating whether the trip involved using Bicicoruña or not and, also, the type of bicycle used.",
+                "why_we_collect": "Collecting data on your trips made with Bicicoruña, linked to your survey answers, helps us better understand the experience of the service's users and the different ways in which they perceive the network. These records help improve the planning of shared bicycle services and infrastructure in the city, which helps make cycling a more attractive option for daily trips and contributes to sustainable mobility.",
                 "research_questions": []
             }
         }
@@ -99,7 +99,7 @@
         "options_uuids": true,
         "options_emails": true,
         "admin_access": [
-            "<enrique.ramos@umb.edu>; <dlopezfl@iingen.unam.mx>; <margarita.novales@udc.es>; <alfonso.orro@udc.es>; <enrique.cabarcos@udc.es>"
+            "enrique.ramos@umb.edu", "margarita.novales@udc.es", "alfonso.orro@udc.es", "enrique.cabarcos@udc.es"
         ]
     }
 }
