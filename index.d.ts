@@ -158,6 +158,22 @@ export type VehicleLibraryConfig = {
   // Receives the following variables: duration, subgroup,
   // and unpacked fields of the vehicle object
   fee_expression: string;
+  fee_description?: {
+    rates?: {
+      label: { [language: string]: string };
+      duration_hours: [number, number];
+    }[];
+    subgroup_notes?: {
+      [subgroup: string]: { [language: string]: string };
+    };
+  };
+  hold_amount_by_subgroup?: { [subgroup: string]: number };
+  accessories?: VehicleLibraryAccessory[];
+};
+
+export type VehicleLibraryAccessory = {
+  value: string;
+  label: { [lang: string]: string };
 };
 
 export type TranslationTree = {
