@@ -1,6 +1,6 @@
 {
     "url_abbreviation": "r2opyouth",
-    "version": 1,
+    "version": 2,
     "ts": 1778261474,
     "server": {
         "connectUrl": "https://r2opyouth-openpath.nlr.gov/api/",
@@ -14,7 +14,7 @@
         ]
     },
     "intro": {
-        "program_or_study": "study",
+        "program_or_study": "program",
         "start_month": "6",
         "start_year": "2026",
         "mode_studied": "e-bike",
